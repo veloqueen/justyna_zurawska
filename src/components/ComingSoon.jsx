@@ -5,7 +5,7 @@ const ComingSoon = () => {
     <Grid container height="100vh" justifyContent="center" alignItems="center">
       <Grid item>
         <Typography variant="h1"> Justyna Zurawska</Typography>
-        <Typography variant="h1" textAlign="center" fontStyle="italic">
+        <Typography variant="h2" textAlign="center" fontStyle="italic">
           Coming Soon :)
         </Typography>
       </Grid>
