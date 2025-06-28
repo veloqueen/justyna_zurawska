@@ -1,75 +1,979 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-      <!--<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />  -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Coaching process to facilitate confident decision-making, embodied self-awareness, and the development of emotional intelligence and resilience. I support you in overcoming FOMO and information overload, empowering you to make choices that align with your core."
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="%PUBLIC_URL%/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="%PUBLIC_URL%/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="%PUBLIC_URL%/favicon-16x16.png"
-    />
-    <meta name="robots" content="index, follow" />
-    <meta
-      data-react-helmet="true"
-      property="og:title"
-      content="Justyna Zurawska"
-    />
-    <meta
-      data-react-helmet="true"
-      property="og:description"
-      content="Coaching process to facilitate confident decision-making, embodied self-awareness, and the development of emotional intelligence and resilience. I support you in overcoming FOMO and information overload, empowering you to make choices that align with your core."
-    />
-    <meta data-react-helmet="true" property="og:type" content="website" />
-    <meta data-react-helmet="true" property="og:image:width" content="2205" />
-    <meta data-react-helmet="true" property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Justyna Zurawska" />
-    <meta
-      name="twitter:description"
-      content="Coaching process to facilitate confident decision-making, embodied self-awareness, and the development of emotional intelligence and resilience. I support you in overcoming FOMO and information overload, empowering you to make choices that align with your core."
-    />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="theme-color" content="#120F17" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justyna Zurawska</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(
+          135deg,
+          #ebf5f8 0%,
+          #f0f6fc 50%,
+          #f9f2f7 100%
+        ); /* Softer, more ethereal gradient */
+        background-image: url("/image_background.png");
+        color: #333;
+      }
+      .text-gradient-blue-pink {
+        background: linear-gradient(
+          90deg,
+          #5ab1e7,
+          #de95d7
+        ); /* Adjusted gradient for headings */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .btn-primary {
+        background: linear-gradient(
+          45deg,
+          #5ab1e7,
+          #de95d7
+        ); /* Button gradient */
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly softer shadow */
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+      .section-bg-light {
+        background-color: rgba(
+          34,
+          150,
+          171,
+          0.15
+        ); /* Slightly less opaque white for sections */
+        box-shadow: 0 8px 25px rgba(36, 140, 200, 0.15); /* Softer, more diffused shadow */
+      }
+      .card {
+        background-color: rgba(255, 255, 255, 0.85); /* Even less opaque */
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        cursor: "pointer";
+      }
+      .animated-subtle {
+        animation: floatSubtle 8s ease-in-out infinite;
+      }
+      @keyframes floatSubtle {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0.7;
+        }
+        50% {
+          transform: translateY(-15px) rotate(5deg);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0.7;
+        }
+      }
+      .animated-ripple {
+        animation: ripple 8s ease-out infinite;
+      }
+      @keyframes ripple {
+        0% {
+          r: 150;
+          opacity: 0.6;
+          stroke-width: 2;
+        }
+        100% {
+          r: 350;
+          opacity: 0;
+          stroke-width: 0;
+        }
+      }
+    </style>
   </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <body class="selection:bg-blue-100 selection:text-blue-800">
+    <!-- Header -->
+    <header
+      class="bg-white bg-opacity-80 backdrop-blur-sm shadow-sm py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50 rounded-b-lg"
+    >
+      <div class="flex items-center">
+        <!-- Simplified Logo/Icon -->
+        <svg
+          class="w-7 h-7 mr-2 text-gradient-blue-pink"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 102 0V8a1 1 0 00-.445-.832l-1-.5zm0 0l-1-.5zm1 0l1-.5z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        <a
+          href="#"
+          class="text-xl md:text-2xl font-bold text-gradient-blue-pink whitespace-nowrap"
+          >Justyna Zurawska</a
+        >
+      </div>
+      <nav class="hidden md:flex space-x-8 lg:space-x-12">
+        <a
+          href="#about"
+          class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
+          >About Me</a
+        >
+        <a
+          href="#services"
+          class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
+          >Services</a
+        >
+        <a
+          href="#join"
+          class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
+          >Join</a
+        >
+        <a
+          href="#contact"
+          class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
+          >Contact</a
+        >
+      </nav>
+      <div class="flex items-center space-x-4">
+        <div class="relative inline-block text-left z-20">
+          <button
+            id="language-toggle-button"
+            type="button"
+            class="inline-flex justify-center w-full rounded-md border border-gray-200 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300"
+            aria-haspopup="true"
+            aria-expanded="true"
+          >
+            EN <i class="fas fa-chevron-down ml-2 -mr-1 text-xs"></i>
+          </button>
+          <div
+            id="language-menu"
+            class="origin-top-right absolute right-0 mt-2 w-24 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden z-10"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="language-toggle-button"
+          >
+            <div class="py-1" role="none">
+              <button
+                class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100 w-full text-left"
+                role="menuitem"
+                data-lang="en"
+              >
+                English
+              </button>
+              <button
+                class="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100 w-full text-left"
+                role="menuitem"
+                data-lang="pl"
+              >
+                Polski
+              </button>
+            </div>
+          </div>
+        </div>
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </header>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-white bg-opacity-95 z-40 hidden md:hidden flex flex-col items-center justify-center space-y-6 pt-20"
+    >
+      <a
+        href="#about"
+        class="text-gray-900 hover:text-gradient-blue-pink text-2xl font-medium"
+        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+        >About Me</a
+      >
+      <a
+        href="#services"
+        class="text-gray-900 hover:text-gradient-blue-pink text-2xl font-medium"
+        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+        >Services</a
+      >
+      <a
+        href="#join"
+        class="text-gray-900 hover:text-gradient-blue-pink text-2xl font-medium"
+        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+        >Join</a
+      >
+      <a
+        href="#contact"
+        class="text-gray-900 hover:text-gradient-blue-pink text-2xl font-medium"
+        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+        >Contact</a
+      >
+    </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- Hero Section -->
+    <section
+      class="relative h-screen flex items-center justify-center text-center overflow-hidden"
+    >
+      <!-- Background elements inspired by the image, made more abstract and subtle -->
+      <div class="absolute inset-0 z-0">
+        <svg
+          class="w-full h-full"
+          viewBox="0 0 1000 900"
+          preserveAspectRatio="xMidYMid slice"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Subtle water ripples -->
+          <circle
+            cx="500"
+            cy="480"
+            r="150"
+            stroke="#ADD8E6"
+            stroke-width="2"
+            opacity="0.6"
+            class="animated-ripple"
+          ></circle>
+          <circle
+            cx="500"
+            cy="480"
+            r="200"
+            stroke="#ADD8E6"
+            stroke-width="2"
+            opacity="0.4"
+            class="animated-ripple"
+            style="animation-delay: 2s"
+          ></circle>
+          <circle
+            cx="500"
+            cy="480"
+            r="250"
+            stroke="#ADD8E6"
+            stroke-width="2"
+            opacity="0.2"
+            class="animated-ripple"
+            style="animation-delay: 4s"
+          ></circle>
+
+          <!-- Abstract floating elements (like soft petals or seeds) -->
+          <path
+            class="animated-subtle"
+            d="M100 100 Q110 90 120 100 Q110 110 100 100 Z"
+            fill="#FFFFFF"
+            opacity="0.7"
+          ></path>
+          <path
+            class="animated-subtle"
+            d="M800 50 Q810 40 820 50 Q810 60 800 50 Z"
+            fill="#F0F8FF"
+            opacity="0.6"
+            style="animation-delay: 2.5s"
+          ></path>
+          <path
+            class="animated-subtle"
+            d="M200 20 Q210 10 220 20 Q210 30 200 20 Z"
+            fill="#EBF5F8"
+            opacity="0.5"
+            style="animation-delay: 5s"
+          ></path>
+          <path
+            class="animated-subtle"
+            d="M700 200 Q710 190 720 200 Q710 210 700 200 Z"
+            fill="#F5F5DC"
+            opacity="0.7"
+            style="animation-delay: 1.2s"
+          ></path>
+          <path
+            class="animated-subtle"
+            d="M300 150 Q310 140 320 150 Q310 160 300 150 Z"
+            fill="#ADD8E6"
+            opacity="0.6"
+            style="animation-delay: 3.8s"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="relative z-10 p-8 md:p-12 max-w-4xl mx-auto">
+        <h1
+          class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-gradient-blue-pink"
+          data-key="heroTitle"
+        >
+          Unlock Your Inner Bloom
+        </h1>
+        <h5
+          class="text-xl md:text-2xl text-gray-900 mb-8"
+          data-key="heroSubtitle"
+        >
+          Trauma-Informed Coaching & Breathwork for Lasting Transformation
+        </h5>
+        <button
+          class="btn-primary text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl mt-10"
+          data-key="bookSession"
+        >
+          Book a Session
+        </button>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section
+      id="about"
+      class="container mx-auto px-6 py-16 md:py-24 mt-16 md:mt-24 section-bg-light rounded-3xl"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h2
+          class="text-3xl md:text-5xl font-bold text-center mb-10 text-gradient-blue-pink"
+          data-key="aboutMeTitle"
+        >
+          About Me
+        </h2>
+        <div
+          class="prose lg:prose-xl text-gray-900 leading-relaxed text-justify mx-auto"
+        >
+          <h5 data-key="aboutMePara1" class="my-2">
+            I am a trauma-informed coach and breathwork practitioner with a
+            diverse background and a non-linear career path. I consider myself a
+            lifelong learner, a concept of which I have heard for the first time
+            while going on a student exchange. I have a Bachelor in Business
+            Management and Master in Intercultural Communication. I also studied
+            Philosophy as a separate degree and although philosophy is still my
+            passion I quit that study after 2.5 years. My education has not
+            stopped with graduation and although fully employed, I keep on
+            learning.
+          </h5>
+          <h5 data-key="aboutMePara2" class="my-2">
+            I am currently working as an HR Business Partner and have had
+            various roles in startups and corporate environments. I did further
+            education with Swiss employment law and completed full stack
+            development bootcamp over pandemic and worked on software
+            development projects. I love to change environments and from time to
+            time I volunteer during cultural events like film and music
+            festivals. Up until my move to Switzerland I thought I would like to
+            travel all over the world and see as many different places as
+            possible - it changed.
+          </h5>
+          <h5 data-key="aboutMePara3" class="my-2">
+            It was also the case with learning languages. Polish is my mother
+            tongue and I learned English and French at school. There weren’t any
+            native speakers around me back then and I was quite shocked when I
+            moved to the UK in my early 20s. French as a phonetic language
+            hasn’t been my thing and Spanish didn’t really catch my heart. I was
+            very enthusiastic about learning Greek when moving to Greece and
+            learning this language was so meaningful (do you know that Kosmos
+            means people in greek?) and also its different alphabet seems like a
+            nice adventure. And it was so! However lack of application in my
+            live and wanting to get a job in a german speaking country resulted
+            in adding German to my language repertoire.
+          </h5>
+        </div>
+        <!-- Placeholder for an image of the coach -->
+        <div class="mt-10 text-center">
+          <img
+            src="/JustynaZurawska.jpeg"
+            alt="Coach's Photo"
+            class="rounded-full mx-auto shadow-lg border-4 border-white w-64"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About You Section -->
+    <section
+      id="about-you"
+      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-5xl font-bold mb-10 text-gradient-blue-pink"
+          data-key="aboutYouTitle"
+        >
+          About You
+        </h2>
+        <h5 class="text-gray-900 leading-relaxed px-4">
+          <span data-key="aboutYouContent"
+            >You are highly functioning but internally exhausted or
+            disconnected.</span
+          >
+        </h5>
+      </div>
+    </section>
+
+    <!-- My Services Section -->
+    <section
+      id="services"
+      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h2
+          class="text-3xl md:text-5xl font-bold text-center mb-10 text-gradient-blue-pink"
+          data-key="myServicesTitle"
+        >
+          My Services
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="bg-purple-50 bg-opacity-60 card p-6 rounded-2xl flex items-start space-x-4"
+          >
+            <div class="flex-shrink-0 text-gradient-blue-pink">
+              <i class="fas fa-comments text-4xl"></i>
+            </div>
+            <div>
+              <h3
+                class="text-2xl font-semibold mb-2 text-gray-800"
+                data-key="service1Title"
+              >
+                1:1 Coaching Sessions
+              </h3>
+              <h5 class="text-gray-600" data-key="service1Desc">
+                (Online and in person)
+              </h5>
+            </div>
+          </div>
+          <div
+            class="bg-purple-50 bg-opacity-60 card p-6 rounded-2xl flex items-start space-x-4"
+          >
+            <div class="flex-shrink-0 text-gradient-blue-pink">
+              <i class="fas fa-lungs text-4xl"></i>
+            </div>
+            <div>
+              <h3
+                class="text-2xl font-semibold mb-2 text-gray-800"
+                data-key="service2Title"
+              >
+                Breathwork Sessions
+              </h3>
+              <h5 class="text-gray-600" data-key="service2Desc">
+                For trauma release
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work With Me Section -->
+    <section
+      id="work-with-me"
+      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
+    >
+      <div class="max-w-4xl mx-auto">
+        <h2
+          class="text-3xl md:text-5xl font-bold text-center mb-10 text-gradient-blue-pink"
+          data-key="workWithMeTitle"
+        >
+          Work With Me
+        </h2>
+        <ul class="text-gray-900 leading-relaxed">
+          <li class="p-2 rounded-xl flex items-start space-x-4">
+            <i
+              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
+            ></i>
+            <span data-key="workWithMe1">If you feel stuck</span>
+          </li>
+          <li class="p-2 rounded-xl flex items-start space-x-4">
+            <i
+              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
+            ></i>
+            <span data-key="workWithMe2"
+              >If you are disconnected from your body</span
+            >
+          </li>
+          <li class="p-2 rounded-xl flex items-start space-x-4">
+            <i
+              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
+            ></i>
+            <span data-key="workWithMe3"
+              >If you want to tap into your own resources, to free your energy,
+              get clarity and awareness behind your decisions as well as ensure
+              you make choices that align with your values</span
+            >
+          </li>
+          <li class="p-2 rounded-xl flex items-start space-x-4">
+            <i
+              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
+            ></i>
+            <span data-key="workWithMe4"
+              >If you would like to stop repressing emotional impulses and
+              understand what has triggered that emotion in the here and
+              now</span
+            >
+          </li>
+          <li class="p-2 rounded-xl flex items-start space-x-4">
+            <i
+              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
+            ></i>
+            <span data-key="workWithMe5"
+              >If you would like to get more aware of your body and emotional
+              impulses and move away from blind reaction</span
+            >
+          </li>
+          <li class="p-2 rounded-xl flex items-start space-x-4">
+            <i
+              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
+            ></i>
+            <span data-key="releaseTension">
+              If you would like to release tension from your body.</span
+            >
+          </li>
+        </ul>
+
+        <div
+          class="mt-12 p-8 bg-purple-50 bg-opacity-60 rounded-2xl shadow-inner border border-purple-100"
+        >
+          <h3
+            class="text-2xl md:text-3xl font-semibold mb-4 text-gradient-blue-pink"
+            data-key="griefSupportTitle"
+          >
+            Grief Support
+          </h3>
+          <h5
+            class="text-gray-900 leading-relaxed mb-4"
+            data-key="griefSupport1"
+          >
+            If you suffer from recent or recurring loss, may it be a death of a
+            loved one, loss of a job or anything that triggered unprocessed
+            grief I am here to help you to create a new sense of normalcy.
+          </h5>
+          <h5
+            class="text-gray-900 leading-relaxed mb-4"
+            data-key="griefSupport2"
+          >
+            If you would like to integrate your loss into your life and
+            transition to the new sense of normalcy.
+          </h5>
+          <h5 class="text-gray-900 leading-relaxed" data-key="griefSupport3">
+            I help you handle the painful emotions of losing a loved one, get on
+            top of your grief, and move forward with meaning and purpose - in
+            the shortest time possible. You don’t have to do this alone — and it
+            doesn’t have to take forever.
+          </h5>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Section -->
+    <section
+      id="how"
+      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-5xl font-bold mb-10 text-gradient-blue-pink"
+          data-key="howTitle"
+        >
+          How
+        </h2>
+        <h5 class="text-gray-900 leading-relaxed px-4">
+          <span data-key="howContent"
+            >We will connect with repressed emotions, so that we can move them
+            out of our bodies.</span
+          >
+        </h5>
+      </div>
+    </section>
+
+    <!-- Join Section -->
+    <section
+      id="join"
+      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24 mb-16 md:mb-24"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <div
+          class="bg-blue-50 bg-opacity-80 rounded-2xl p-16 shadow-inner border border-blue-100"
+        >
+          <h3
+            class="text-2xl md:text-3xl font-semibold mb-4 text-gradient-blue-pink"
+            data-key="clubTitle"
+          >
+            KLUB: Pretty & Angry Girls Club
+          </h3>
+          <h5
+            class="text-gray-900 leading-relaxed text-lg"
+            data-key="clubDescription"
+          >
+            Breathwork is a powerful way of releasing energy that gets stored in
+            our body. We tend to suppress that energy, we push it down, we carry
+            it with us, we are ashamed of it.
+          </h5>
+        </div>
+        <button
+          class="btn-primary text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl mt-10"
+          data-key="joinNow"
+        >
+          Join Now
+        </button>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24 mb-16 md:mb-24"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-5xl font-bold mb-10 text-gradient-blue-pink"
+          data-key="contactTitle"
+        >
+          Get in Touch
+        </h2>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-8 text-xl"
+        >
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-envelope text-gradient-blue-pink text-2xl"></i>
+            <a
+              href="mailto:info@innerbloomcoaching.com"
+              class="text-gray-900 hover:text-gradient-blue-pink"
+              data-key="contactEmail"
+              >info@innerbloomcoaching.com</a
+            >
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-phone-alt text-gradient-blue-pink text-2xl"></i>
+            <a
+              href="tel:+1234567890"
+              class="text-gray-900 hover:text-gradient-blue-pink"
+              data-key="contactPhone"
+              >+1 (234) 567-890</a
+            >
+          </div>
+        </div>
+        <h5 class="text-lg text-gray-700 mt-16" data-key="contactFormPrompt">
+          Alternatively, fill out the form below and I'll get back to you
+          shortly.
+        </h5>
+        <!-- Basic contact form placeholder -->
+        <form class="mt-8 max-w-xl mx-auto space-y-6 text-left">
+          <div>
+            <label
+              for="name"
+              class="block text-gray-900 text-sm font-medium mb-2"
+              data-key="formNameLabel"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
+              placeholder="Your Name"
+              data-key="formNamePlaceholder"
+            />
+          </div>
+          <div>
+            <label
+              for="email"
+              class="block text-gray-900 text-sm font-medium mb-2"
+              data-key="formEmailLabel"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
+              placeholder="your.email@example.com"
+              data-key="formEmailPlaceholder"
+            />
+          </div>
+          <div>
+            <label
+              for="message"
+              class="block text-gray-900 text-sm font-medium mb-2"
+              data-key="formMessageLabel"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
+              placeholder="Tell me about your needs..."
+              data-key="formMessagePlaceholder"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn-primary text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl w-full md:w-auto"
+            data-key="formSubmitButton"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 px-6 md:px-12 rounded-t-xl">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left"
+      >
+        <div class="mb-6 md:mb-0">
+          <h3 class="text-2xl font-bold text-gradient-blue-pink mb-2">
+            Justyna Zurawska
+          </h3>
+          <h5 class="text-gray-400">&copy; 2025 All rights reserved.</h5>
+        </div>
+        <div class="flex space-x-6 mb-6 md:mb-0">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+            class="text-gray-300 hover:text-pink-400 transition-colors duration-200"
+            ><i class="fab fa-instagram text-2xl"></i
+          ></a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            aria-label="Facebook"
+            class="text-gray-300 hover:text-blue-500 transition-colors duration-200"
+            ><i class="fab fa-facebook-f text-2xl"></i
+          ></a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            aria-label="LinkedIn"
+            class="text-gray-300 hover:text-blue-600 transition-colors duration-200"
+            ><i class="fab fa-linkedin-in text-2xl"></i
+          ></a>
+        </div>
+        <nav
+          class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-gray-400"
+        >
+          <a
+            href="#about"
+            class="hover:text-white transition-colors duration-200"
+            >About Me</a
+          >
+          <a
+            href="#services"
+            class="hover:text-white transition-colors duration-200"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-white transition-colors duration-200"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      // Language content
+      const content = {
+        en: {
+          heroTitle: "Unlock Your Inner Bloom",
+          heroSubtitle:
+            "Trauma-Informed Coaching & Breathwork for Lasting Transformation",
+          bookSession: "Book a Session",
+          aboutMeTitle: "About Me",
+          aboutMePara1:
+            "I am a trauma-informed coach and breathwork practitioner with a diverse background and a non-linear career path. I consider myself a lifelong learner, a concept of which I have heard for the first first time while going on a student exchange. I have a Bachelor in Business Management and Master in Intercultural Communication. I also studied Philosophy as a separate degree and although philosophy is still my passion I quit that study after 2.5 years. My education has not stopped with graduation and although fully employed, I keep on learning.",
+          aboutMePara2:
+            "I am currently working as an HR Business Partner and have had various roles in startups and corporate environments. I did further education with Swiss employment law and completed full stack development bootcamp over pandemic and worked on software development projects. I love to change environments and from time to time I volunteer during cultural events like film and music festivals. Up until my move to Switzerland I thought I would like to travel all over the world and see as many different places as possible - it changed.",
+          aboutMePara3:
+            "It was also the case with learning languages. Polish is my mother tongue and I learned English and French at school. There weren’t any native speakers around me back then and I was quite shocked when I moved to the UK in my early 20s. French as a phonetic language hasn’t been my thing and Spanish didn’t really catch my heart. I was very enthusiastic about learning Greek when moving to Greece and learning this language was so meaningful (do you know that Kosmos means people in greek?) and also its different alphabet seems like a nice adventure. And it was so! However lack of application in my live and wanting to get a job in a german speaking country resulted in adding German to my language repertoire.",
+          aboutYouTitle: "About You",
+          aboutYouContent:
+            "You are highly functioning but internally exhausted or disconnected.",
+          myServicesTitle: "My Services",
+          service1Title: "1:1 Coaching Sessions",
+          service1Desc: "(Online and in person)",
+          service2Title: "Breathwork Sessions",
+          service2Desc: "For trauma release",
+          workWithMeTitle: "Work With Me",
+          workWithMe1: "If you feel stuck",
+          workWithMe2: "If you are disconnected from your body",
+          workWithMe3:
+            "If you want to tap into your own resources, to free your energy, get clarity and awareness behind your decisions as well as ensure you make choices that align with your values",
+          workWithMe4:
+            "If you would like to stop repressing emotional impulses and understand what has triggered that emotion in the here and now",
+          workWithMe5:
+            "If you would like to get more aware of your body and emotional impulses and move away from blind reaction",
+          griefSupportTitle: "Grief Support",
+          griefSupport1:
+            "If you suffer from recent or recurring loss, may it be a death of a loved one, loss of a job or anything that triggered unprocessed grief I am here to help you to create a new sense of normalcy.",
+          griefSupport2:
+            "If you would like to integrate your loss into your life and transition to the new sense of normalcy.",
+          griefSupport3:
+            "I help you handle the painful emotions of losing a loved one, get on top of your grief, and move forward with meaning and purpose - in the shortest time possible. You don’t have to do this alone — and it doesn’t have to take forever.",
+          releaseTension: "If you would like to release tension from your body",
+          howTitle: "How",
+          howContent:
+            "We will connect with repressed emotions, so that we can move them out of our bodies.",
+          joinTitle: "Join",
+          clubTitle: "KLUB: Pretty & Angry Girls Club",
+          clubDescription:
+            "Breathwork is a powerful way of releasing energy that gets stored in our body. We tend to suppress that energy, we push it down, we carry it with us, we are ashamed of it.",
+          joinNow: "Join Now",
+          contactTitle: "Get in Touch",
+          contactSubtitle:
+            "Ready to take the first step? I'd love to hear from you.",
+          contactEmail: "coaching@justynazurawska.com",
+          contactPhone: "+41 78 693 88 31",
+          contactFormPrompt:
+            "Alternatively, fill out the form below and I'll get back to you shortly.",
+          formNameLabel: "Name",
+          formNamePlaceholder: "Your Name",
+          formEmailLabel: "Email",
+          formEmailPlaceholder: "your.email@example.com",
+          formMessageLabel: "Message",
+          formMessagePlaceholder: "Tell me about your needs...",
+          formSubmitButton: "Send Message",
+        },
+        pl: {
+          heroTitle: "Uwolnij Swój Wewnętrzny Rozkwit",
+          heroSubtitle:
+            "Coaching Traumatyczny i Praca z Oddechem dla Trwałej Transformacji",
+          bookSession: "Zaplanuj sesję",
+          aboutMeTitle: "O Mnie",
+          aboutMePara1:
+            "Jestem coachem zorientowanym na traumę i praktykiem pracy z oddechem, z różnorodnym doświadczeniem i nieliniową ścieżką kariery. Uważam się za ucznia przez całe życie, pojęcie, o którym usłyszałam po raz pierwszy podczas wymiany studenckiej. Posiadam tytuł licencjata z Zarządzania Biznesem oraz magistra z Komunikacji Międzykulturowej. Studiowałam również Filozofię jako osobny kierunek i choć filozofia nadal jest moją pasją, zrezygnowałam z tych studiów po 2,5 roku. Moja edukacja nie zakończyła się wraz z dyplomem i choć jestem w pełni zatrudniona, ciągle się uczę.",
+          aboutMePara2:
+            "Obecnie pracuję jako HR Business Partner i pełniłam różne role w startupach oraz środowiskach korporacyjnych. Ukończyłam dalszą edukację z zakresu szwajcarskiego prawa pracy oraz bootcamp full stack developmentu podczas pandemii i pracowałam nad projektami rozwoju oprogramowania. Uwielbiam zmieniać środowiska i od czasu do czasu wolontariuję podczas wydarzeń kulturalnych, takich jak festiwale filmowe i muzyczne. Aż do przeprowadzki do Szwajcarii myślałam, że chciałabym podróżować po całym świecie i zobaczyć jak najwięcej różnych miejsc - to się zmieniło.",
+          aboutMePara3:
+            "Podobnie było z nauką języków. Polski to mój język ojczysty, a angielskiego i francuskiego uczyłam się w szkole. Wtedy wokół mnie nie było żadnych native speakerów i byłam dość zszokowana, gdy w wieku dwudziestu kilku lat przeniosłam się do Wielkiej Brytanii. Francuski jako język fonetyczny nie był moją mocną stroną, a hiszpański nie skradł mojego serca. Byłam bardzo entuzjastycznie nastawiona do nauki greckiego po przeprowadzce do Grecji, a nauka tego języka była tak sensowna (czy wiesz, że Kosmos oznacza ludzi po grecku?) i także jego inny alfabet wydawał się fajną przygodą. I tak było! Jednak brak zastosowania w moim życiu i chęć znalezienia pracy w kraju niemieckojęzycznym zaowocowały dodaniem niemieckiego do mojego repertuaru językowego.",
+          aboutYouTitle: "O Tobie",
+          aboutYouContent:
+            "Jesteś wysoce funkcjonujący, ale wewnętrznie wyczerpany lub odłączony.",
+          myServicesTitle: "Moje Usługi",
+          service1Title: "Sesje Coachingowe 1:1",
+          service1Desc: "(Online i osobiście)",
+          service2Title: "Sesje Pracy z Oddechem",
+          service2Desc: "Dla uwolnienia traumy",
+          workWithMeTitle: "Pracuj ze Mną",
+          workWithMe1: "Jeśli czujesz się zablokowany",
+          workWithMe2: "Jeśli jesteś odłączony od swojego ciała",
+          workWithMe3:
+            "Jeśli chcesz wykorzystać swoje wewnętrzne zasoby, uwolnić energię, uzyskać jasność i świadomość swoich decyzji, a także upewnić się, że dokonujesz wyborów zgodnych z Twoimi wartościami",
+          workWithMe4:
+            "Jeśli chciałbyś przestać tłumić impulsy emocjonalne i zrozumieć, co wywołało tę emocję tu i teraz",
+          workWithMe5:
+            "Jeśli chciałbyś stać się bardziej świadomy swojego ciała i impulsów emocjonalnych i odejść od ślepych reakcji",
+          griefSupportTitle: "Wsparcie w Żałobie",
+          griefSupport1:
+            "Jeśli cierpisz z powodu niedawnej lub nawracającej straty, czy to śmierci bliskiej osoby, utraty pracy, czy czegokolwiek, co wywołało nieprzetworzoną żałobę, jestem tutaj, aby pomóc Ci stworzyć nowe poczucie normalności.",
+          griefSupport2:
+            "Jeśli chciałbyś zintegrować swoją stratę ze swoim życiem i przejść do nowego poczucia normalności.",
+          griefSupport3:
+            "Pomogę Ci poradzić sobie z bolesnymi emocjami po stracie bliskiej osoby, uporać się z żałobą i ruszyć naprzód z sensem i celem - w jak najkrótszym czasie. Nie musisz tego robić sam — i nie musi to trwać wiecznie.",
+          releaseTension: "Jeśli chciałbyś uwolnić napięcie z ciała",
+          howTitle: "Jak",
+          howContent:
+            "Połączymy się z wypartymi emocjami, abyśmy mogli je uwolnić z naszych ciał.",
+          joinTitle: "Dołącz",
+          clubTitle: "KLUB: Pretty & Angry Girls Club",
+          clubDescription:
+            "Praca z oddechem to potężny sposób uwalniania energii, która gromadzi się w naszym ciele. Mamy tendencję do tłumienia tej energii, spychamy ją, nosimy ją ze sobą, wstydzimy się jej.",
+          joinNow: "Dołącz teraz",
+          contactTitle: "Skontaktuj się ze Mną",
+          contactSubtitle: "Gotowy na pierwszy krok? Chętnie Cię wysłucham.",
+          contactEmail: "coaching@justynazurawska.com",
+          contactPhone: "+41 78 693 88 31",
+          contactFormPrompt:
+            "Alternatywnie, wypełnij poniższy formularz, a wkrótce się z Tobą skontaktuję.",
+          formNameLabel: "Imię",
+          formNamePlaceholder: "Twoje Imię",
+          formEmailLabel: "Email",
+          formEmailPlaceholder: "twój.email@example.com",
+          formMessageLabel: "Wiadomość",
+          formMessagePlaceholder: "Opowiedz mi o swoich potrzebach...",
+          formSubmitButton: "Wyślij Wiadomość",
+        },
+      };
+
+      let currentLang = "en";
+
+      // Function to update content based on language
+      function updateContent(lang) {
+        document.querySelectorAll("[data-key]").forEach((element) => {
+          const key = element.getAttribute("data-key");
+          if (content[lang][key]) {
+            element.textContent = content[lang][key];
+          }
+        });
+        document.getElementById(
+          "language-toggle-button"
+        ).childNodes[0].nodeValue = lang.toUpperCase() + " ";
+      }
+
+      // Language toggle functionality
+      const langToggleButton = document.getElementById(
+        "language-toggle-button"
+      );
+      const langMenu = document.getElementById("language-menu");
+
+      langToggleButton.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent document click from closing immediately
+        langMenu.classList.toggle("hidden");
+      });
+
+      langMenu.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          currentLang = event.target.dataset.lang;
+          updateContent(currentLang);
+          langMenu.classList.add("hidden");
+        });
+      });
+
+      // Close language menu if clicked outside
+      document.addEventListener("click", (event) => {
+        if (
+          !langToggleButton.contains(event.target) &&
+          !langMenu.contains(event.target)
+        ) {
+          langMenu.classList.add("hidden");
+        }
+      });
+
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        // Select all anchors with href starting with #
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const headerOffset = document.querySelector("header").offsetHeight; // Get height of fixed header
+            const elementPosition =
+              targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - headerOffset - 20; // Add some extra padding
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      // Initial content load
+      document.addEventListener("DOMContentLoaded", () => {
+        updateContent(currentLang);
+      });
+    </script>
   </body>
 </html>
