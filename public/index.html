@@ -271,19 +271,22 @@
         </svg>
       </div>
 
-      <div class="relative z-10 p-8 md:p-12 max-w-4xl mx-auto text-center">
-  <!-- Title -->
+      <!-- Added pt-24 md:pt-32 to push content DOWN below the fixed header on mobile and desktop -->
+<div class="relative z-10 px-4 pt-24 pb-8 md:pt-32 md:pb-12 max-w-4xl mx-auto text-center">
+  
+  <!-- Title: Reduced mobile size (text-3xl) & adjusted line-height so it never gets cut off -->
   <h1
-    class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-gradient-blue-pink tracking-tight"
+    class="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight md:leading-tight text-gradient-blue-pink tracking-tight"
     data-key="heroTitle"
   >
-    Think. Breathe. Allow. Glow.
+    Think. Breathe.<br class="block sm:hidden" /> Allow. Glow.
   </h1>
 
   <!-- Subtitle Block -->
-  <div class="space-y-4 max-w-2xl mx-auto" data-key="heroSubtitle">
+  <div class="space-y-6 max-w-2xl mx-auto" data-key="heroSubtitle">
+    
     <!-- Highlight Tagline -->
-    <p class="text-xl md:text-2xl font-bold text-gray-900 tracking-wide uppercase text-sm md:text-base opacity-90">
+    <p class="text-xs sm:text-sm md:text-base font-bold text-gray-900 tracking-widest uppercase">
       A Journey From Achievement to Alignment
     </p>
 
@@ -292,21 +295,25 @@
       Practical guidance for emotional openness and full participation in life.
     </p>
 
-    <!-- Supporting Text -->
-    <p class="text-base md:text-lg text-gray-700 leading-relaxed font-normal">
-      You will move from over-control, rewire your stress responses, put away the internal armor, and reconnect with your intuition.
-    </p>
+    <!-- Styled Final Paragraph / Key Benefits Card -->
+    <div class="bg-white/60 backdrop-blur-sm border border-white/80 rounded-2xl p-4 sm:p-6 shadow-sm">
+      <p class="text-sm md:text-base text-gray-700 leading-relaxed font-normal">
+        You will move from over-control, rewire your stress responses, put away the internal armor, and reconnect with your intuition.
+      </p>
+    </div>
+
   </div>
 
   <!-- CTA Button -->
   <div class="mt-8">
     <button
-      class="btn-primary text-white font-semibold py-3.5 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
+      class="btn-primary text-white font-semibold py-3.5 px-8 rounded-full text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
       data-key="bookSession"
     >
       Book a Session
     </button>
   </div>
+
 </div>
     </section>
 
