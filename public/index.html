@@ -23,18 +23,17 @@
           #ebf5f8 0%,
           #f0f6fc 50%,
           #f9f2f7 100%
-        ); /* Softer, more ethereal gradient */
+        );
         background-image: url("/image_background.png");
         color: #333;
         background-position: top;
-        resize: both;
       }
       .text-gradient-blue-pink {
         background: linear-gradient(
           90deg,
           #5ab1e7,
           #de95d7
-        ); /* Adjusted gradient for headings */
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -43,9 +42,9 @@
           45deg,
           #5ab1e7,
           #de95d7
-        ); /* Button gradient */
+        );
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly softer shadow */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       }
       .btn-primary:hover {
         transform: translateY(-2px);
@@ -57,13 +56,13 @@
           150,
           171,
           0.15
-        ); /* Slightly less opaque white for sections */
-        box-shadow: 0 8px 25px rgba(36, 140, 200, 0.15); /* Softer, more diffused shadow */
+        );
+        box-shadow: 0 8px 25px rgba(36, 140, 200, 0.15);
       }
       .card {
-        background-color: rgba(255, 255, 255, 0.85); /* Even less opaque */
+        background-color: rgba(255, 255, 255, 0.85);
         transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        cursor: "pointer";
+        cursor: pointer;
       }
       .animated-subtle {
         animation: floatSubtle 8s ease-in-out infinite;
@@ -105,7 +104,6 @@
       class="bg-white bg-opacity-80 backdrop-blur-sm shadow-sm py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50 rounded-b-lg"
     >
       <div class="flex items-center">
-        <!-- Simplified Logo/Icon -->
         <svg
           class="w-7 h-7 mr-2 text-gradient-blue-pink"
           fill="currentColor"
@@ -125,12 +123,6 @@
         >
       </div>
       <nav class="hidden md:flex space-x-8 lg:space-x-12">
- <a
-          href="#matter"
-          class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
-          >About Me</a
-        >
-        
         <a
           href="#about"
           class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
@@ -232,7 +224,6 @@
     <section
       class="relative h-screen flex items-center justify-center text-center overflow-hidden"
     >
-      <!-- Background elements inspired by the image, made more abstract and subtle -->
       <div class="absolute inset-0 z-0">
         <svg
           class="w-full h-full"
@@ -241,7 +232,6 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <!-- Subtle water ripples -->
           <circle
             cx="500"
             cy="480"
@@ -271,8 +261,6 @@
             class="animated-ripple"
             style="animation-delay: 4s"
           ></circle>
-
-          <!-- Abstract floating elements (like soft petals or seeds) -->
           <path
             class="animated-subtle"
             d="M100 100 Q110 90 120 100 Q110 110 100 100 Z"
@@ -332,22 +320,29 @@
       </div>
     </section>
 
-        
-        <h5 class="text-gray-900 leading-relaxed px-4">
-          <div data-key="whyThisMattersContent">
-            <p>You are highly functioning and  internally exhausted or disconnected.</p>
-<p>Because being high-functioning doesn’t mean you’re fine.</p>
-<p>You can appear composed, capable, and in control — while silently carrying exhaustion, grief, or a deep sense of disconnection.</p>
-<p>When you’ve always been the strong one, it’s easy to override your own needs. To stay busy, overthink, or keep going while something inside feels off or unresolved.</p>
-<p>But true strength isn’t just about holding it together. It’s about having the space to fall apart safely — and come back to yourself with more honesty, clarity, and inner calm.</p>
-<p>This work matters because you matter.</p>
-<p>Not just the version of you who achieves and performs — but the whole, complex, feeling human underneath.</p>
-<p>By slowing down, meeting your emotions, and reconnecting with your body, you can stop surviving and start living. You can make decisions that honor who you are now — not just who you've been expected to be.</p>
-<p>This is how you can reclaim presence. Power. And peace.</p>
-
-.</span>
-        </h5>
-      </div>
+    <!-- Why This Matters Section -->
+    <section
+      id="why-this-matters"
+      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
+    >
+      <div class="max-w-4xl mx-auto text-center">
+        <h2
+          class="text-3xl md:text-5xl font-bold mb-10 text-gradient-blue-pink"
+          data-key="whyThisMattersTitle"
+        >
+          Why This Matters
+        </h2>
+        <div class="text-gray-900 leading-relaxed px-4 text-left space-y-4" data-key="whyThisMattersContent">
+          <p>You are highly functioning and internally exhausted or disconnected.</p>
+          <p>Because being high-functioning doesn’t mean you’re fine.</p>
+          <p>You can appear composed, capable, and in control — while silently carrying exhaustion, grief, or a deep sense of disconnection.</p>
+          <p>When you’ve always been the strong one, it’s easy to override your own needs. To stay busy, overthink, or keep going while something inside feels off or unresolved.</p>
+          <p>But true strength isn’t just about holding it together. It’s about having the space to fall apart safely — and come back to yourself with more honesty, clarity, and inner calm.</p>
+          <p>This work matters because you matter.</p>
+          <p>Not just the version of you who achieves and performs — but the whole, complex, feeling human underneath.</p>
+          <p>By slowing down, meeting your emotions, and reconnecting with your body, you can stop surviving and start living. You can make decisions that honor who you are now — not just who you've been expected to be.</p>
+          <p>This is how you can reclaim presence. Power. And peace.</p>
+        </div>
       </div>
     </section>
 
@@ -364,35 +359,29 @@
           About Me
         </h2>
         <div
-          class="prose lg:prose-xl text-gray-900 leading-relaxed text-justify mx-auto"
+          class="prose lg:prose-xl text-gray-900 leading-relaxed text-justify mx-auto space-y-4"
         >
-<h5 data-key="aboutMePara1" class="my-2">
-  One of the songs that stayed with me from a very young age was "It's My Life" by Bon Jovi — especially the words: "It's my life, it's now or never, I ain't gonna live forever." Those words resonated deeply with me because I encountered the reality of life's fragility very early.
-
-  My mother passed away when I was young, and through that experience I came to understand that life is precious and not something to take for granted. Alongside grief and sadness, I also experienced love, support, and the presence of a deeply caring and conscious father. His resilience and the way he continued moving through life have been one of my greatest inspirations.
-</h5>
-<h5 data-key="aboutMePara2" class="my-2">
-I support high-functioning, thoughtful individuals who feel stuck, overwhelmed, disconnected, or are moving through major life transitions. Many of the people I work with have achieved a lot, yet still feel exhausted, emotionally disconnected, or under constant pressure to hold everything together. My work combines coaching, body-based practices, and breathwork to help people reconnect with themselves, release what has been held inside, and return to clarity, presence, and inner strength.
-</h5>
-
-<h5 data-key="aboutMePara3" class="my-2">
- Alongside my coaching practice, I work as an HR Business Partner in a global reinsurance company in Zurich, Switzerland. Over the past decade, I have worked across academia, startups, and corporate environments — experiences that have given me a deep understanding of performance, change, ambition, and the hidden struggles that often exist behind success.
-</h5>
-
-<h5 data-key="aboutMePara4" class="my-2">
-My approach is grounded, compassionate, and curious. I have always been fascinated by human experience and the power of meaningful questions — something I discovered through the Socratic method during my studies in Philosophy. Today, I bring this curiosity into my coaching, creating space for reflection, awareness, and transformation.
-</h5>
- <h5 data-key="aboutMePara5" class="my-2"> 
-   My background is as diverse as my various interests: I hold a BA in Business Management, an MA in Intercultural Communication, studied Philosophy, completed a full-stack development bootcamp, learned languages through living in different countries, and continue to explore life through movement, creativity, introspection, nature, and connection.
-Whether you are seeking clarity, a deeper connection with yourself, or a new way of moving through life, you are welcome here. My intention is not to fix you — but to help you reconnect with the wisdom, strength, and aliveness that are already within you.
-Above all, I love connecting with people - I like to joke that it’s an only-child thing.
-I’d love to connect with you.
-
-
-</h5>
-
+          <p data-key="aboutMePara1">
+            One of the songs that stayed with me from a very young age was "It's My Life" by Bon Jovi — especially the words: "It's my life, it's now or never, I ain't gonna live forever." Those words resonated deeply with me because I encountered the reality of life's fragility very early.
+            <br/><br/>
+            My mother passed away when I was young, and through that experience I came to understand that life is precious and not something to take for granted. Alongside grief and sadness, I also experienced love, support, and the presence of a deeply caring and conscious father. His resilience and the way he continued moving through life have been one of my greatest inspirations.
+          </p>
+          <p data-key="aboutMePara2">
+            I support high-functioning, thoughtful individuals who feel stuck, overwhelmed, disconnected, or are moving through major life transitions. Many of the people I work with have achieved a lot, yet still feel exhausted, emotionally disconnected, or under constant pressure to hold everything together. My work combines coaching, body-based practices, and breathwork to help people reconnect with themselves, release what has been held inside, and return to clarity, presence, and inner strength.
+          </p>
+          <p data-key="aboutMePara3">
+            Alongside my coaching practice, I work as an HR Business Partner in a global reinsurance company in Zurich, Switzerland. Over the past decade, I have worked across academia, startups, and corporate environments — experiences that have given me a deep understanding of performance, change, ambition, and the hidden struggles that often exist behind success.
+          </p>
+          <p data-key="aboutMePara4">
+            My approach is grounded, compassionate, and curious. I have always been fascinated by human experience and the power of meaningful questions — something I discovered through the Socratic method during my studies in Philosophy. Today, I bring this curiosity into my coaching, creating space for reflection, awareness, and transformation.
+          </p>
+          <p data-key="aboutMePara5">
+            My background is as diverse as my various interests: I hold a BA in Business Management, an MA in Intercultural Communication, studied Philosophy, completed a full-stack development bootcamp, learned languages through living in different countries, and continue to explore life through movement, creativity, introspection, nature, and connection.
+            Whether you are seeking clarity, a deeper connection with yourself, or a new way of moving through life, you are welcome here. My intention is not to fix you — but to help you reconnect with the wisdom, strength, and aliveness that are already within you.
+            Above all, I love connecting with people - I like to joke that it’s an only-child thing.
+            I’d love to connect with you.
+          </p>
         </div>
-        <!-- Placeholder for an image of the coach -->
         <div class="mt-10 text-center">
           <img
             src="/JustynaZurawska.jpeg"
@@ -403,18 +392,6 @@ I’d love to connect with you.
       </div>
     </section>
 
-    <!-- Why This Matters -->
-    <section
-      id="why-this-matters"
-      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
-    >
-      <div class="max-w-4xl mx-auto text-center">
-        <h2
-          class="text-3xl md:text-5xl font-bold mb-10 text-gradient-blue-pink"
-          data-key="whyThisMattersTitle"
-        >
-
-    
     <!-- About You Section -->
     <section
       id="about-you"
@@ -427,19 +404,16 @@ I’d love to connect with you.
         >
           About You
         </h2>
-        <h5 class="text-gray-900 leading-relaxed px-4">
-          <div data-key="aboutYouContent">
-            <p>You are highly functioning and  internally exhausted or disconnected.</p>
-<p>You are thoughtful, brave, and self-aware.</p>
-<p>You have already tried many things coaching itself, therapy, self-development and still feel there is something deeper calling you.</p> 
-<p>You might be at a crossroads, navigating change, or noticing that old patterns keep resurfacing, especially under pressure.</p>
-<p>You are ready to find clarity in the unknown, reconnect with what truly matters to you, and take your next step with confidence.</p>
-<p>You may be grieving, feel too much or feel nothing at all.</p>
-<p>You want support that goes beyond just talking, one that includes your body, your knowing.</p>
-<p>You are ready to make decisions that honor all of you, your past, current version and the future you want to live into.</p>
-.</span>
-        </h5>
-      </div>
+        <div class="text-gray-900 leading-relaxed px-4 text-left space-y-3" data-key="aboutYouContent">
+          <p>You are highly functioning and internally exhausted or disconnected.</p>
+          <p>You are thoughtful, brave, and self-aware.</p>
+          <p>You have already tried many things coaching itself, therapy, self-development and still feel there is something deeper calling you.</p> 
+          <p>You might be at a crossroads, navigating change, or noticing that old patterns keep resurfacing, especially under pressure.</p>
+          <p>You are ready to find clarity in the unknown, reconnect with what truly matters to you, and take your next step with confidence.</p>
+          <p>You may be grieving, feel too much or feel nothing at all.</p>
+          <p>You want support that goes beyond just talking, one that includes your body, your knowing.</p>
+          <p>You are ready to make decisions that honor all of you, your past, current version and the future you want to live into.</p>
+        </div>
       </div>
     </section>
 
@@ -469,9 +443,9 @@ I’d love to connect with you.
               >
                 1:1 Coaching Sessions
               </h3>
-              <h5 class="text-gray-600" data-key="service1Desc">
+              <p class="text-gray-600" data-key="service1Desc">
                 (Online and in person)
-              </h5>
+              </p>
             </div>
           </div>
           <div
@@ -487,9 +461,9 @@ I’d love to connect with you.
               >
                 Breathwork Sessions
               </h3>
-              <h5 class="text-gray-600" data-key="service2Desc">
+              <p class="text-gray-600" data-key="service2Desc">
                 For trauma release
-              </h5>
+              </p>
             </div>
           </div>
         </div>
@@ -508,86 +482,49 @@ I’d love to connect with you.
         >
           Work With Me
         </h2>
-        <ul class="text-gray-900 leading-relaxed">
+        <ul class="text-gray-900 leading-relaxed space-y-3">
           <li class="p-2 rounded-xl flex items-start space-x-4">
-            <i
-              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
-            ></i>
+            <i class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
             <span data-key="workWithMe1">If you feel stuck</span>
           </li>
           <li class="p-2 rounded-xl flex items-start space-x-4">
-            <i
-              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
-            ></i>
-            <span data-key="workWithMe2"
-              >If you are disconnected from your body</span
-            >
+            <i class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
+            <span data-key="workWithMe2">If you are disconnected from your body</span>
           </li>
           <li class="p-2 rounded-xl flex items-start space-x-4">
-            <i
-              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
-            ></i>
-            <span data-key="workWithMe3"
-              >If you want to tap into your own resources, to free your energy,
-              get clarity and awareness behind your decisions as well as ensure
-              you make choices that align with your values and priorities</span
-            >
+            <i class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
+            <span data-key="workWithMe3">If you want to tap into your own resources, to free your energy, get clarity and awareness behind your decisions as well as ensure you make choices that align with your values and priorities</span>
           </li>
           <li class="p-2 rounded-xl flex items-start space-x-4">
-            <i
-              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
-            ></i>
-            <span data-key="workWithMe4"
-              >If you would like to stop repressing emotional impulses and
-              understand what has triggered that emotion in the here and
-              now</span
-            >
+            <i class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
+            <span data-key="workWithMe4">If you would like to stop repressing emotional impulses and understand what has triggered that emotion in the here and now</span>
           </li>
           <li class="p-2 rounded-xl flex items-start space-x-4">
-            <i
-              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
-            ></i>
-            <span data-key="workWithMe5"
-              >If you would like to get more aware of your body and emotional
-              impulses and move away from blind reaction</span
-            >
+            <i class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
+            <span data-key="workWithMe5">If you would like to get more aware of your body and emotional impulses and move away from blind reaction</span>
           </li>
           <li class="p-2 rounded-xl flex items-start space-x-4">
-            <i
-              class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl"
-            ></i>
-            <span data-key="releaseTension">
-              If you would like to release tension from your body.</span
-            >
+            <i class="fas fa-circle-check text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
+            <span data-key="releaseTension">If you would like to release tension from your body.</span>
           </li>
         </ul>
 
-        <div
-          class="mt-12 p-8 bg-purple-50 bg-opacity-60 rounded-2xl shadow-inner border border-purple-100"
-        >
+        <div class="mt-12 p-8 bg-purple-50 bg-opacity-60 rounded-2xl shadow-inner border border-purple-100 space-y-4">
           <h3
-            class="text-2xl md:text-3xl font-semibold mb-4 text-gradient-blue-pink"
+            class="text-2xl md:text-3xl font-semibold text-gradient-blue-pink"
             data-key="griefSupportTitle"
           >
             Grief Support
           </h3>
-          <h5
-            class="text-gray-900 leading-relaxed mb-4"
-            data-key="griefSupport1"
-          >
+          <p class="text-gray-900 leading-relaxed" data-key="griefSupport1">
             Grief isn't a problem to solve; It’s a process to move through - at your own pace, in your own way. It can be loud, numb, or even show up as anger, exhaustion or overworking. Having navigated my own grief since childhood, I offer a heart-centered, non-therapeutic approach that honors your unique experience. 
-          </h5>
-          <h5
-            class="text-gray-900 leading-relaxed mb-4"
-            data-key="griefSupport2"
-          >
+          </p>
+          <p class="text-gray-900 leading-relaxed" data-key="griefSupport2">
             Through integrative coaching and breathwork, we’ll create a space where you can meet your emotions safely, release what’s held in the body, begin to integrate your loss and move forward with meaning. 
-          </h5>
-          <h5 class="text-gray-900 leading-relaxed mb-4" 
-            data-key="griefSupport3">
+          </p>
+          <p class="text-gray-900 leading-relaxed" data-key="griefSupport3">
             Pain doesn’t always fade, but we can learn to hold it differently, grow around it, and live fully again.
-          </h5>
-          
+          </p>
         </div>
       </div>
     </section>
@@ -604,30 +541,24 @@ I’d love to connect with you.
         >
           How
         </h2>
-       <h5 class="text-gray-900 leading-relaxed px-4">
-  <span data-key="howContent">
-    I combine coaching and breathwork to create a grounded, integrative process that helps you reconnect with yourself — not just mentally, but physically and emotionally.<br><br>
-
-    We start by slowing down and creating space for what’s really going on beneath the surface. Whether you’re navigating grief, burnout, or a major life transition, I support you in releasing the tension and protective patterns that no longer serve you.<br><br>
-
-    We work with both the mind and the body:<br><br>
-
-    • <strong>Coaching</strong> brings clarity, direction, and gentle accountability. Through deep, well-placed questions, I help you access insight and shift perspectives without judgment or pressure.<br>
-    • <strong>Breathwork</strong> supports emotional release, nervous system regulation, and reconnection with your body. It’s not about performance — it’s about presence.<br><br>
-
-    My approach is trauma-informed, non-therapeutic, and practical. It’s designed for high-functioning, thoughtful people who are used to holding it all together — but are ready to soften, feel again, and lead from their inner strength.<br><br>
-
-    Through this work, you’ll learn to:<br><br>
-
-    • Regulate your nervous system<br>
-    • Release stored emotional tension from the body<br>
-    • Access your inner clarity and sense of self<br>
-    • Make decisions that are not just logical, but deeply aligned<br><br>
-
-    This is not about fixing you. It’s about walking you back home to yourself — with gentleness, honesty, and space to just be.
-  </span>
-</h5>
-
+        <div class="text-gray-900 leading-relaxed px-4 text-left space-y-4" data-key="howContent">
+          <p>I combine coaching and breathwork to create a grounded, integrative process that helps you reconnect with yourself — not just mentally, but physically and emotionally.</p>
+          <p>We start by slowing down and creating space for what’s really going on beneath the surface. Whether you’re navigating grief, burnout, or a major life transition, I support you in releasing the tension and protective patterns that no longer serve you.</p>
+          <p class="font-semibold pt-2">We work with both the mind and the body:</p>
+          <ul class="list-disc list-inside space-y-2 pl-2">
+            <li><strong>Coaching</strong> brings clarity, direction, and gentle accountability. Through deep, well-placed questions, I help you access insight and shift perspectives without judgment or pressure.</li>
+            <li><strong>Breathwork</strong> supports emotional release, nervous system regulation, and reconnection with your body. It’s not about performance — it’s about presence.</li>
+          </ul>
+          <p class="pt-2">My approach is trauma-informed, non-therapeutic, and practical. It’s designed for high-functioning, thoughtful people who are used to holding it all together — but are ready to soften, feel again, and lead from their inner strength.</p>
+          <p class="font-semibold pt-2">Through this work, you’ll learn to:</p>
+          <ul class="list-disc list-inside space-y-1 pl-2">
+            <li>Regulate your nervous system</li>
+            <li>Release stored emotional tension from the body</li>
+            <li>Access your inner clarity and sense of self</li>
+            <li>Make decisions that are not just logical, but deeply aligned</li>
+          </ul>
+          <p class="pt-2">This is not about fixing you. It’s about walking you back home to yourself — with gentleness, honesty, and space to just be.</p>
+        </div>
       </div>
     </section>
 
@@ -638,40 +569,29 @@ I’d love to connect with you.
     >
       <div class="max-w-4xl mx-auto text-center">
         <div
-          class="bg-blue-50 bg-opacity-80 rounded-2xl p-16 shadow-inner border border-blue-100"
+          class="bg-blue-50 bg-opacity-80 rounded-2xl p-8 md:p-16 shadow-inner border border-blue-100"
         >
           <h3
-            class="text-2xl md:text-3xl font-semibold mb-4 text-gradient-blue-pink"
+            class="text-2xl md:text-3xl font-semibold mb-6 text-gradient-blue-pink"
             data-key="clubTitle"
           >
             Pretty & Angry Girls Club
           </h3>
-          <h5
-            
+          <div
             class="text-gray-900 leading-relaxed text-lg text-left space-y-4"
             data-key="clubDescription"
           >
             <p>It is a space we co-create.</p>
-<p><strong>Pretty and Angry Girls Club</strong> is a series of group gatherings, both in-person and online, where we come together to meet one of the most misunderstood emotions: ANGER.</p>
-
-    <p>Here, we don’t push it away or try to fix it. 
-      <p>We embrace it. </p>
-            <p>We use it and transform it together.</p>
-
-    <p>You belong here whether you're simmering, silent, or explosive under anger. This is a space to remain fully yourself, in all your fire and softness.</p>
-
-    <p>We explore how anger can become a source of strength, clarity, and connection instead of something we repress or carry alone.</p>
-
-    <p>Expect a lively, laid-back atmosphere.</p>
-
-    <p>We draw from each other’s skills and expressions. You'll experience sessions that include elements of improv theatre, movement and dance, painting, boxing and more — all designed to help you process and channel your emotions in empowering, embodied ways.</p>
-
-    <p>And yes, you might as well meet new friends here.</p>
-
-    <p>This is a place where fierceness meets fun, and where your emotions have full permission to be seen and felt without judgment.</p>
-
-    <p>You’re not too much or too little here. You're just in time and fully welcomed. 🔥</p>
-          </h5>
+            <p><strong>Pretty and Angry Girls Club</strong> is a series of group gatherings, both in-person and online, where we come together to meet one of the most misunderstood emotions: ANGER.</p>
+            <p>Here, we don’t push it away or try to fix it. We embrace it. We use it and transform it together.</p>
+            <p>You belong here whether you're simmering, silent, or explosive under anger. This is a space to remain fully yourself, in all your fire and softness.</p>
+            <p>We explore how anger can become a source of strength, clarity, and connection instead of something we repress or carry alone.</p>
+            <p>Expect a lively, laid-back atmosphere.</p>
+            <p>We draw from each other’s skills and expressions. You'll experience sessions that include elements of improv theatre, movement and dance, painting, boxing and more — all designed to help you process and channel your emotions in empowering, embodied ways.</p>
+            <p>And yes, you might as well meet new friends here.</p>
+            <p>This is a place where fierceness meets fun, and where your emotions have full permission to be seen and felt without judgment.</p>
+            <p>You’re not too much or too little here. You're just in time and fully welcomed. 🔥</p>
+          </div>
         </div>
         <button
           class="btn-primary text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl mt-10"
@@ -709,18 +629,16 @@ I’d love to connect with you.
           <div class="flex items-center space-x-3">
             <i class="fas fa-phone-alt text-gradient-blue-pink text-2xl"></i>
             <a
-              href="tel:+1234567890"
+              href="tel:+41786938831"
               class="text-gray-900 hover:text-gradient-blue-pink"
               data-key="contactPhone"
               >+41 78 693 88 31</a
             >
           </div>
         </div>
-        <h5 class="text-lg text-gray-700 mt-16" data-key="contactFormPrompt">
-          Alternatively, fill out the form below and I'll get back to you
-          shortly.
-        </h5>
-        <!-- Basic contact form placeholder -->
+        <p class="text-lg text-gray-700 mt-16" data-key="contactFormPrompt">
+          Alternatively, fill out the form below and I'll get back to you shortly.
+        </p>
         <form class="mt-8 max-w-xl mx-auto space-y-6 text-left">
           <div>
             <label
@@ -790,285 +708,54 @@ I’d love to connect with you.
           <h3 class="text-2xl font-bold text-gradient-blue-pink mb-2">
             Justyna Zurawska
           </h3>
-          <h5 class="text-gray-400">&copy; 2025 All rights reserved.</h5>
+          <p class="text-gray-400">&copy; 2026 All rights reserved.</p>
         </div>
         <div class="flex space-x-6 mb-6 md:mb-0">
           <a
             href="https://instagram.com"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Instagram"
-            class="text-gray-300 hover:text-pink-400 transition-colors duration-200"
-            ><i class="fab fa-instagram text-2xl"></i
-          ></a>
+            class="hover:text-pink-400 transition-colors"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
           <a
-            href="https://linkedin.com/in/justynazurawska/"
+            href="https://linkedin.com"
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
-            class="text-gray-300 hover:text-blue-600 transition-colors duration-200"
-            ><i class="fab fa-linkedin-in text-2xl"></i
-          ></a>
+            class="hover:text-blue-400 transition-colors"
+          >
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
         </div>
-        <nav
-          class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-gray-400"
-        >
-          <a
-            href="#about"
-            class="hover:text-white transition-colors duration-200"
-            >About Me</a
-          >
-          <a
-            href="#services"
-            class="hover:text-white transition-colors duration-200"
-            >Services</a
-          >
-          <a
-            href="#contact"
-            class="hover:text-white transition-colors duration-200"
-            >Contact</a
-          >
-        </nav>
       </div>
     </footer>
 
+    <!-- Interactive Menus JavaScript -->
     <script>
-      // Language content
-      const content = {
-        en: {
-          heroTitle: "Think. Breathe. Allow. Glow.",
-          heroSubtitle:
-            "Coaching & Breathwork for high-functioning people ready to reconnect with their inner strength, clarity, presence and rewire stress responses.",
-          bookSession: "Book a Session",
-          
-           whyThisMattersTitle: "Why This Matters",
-          whyThisMattersContent:
-            "You are highly functioning and  internally exhausted or disconnected. Because being high-functioning doesn’t mean you’re fine. You can appear composed, capable, and in control — while silently carrying exhaustion, grief, or a deep sense of disconnection. When you’ve always been the strong one, it’s easy to override your own needs. To stay busy, overthink, or keep going while something inside feels off or unresolved. But true strength isn’t just about holding it together. It’s about having the space to fall apart safely — and come back to yourself with more honesty, clarity, and inner calm. This work matters because you matter. Not just the version of you who achieves and performs — but the whole, complex, feeling human underneath. By slowing down, meeting your emotions, and reconnecting with your body, you can stop surviving and start living. You can make decisions that honor who you are now — not just who you've been expected to be. This is how you can reclaim presence. Power. And peace.</p>",
-          
-          aboutMeTitle: "About Me",
-         aboutMePara1:
-  "As a coach and breathwork practitioner, I support high-functioning, thoughtful individuals who feel stuck, overwhelmed, disconnected, or are going through transitions — even after therapy, coaching, or years of self-development. Many of the people I work with are navigating grief, burnout, or identity shifts. Some feel emotionally disconnected or constantly under pressure to keep everything together, despite their success. I help them release tension stored in the body, reconnect with their emotions, and return to their inner clarity and strength — so they can move through life with greater ease, presence, and purpose. I also work as an HR Business Partner in a global reinsurance company in Zurich, Switzerland. Over the past decade, I have worked across academia, startups, and corporate environments — experiences that have given me a deep understanding of performance, change, ambition, and the hidden struggles that often exist behind success.",
-
-aboutMePara2:
-  "My approach is grounded, compassionate, and curious. I have always been fascinated by human experience and the power of meaningful questions — something I discovered through the Socratic method during my studies in Philosophy. I was amazed by how a single, well-placed question could open space for clarity and change. Today, I bring this curiosity into my coaching, creating space for reflection, awareness, and transformation. My work combines strategic insight with deep presence, integrating both mind and body through coaching and breathwork.",
-
-aboutMePara3:
-  "Since childhood, I have been deeply curious about the world, people, life, and death. One of the questions I often return to is: What do I want to do with this life? And how can I contribute? My own experiences with loss, change, and resilience have shaped the way I see life — not as something to simply get through, but as something to consciously participate in. I believe healing is not the destination. At some point, the question changes. It is no longer: “Why am I like this?” It becomes: “What do I want to do with this life?”",
-
-aboutMePara4:
-  "My life has been full of transitions and new adventures — learning Greek while living in Greece, diving into Swiss labor law and German after moving to Zurich, or even completing a full-stack development bootcamp during the pandemic (yes, I could probably be a developer too!). I am a lifelong learner, always curious and always exploring. My background is as diverse as my interests: I hold a BA in Business Management, an MA in Intercultural Communication, studied Philosophy, completed a full-stack development bootcamp, learned languages through living in different countries, and continue to explore life through movement, creativity, introspection, nature, and connection.",
-
-aboutMePara5:
-  "Above all, I love connecting with people — I like to joke that it’s an only-child thing. Whether you are seeking clarity, a deeper connection with yourself, or a new way of moving through life, you are welcome here and I would love to connect with you. My intention is not to fix you — but to help you reconnect with the wisdom, strength, and aliveness that are already within you. Through coaching and breathwork, you can learn practical tools to manage stress, release what no longer serves you, and make choices that truly reflect who you are.",
-           aboutYouTitle: "About You",
-          aboutYouContent:
-            "<p>You are highly functioning and  internally exhausted or disconnected.</p>
-<p>You are thoughtful, brave, and self-aware.</p>
-<p>You have already tried many things coaching itself, therapy, self-development and still feel there is something deeper calling you.</p> 
-<p>You might be at a crossroads, navigating change, or noticing that old patterns keep resurfacing, especially under pressure.</p>
-<p>You are ready to find clarity in the unknown, reconnect with what truly matters to you, and take your next step with confidence.</p>
-<p>You may be grieving, feel too much or feel nothing at all.</p>
-<p>You want support that goes beyond just talking, one that includes your body, your knowing.</p>
-<p>You are ready to make decisions that honor all of you, your past, current version and the future you want to live into.</p>",
-          myServicesTitle: "My Services",
-          service1Title: "1:1 Coaching Sessions",
-          service1Desc: "(Online and in person)",
-          service2Title: "Breathwork Sessions",
-          service2Desc: "For trauma release",
-          workWithMeTitle: "Work With Me",
-          workWithMe1: "If you feel stuck",
-          workWithMe2: "If you are disconnected from your body",
-          workWithMe3:
-            "If you want to tap into your own resources, to free your energy, get clarity and awareness behind your decisions as well as ensure you make choices that align with your values",
-          workWithMe4:
-            "If you would like to stop repressing emotional impulses and understand what has triggered that emotion in the here and now",
-          workWithMe5:
-            "If you would like to get more aware of your body and emotional impulses and move away from blind reaction",
-          griefSupportTitle: "Grief Support",
-          griefSupport1:
-            "Grief isn't a problem to solve; It’s a process to move through - at your own pace, in your own way. It can be loud, numb, or even show up as anger, exhaustion or overworking. Having navigated my own grief since childhood, I offer a heart-centered, non-therapeutic approach that honors your unique experience. ",
-          griefSupport2:
-            "Through integrative coaching and breathwork, we’ll create a space where you can meet your emotions safely, release what’s held in the body, begin to integrate your loss and move forward with meaning. ",
-          griefSupport3:
-            "Pain doesn’t always fade, but we can learn to hold it differently, grow around it, and live fully again.",
-
-
-          releaseTension: "If you would like to release tension from your body",
-          howTitle: "How",
-howContent:
-  "I combine coaching and breathwork to create a grounded, integrative process that helps you reconnect with yourself — mentally, physically, and emotionally.\n\n" +
-  "We start by slowing down and creating space for what’s going on beneath the surface. Whether you’re navigating grief, burnout, or a life transition, I help you release tension and protective patterns that no longer serve.\n\n" +
-  "We work with both the mind and the body:\n\n" +
-  "• Coaching brings clarity, direction, and perspective. Through honest, well-placed questions, I help you access insight and shift patterns without pressure.\n" +
-  "• Breathwork supports emotional release, nervous system regulation, and reconnection with the body. It’s not about performance — it’s about presence.\n\n" +
-  "This approach is trauma-informed, non-therapeutic, and practical. It’s for high-functioning people ready to soften, feel again, and lead from their own inner calm.\n\n" +
-  "You’ll learn to:\n" +
-  "• Regulate your nervous system\n" +
-  "• Release stored emotional tension from the body\n" +
-  "• Access inner clarity and confidence\n" +
-  "• Make deeply aligned decisions\n\n" +
-  "This isn’t about fixing you — it’s about walking you back home to yourself, with honesty, presence, and care."
-
-          joinTitle: "Join",
-          clubTitle: "Pretty & Angry Girls Club",
-          clubDescription:
-            "It is a space we co-create. Pretty and Angry Girls Club is a series of group gatherings, both in-person and online, where we come together to meet one of the most misunderstood emotions: ANGER. Here, we do not push it away or try to fix it. We embrace it. We use it and transform it together. You belong here whether you are simmering, silent, or explosive under anger. This is a space to remain fully yourself, in all your fire and softness. We explore how anger can become a source of strength, clarity, and connection instead of something we repress or carry alone. Expect a lively, laid-back atmosphere. We draw from each other’s skills and expressions. You will experience sessions that include elements of improv theatre, movement and dance, painting, boxing and more - all designed to help you process and channel your emotions in empowering, embodied ways. And yes, you might as well meet new friends here. This is a place where fierceness meets fun, and where your emotions have full permission to be seen and felt without judgment. You are not too much or too little here. You are just in time and fully welcomed. 🔥",
-          joinNow: "Join Now",
-          contactTitle: "Get in Touch",
-          contactSubtitle:
-            "Ready to take the first step? I'd love to hear from you.",
-          contactEmail: "coaching@justynazurawska.com",
-          contactPhone: "+41 78 693 88 31",
-          contactFormPrompt:
-            "Alternatively, fill out the form below and I'll get back to you shortly.",
-          formNameLabel: "Name",
-          formNamePlaceholder: "Your Name",
-          formEmailLabel: "Email",
-          formEmailPlaceholder: "your.email@example.com",
-          formMessageLabel: "Message",
-          formMessagePlaceholder: "Tell me about your needs...",
-          formSubmitButton: "Send Message",
-        },
-        pl: {
-          heroTitle: "Myśl. Oddychaj. Pozwól. Błyszcz.",
-          heroSubtitle:
-            "Coaching i praca z oddechem dla tych, którzy chcą odzyskać dostęp do wewnętrznej siły, jasności i spokoju, a także przeprogramować swoje reakcje na stres.",
-          bookSession: "Zaplanuj sesję",
-          aboutMeTitle: "O Mnie",
-          aboutMePara1:
-            "Jako coach i praktyk pracy z oddechem, wspieram klientów w uwalnianiu wzorców, które już im nie służą, pomagam nawigować przez życiowe zmiany oraz rozwijać jasność umysłu, odporność i umiejętność poruszania się przez życie z większą lekkością i obecnością. Równocześnie pracuję jako HR Business Partner w globalnej firmie reasekuracyjnej w Zurychu, w Szwajcarii.",
-          aboutMePara2:
-            "Mój sposób pracy łączy wieloletnie doświadczenie w środowiskach o wysokich wymaganiach, akademickich i strategicznych, z podejściem świadomym traumy, ale nie terapeutycznym. Od dziecka jestem głęboko ciekawa świata i tego, co to znaczy być człowiekiem. Ta ciekawość skłoniła mnie do studiowania filozofii jako drugiego kierunku, obok mojego wykształcenia w zarządzaniu biznesem (licencjat) oraz komunikacji międzykulturowej (magister). Moja przygoda z coachingiem i pracą z oddechem zaczęła się jednak dużo wcześniej, zanim znałam te słowa i wiedziałam, że ukształtują moją pracę. Pierwsze zafascynowanie przyszło dzięki sile pytań, poznanej m.in. przez metodę sokratyczną – zachwyciło mnie, jak jedno dobrze postawione pytanie może otworzyć przestrzeń dla jasności, wglądu i zmiany. Później odkryłam pracę z oddechem i polubiłam jej prostotę i dostępność.",
-          aboutMePara3:
-            "Jestem osobą, która uczy się przez całe życie i na każdym etapie ciągle poszerzam swoją wiedzę. Niezależnie od tego, czy była to nauka greckiego podczas pobytu w Grecji, szwajcarskiego prawa pracy i niemieckiego po przeprowadzce do Szwajcarii, czy też bootcamp z programowania podczas pandemii (tak, mogłabym być też developerem), stale rozwijam swoje kompetencje. Ponad wszystko uwielbiam kontakt z ludźmi. Lubię żartować, że to syndrom jedynaka. Możesz mnie też spotkać na improwizacji teatralnej, wydarzeniach tanecznych, grająca w badmintona lub pod woda jako nurek. Niezależnie od tego, czy szukasz jasności, połączenia, czy zmiany, która zaczyna się od środka – jesteś tu mile widziany/a i zapraszam do kontaktu! :)",
-          aboutYouTitle: "O Tobie",
-          aboutYouContent:
-            "Jesteś osobą refleksyjną, odważną, świadomą siebie. Masz już za sobą wiele  coaching sam w sobie, terapię, rozwój osobisty a mimo to czujesz, że wciąż coś w Tobie woła głębiej. Być może jesteś na rozdrożu. Przechodzisz przez zmianę. A może zauważasz, że w trudnych momentach znów wracają stare schematy. Masz gotowość odnaleźć klarowność nawet w niepewności, wrócić do tego, co naprawdę dla Ciebie ważne, i z odwagą zrobić kolejny krok. Możliwe, że przeżywasz stratę. Czujesz zbyt dużo… albo nie czujesz nic. Szukasz wsparcia, które sięga głębiej niż rozmowa. Takiego, które obejmuje także ciało, oddech i Twoją wewnętrzną mądrość. Masz gotowość podejmować decyzje, które będą spójne z całą Tobą – z Twoją przeszłością, tym kim jesteś teraz, i tym, ku czemu chcesz iść.
-",
-          myServicesTitle: "Moje Usługi",
-          service1Title: "Sesje Coachingowe 1:1",
-          service1Desc: "(Online i osobiście)",
-          service2Title: "Sesje Pracy z Oddechem",
-          service2Desc: "Dla uwolnienia traumy",
-          workWithMeTitle: "Pracuj ze Mną",
-          workWithMe1: "Jeśli czujesz się zablokowany",
-          workWithMe2: "Jeśli jesteś odłączony od swojego ciała",
-          workWithMe3:
-            "Jeśli chcesz wykorzystać swoje wewnętrzne zasoby, uwolnić energię, uzyskać jasność i świadomość swoich decyzji, a także upewnić się, że dokonujesz wyborów zgodnych z Twoimi wartościami",
-          workWithMe4:
-            "Jeśli chciałbyś przestać tłumić impulsy emocjonalne i zrozumieć, co wywołało tę emocję tu i teraz",
-          workWithMe5:
-            "Jeśli chciałbyś stać się bardziej świadomy swojego ciała i impulsów emocjonalnych i odejść od ślepych reakcji",
-          griefSupportTitle: "Wsparcie w Żałobie",
-          griefSupport1:
-            "Jeśli cierpisz z powodu niedawnej lub nawracającej straty, czy to śmierci bliskiej osoby, utraty pracy, czy czegokolwiek, co wywołało nieprzetworzoną żałobę, jestem tutaj, aby pomóc Ci stworzyć nowe poczucie normalności.",
-          griefSupport2:
-            "Jeśli chciałbyś zintegrować swoją stratę ze swoim życiem i przejść do nowego poczucia normalności.",
-          griefSupport3:
-            "Pomogę Ci poradzić sobie z bolesnymi emocjami po stracie bliskiej osoby, uporać się z żałobą i ruszyć naprzód z sensem i celem - w jak najkrótszym czasie. Nie musisz tego robić sam — i nie musi to trwać wiecznie.",
-          releaseTension: "Jeśli chciałbyś uwolnić napięcie z ciała",
-          howTitle: "Jak",
-          howContent:
-            "Połączymy się z wypartymi emocjami, abyśmy mogli je uwolnić z naszych ciał.",
-          joinTitle: "Dołącz",
-          clubTitle: "Pretty & Angry Girls Club",
-          clubDescription:
-            "Pretty and Angry Girls Club to cykl grupowych spotkań – na żywo i online – podczas których razem stajemy twarzą w twarz z jedną z najbardziej niezrozumiałych emocji: ZŁOŚCIĄ. Tutaj nie odpychamy jej ani nie próbujemy naprawić. Przyjmujemy ją. Korzystamy z niej i razem przekształcamy. Niezależnie od tego, czy kiedy odczuwasz złość to w Tobie coś się tli, milczy, czy eksploduje – jesteście tu mile widziani. To przestrzeń, w której możesz być w pełni sobą – w całym swoim ogniu i delikatności. Odkrywamy, jak złość może stać się źródłem siły, jasności i połączenia, zamiast czymś, co tłumimy lub dźwigamy samemu w sobie. Spodziewaj się żywej, luźnej atmosfery. Czerpiemy z siebie nawzajem – z naszych umiejętności, ekspresji, energii. Doświadczysz spotkań z elementami teatru improwizowanego, ruchu i tańca, malowania, boksu i innych form, które pomogą Ci przeżyć i wyrazić emocje w sposób wzmacniający i osadzony w ciele. I tak, całkiem możliwe, że poznasz tu nowe osoby, z którymi się zaprzyjaźnisz. To miejsce, gdzie dzikość spotyka lekkość, a Twoje emocje mają pełne prawo do tego, by być widziane i odczute – bez oceny. Tutaj nie ma ciebie za dużo czy za mało. To najlepszy czas na to, żeby poczuć się mile widzianymi takimi jakimi jestesmy. 🔥",
-          joinNow: "Dołącz teraz",
-          contactTitle: "Skontaktuj się ze Mną",
-          contactSubtitle: "Gotowy na pierwszy krok? Chętnie Cię wysłucham.",
-          contactEmail: "coaching@justynazurawska.com",
-          contactPhone: "+41 78 693 88 31",
-          contactFormPrompt:
-            "Alternatywnie, wypełnij poniższy formularz, a wkrótce się z Tobą skontaktuję.",
-          formNameLabel: "Imię",
-          formNamePlaceholder: "Twoje Imię",
-          formEmailLabel: "Email",
-          formEmailPlaceholder: "twój.email@example.com",
-          formMessageLabel: "Wiadomość",
-          formMessagePlaceholder: "Opowiedz mi o swoich potrzebach...",
-          formSubmitButton: "Wyślij Wiadomość",
-        },
-      };
-
-      let currentLang = "en";
-
-      // Function to update content based on language
-      function updateContent(lang) {
-        document.querySelectorAll("[data-key]").forEach((element) => {
-          const key = element.getAttribute("data-key");
-          if (content[lang][key]) {
-            element.textContent = content[lang][key];
-          }
-        });
-        document.getElementById(
-          "language-toggle-button"
-        ).childNodes[0].nodeValue = lang.toUpperCase() + " ";
-      }
-
-      // Language toggle functionality
-      const langToggleButton = document.getElementById(
-        "language-toggle-button"
-      );
-      const langMenu = document.getElementById("language-menu");
-
-      langToggleButton.addEventListener("click", (event) => {
-        event.stopPropagation(); // Prevent document click from closing immediately
-        langMenu.classList.toggle("hidden");
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
       });
 
-      langMenu.querySelectorAll("button").forEach((button) => {
-        button.addEventListener("click", (event) => {
-          currentLang = event.target.dataset.lang;
-          updateContent(currentLang);
-          langMenu.classList.add("hidden");
-        });
+      // Language menu toggle
+      const langBtn = document.getElementById('language-toggle-button');
+      const langMenu = document.getElementById('language-menu');
+
+      langBtn.addEventListener('click', () => {
+        langMenu.classList.toggle('hidden');
       });
 
-      // Close language menu if clicked outside
-      document.addEventListener("click", (event) => {
-        if (
-          !langToggleButton.contains(event.target) &&
-          !langMenu.contains(event.target)
-        ) {
-          langMenu.classList.add("hidden");
+      // Close dropdowns on outside click
+      window.addEventListener('click', (e) => {
+        if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+          langMenu.classList.add('hidden');
         }
-      });
-
-      // Mobile menu functionality
-      const mobileMenuButton = document.getElementById("mobile-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      mobileMenuButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        // Select all anchors with href starting with #
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            const headerOffset = document.querySelector("header").offsetHeight; // Get height of fixed header
-            const elementPosition =
-              targetElement.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - headerOffset - 20; // Add some extra padding
-
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth",
-            });
-          }
-          // Close mobile menu if open
-          if (!mobileMenu.classList.contains("hidden")) {
-            mobileMenu.classList.add("hidden");
-          }
-        });
-      });
-
-      // Initial content load
-      document.addEventListener("DOMContentLoaded", () => {
-        updateContent(currentLang);
       });
     </script>
   </body>
