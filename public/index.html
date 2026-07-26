@@ -427,13 +427,46 @@ Whether you're navigating a major transition, feeling burnt out, or simply looki
           <p>I am always performing.</p>
           <p>I feel stuck in my head.</p>
         </div>
-         <div class="mt-10 text-center">
-          <img
-            src="/AboutYouFourPics.png"
-            alt="Client"
-            class="rounded-full mx-auto shadow-lg border-4 border-white w-64"
-          />
-        </div>
+         <!-- Container for the 4 pictures: 1 column on mobile, 2 on tablets, 4 in a row on desktop -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto my-10 px-4">
+
+  <!-- Picture 1 -->
+  <div class="overflow-hidden rounded-2xl shadow-md border-2 border-white/80 bg-white hover:shadow-xl transition-all duration-300">
+    <img
+      src="/AboutYou1.png"
+      alt="Client photo 1"
+      class="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+
+  <!-- Picture 2 -->
+  <div class="overflow-hidden rounded-2xl shadow-md border-2 border-white/80 bg-white hover:shadow-xl transition-all duration-300">
+    <img
+      src="/AboutYou2.png" 
+      alt="Client photo 2"
+      class="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+
+  <!-- Picture 3 -->
+  <div class="overflow-hidden rounded-2xl shadow-md border-2 border-white/80 bg-white hover:shadow-xl transition-all duration-300">
+    <img
+      src="/AboutYou3.png" 
+      alt="Client photo 3"
+      class="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+
+  <!-- Picture 4 -->
+  <div class="overflow-hidden rounded-2xl shadow-md border-2 border-white/80 bg-white hover:shadow-xl transition-all duration-300">
+    <img
+      src="/AboutYouPic4.png" 
+      alt="Client photo 4"
+      class="w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
+    />
+  </div>
+
+</div>
       </div>
     </section>
 
