@@ -100,222 +100,96 @@
   </head>
   <body class="selection:bg-blue-100 selection:text-blue-800">
     <!-- Header -->
-    <header
-      class="bg-white bg-opacity-80 backdrop-blur-sm shadow-sm py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50 rounded-b-lg"
-    >
-      <div class="flex items-center">
-      <img 
-    src="/smile.png" 
-    alt="smile" 
-    class="w-8 h-8 mr-2 rounded-full object-cover" 
-  />
-  <a
-    href="#"
-    class="text-xl md:text-2xl font-bold text-gradient-blue-pink whitespace-nowrap"
-    >
-        <a
-          href="#"
-          class="text-xl md:text-2xl font-bold text-gradient-blue-pink whitespace-nowrap"
-          >Think. Breathe. Allow. Glow. Connect. Stay Open.</a
-        >
-      </div>
-      <nav class="hidden md:flex space-x-8 lg:space-x-12">
-        <a
-          href="#about"
-          class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
-          >About Me</a
-        >
-        <a
-          href="#services"
-          class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
-          >Services</a
-        >
-        <a
-          href="#join"
-          class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
-          >Join</a
-        >
-        <a
-          href="#contact"
-          class="text-gray-900 hover:text-gradient-blue-pink hover:font-medium transition-colors duration-200 text-lg"
-          >Contact</a
-        >
-      </nav>
-      <div class="flex items-center space-x-4">
-        <div class="relative inline-block text-left z-20">
-    
-          
-            <div class="py-1" role="none">
-        
-            </div>
-          </div>
-        </div>
-        <button
-          id="mobile-menu-button"
-          class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-        >
-          <i class="fas fa-bars text-xl"></i>
-        </button>
-      </div>
-    </header>
+<header class="bg-white/80 backdrop-blur-sm shadow-sm py-3.5 px-4 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50 rounded-b-lg">
+  <!-- Brand / Logo Area -->
+  <div class="flex items-center min-w-0 mr-2">
+    <img src="/smile.png" alt="smile" class="w-8 h-8 mr-2 rounded-full object-cover flex-shrink-0" />
+    <a href="#" class="text-base sm:text-lg md:text-2xl font-bold text-gradient-blue-pink truncate max-w-[200px] sm:max-w-none">
+      Think. Breathe. Allow. Glow. Connect. Stay Open.
+    </a>
+  </div>
 
-    <!-- Mobile Menu -->
-    <div
-      id="mobile-menu"
-      class="fixed inset-0 bg-white bg-opacity-95 z-40 hidden md:hidden flex flex-col items-center justify-center space-y-6 pt-20"
-    >
-      <a
-        href="#about"
-        class="text-gray-900 hover:text-gradient-blue-pink text-2xl font-medium"
-        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-        >About Me</a
-      >
-      <a
-        href="#services"
-        class="text-gray-900 hover:text-gradient-blue-pink text-2xl font-medium"
-        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-        >Services</a
-      >
-      <a
-        href="#join"
-        class="text-gray-900 hover:text-gradient-blue-pink text-2xl font-medium"
-        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-        >Join</a
-      >
-      <a
-        href="#contact"
-        class="text-gray-900 hover:text-gradient-blue-pink text-2xl font-medium"
-        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-        >Contact</a
-      >
+  <!-- Desktop Navigation -->
+  <nav class="hidden md:flex space-x-8 lg:space-x-12">
+    <a href="#about" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">About Me</a>
+    <a href="#services" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Services</a>
+    <a href="#join" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Join</a>
+    <a href="#contact" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Contact</a>
+  </nav>
+
+  <!-- Mobile Menu Button -->
+  <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none p-1" aria-label="Toggle Menu">
+    <i class="fas fa-bars text-xl"></i>
+  </button>
+</header>
+
+<!-- Mobile Overlay Menu -->
+<div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-md z-40 hidden md:hidden flex flex-col items-center justify-center space-y-6 pt-16">
+  <a href="#about" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Me</a>
+  <a href="#services" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
+  <a href="#join" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Join</a>
+  <a href="#contact" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+</div>
+
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden pt-28 pb-12 md:pt-32 md:pb-16 px-4">
+  <!-- Background Ripple Effect -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <svg class="w-full h-full" viewBox="0 0 1000 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="500" cy="480" r="150" stroke="#ADD8E6" stroke-width="2" opacity="0.6" class="animated-ripple"></circle>
+      <circle cx="500" cy="480" r="200" stroke="#ADD8E6" stroke-width="2" opacity="0.4" class="animated-ripple" style="animation-delay: 2s"></circle>
+      <circle cx="500" cy="480" r="250" stroke="#ADD8E6" stroke-width="2" opacity="0.2" class="animated-ripple" style="animation-delay: 4s"></circle>
+      <path class="animated-subtle" d="M100 100 Q110 90 120 100 Q110 110 100 100 Z" fill="#FFFFFF" opacity="0.7"></path>
+      <path class="animated-subtle" d="M800 50 Q810 40 820 50 Q810 60 800 50 Z" fill="#F0F8FF" opacity="0.6" style="animation-delay: 2.5s"></path>
+      <path class="animated-subtle" d="M200 20 Q210 10 220 20 Q210 30 200 20 Z" fill="#EBF5F8" opacity="0.5" style="animation-delay: 5s"></path>
+      <path class="animated-subtle" d="M700 200 Q710 190 720 200 Q710 210 700 200 Z" fill="#F5F5DC" opacity="0.7" style="animation-delay: 1.2s"></path>
+      <path class="animated-subtle" d="M300 150 Q310 140 320 150 Q310 160 300 150 Z" fill="#ADD8E6" opacity="0.6" style="animation-delay: 3.8s"></path>
+    </svg>
+  </div>
+
+  <!-- Hero Content Container -->
+  <div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center justify-center">
+
+    <!-- Kicker Badge -->
+    <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold text-sky-700 bg-sky-50 border border-sky-200/60 rounded-full uppercase tracking-wider">
+      Human in the Age of AI
+    </span>
+
+    <!-- Headline -->
+    <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gradient-blue-pink leading-snug sm:leading-tight mb-4">
+      A journey from thinking to doing, and from doing to being.
+    </h1>
+
+    <!-- Core Subtitle -->
+    <p class="text-sm sm:text-base md:text-lg font-medium text-gray-800 leading-relaxed mb-5 max-w-2xl">
+      Success is no longer only about thinking faster, doing more, or staying ahead. It is about developing the capacity to be present, to feel, to connect, to create, and to choose consciously.
+    </p>
+
+    <!-- Glassmorphism Card -->
+    <div class="bg-white/70 backdrop-blur-md border border-white/80 rounded-2xl p-4 sm:p-6 shadow-sm space-y-3 text-left sm:text-center text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl">
+      <p>
+        Moving beyond over-control, constant striving, and survival patterns that once helped you succeed, you will reconnect with your embodied self, regulate your stress responses, and release the armor built through years of achievement.
+      </p>
+      <p>
+        This is an invitation to return to yourself, to express who you truly are, create from a place of alignment, and participate more fully in your own life.
+      </p>
     </div>
 
-    <!-- Hero Section -->
-    <section
-      class="relative h-screen flex items-center justify-center text-center overflow-hidden"
-    >
-      <div class="absolute inset-0 z-0">
-        <svg
-          class="w-full h-full"
-          viewBox="0 0 1000 900"
-          preserveAspectRatio="xMidYMid slice"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="500"
-            cy="480"
-            r="150"
-            stroke="#ADD8E6"
-            stroke-width="2"
-            opacity="0.6"
-            class="animated-ripple"
-          ></circle>
-          <circle
-            cx="500"
-            cy="480"
-            r="200"
-            stroke="#ADD8E6"
-            stroke-width="2"
-            opacity="0.4"
-            class="animated-ripple"
-            style="animation-delay: 2s"
-          ></circle>
-          <circle
-            cx="500"
-            cy="480"
-            r="250"
-            stroke="#ADD8E6"
-            stroke-width="2"
-            opacity="0.2"
-            class="animated-ripple"
-            style="animation-delay: 4s"
-          ></circle>
-          <path
-            class="animated-subtle"
-            d="M100 100 Q110 90 120 100 Q110 110 100 100 Z"
-            fill="#FFFFFF"
-            opacity="0.7"
-          ></path>
-          <path
-            class="animated-subtle"
-            d="M800 50 Q810 40 820 50 Q810 60 800 50 Z"
-            fill="#F0F8FF"
-            opacity="0.6"
-            style="animation-delay: 2.5s"
-          ></path>
-          <path
-            class="animated-subtle"
-            d="M200 20 Q210 10 220 20 Q210 30 200 20 Z"
-            fill="#EBF5F8"
-            opacity="0.5"
-            style="animation-delay: 5s"
-          ></path>
-          <path
-            class="animated-subtle"
-            d="M700 200 Q710 190 720 200 Q710 210 700 200 Z"
-            fill="#F5F5DC"
-            opacity="0.7"
-            style="animation-delay: 1.2s"
-          ></path>
-          <path
-            class="animated-subtle"
-            d="M300 150 Q310 140 320 150 Q310 160 300 150 Z"
-            fill="#ADD8E6"
-            opacity="0.6"
-            style="animation-delay: 3.8s"
-          ></path>
-        </svg>
-      </div>
-
-    <!-- Container designed to fit gracefully within a single screen view on desktop -->
-<section class="relative z-10 px-4 pt-20 pb-8 md:pt-28 md:pb-12 max-w-4xl mx-auto text-center flex flex-col items-center justify-center min-h-[calc(100vh-5rem)]">
-
-  <!-- Badge / Kicker -->
-  <span class="inline-block px-3 py-1 mb-4 text-xs font-semibold text-sky-700 bg-sky-50 border border-sky-200/60 rounded-full uppercase tracking-wider">
-    Human in the Age of AI
-  </span>
-
-  <!-- Main Headline -->
-  <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gradient-blue-pink leading-tight mb-4 max-w-3xl">
-    A journey from thinking to doing, and from doing to being.
-  </h1>
-
-  <!-- Core Subtitle / Value Prop -->
-  <p class="text-base sm:text-lg md:text-xl font-medium text-gray-800 leading-relaxed mb-6 max-w-2xl">
-    Success is no longer only about thinking faster, doing more, or staying ahead. It is about developing the capacity to be present, to feel, to connect, to create, and to choose consciously.
-  </p>
-
-  <!-- Content Card with Glassmorphic Backdrop -->
-  <div class="bg-white/70 backdrop-blur-md border border-white/80 rounded-2xl p-5 sm:p-6 shadow-sm space-y-4 max-w-2xl text-left sm:text-center text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
-    <p>
-      Moving beyond over-control, constant striving, and survival patterns that once helped you succeed, you will reconnect with your embodied self, regulate your stress responses, and release the armor built through years of achievement.
+    <!-- Final Statement -->
+    <p class="mt-5 text-xs sm:text-sm md:text-base font-semibold text-gray-900 tracking-wide">
+      Because the future does not only need smarter technology. <br class="hidden sm:inline" />
+      <span class="text-sky-600">It needs more conscious humans.</span>
     </p>
-    <p>
-      This is an invitation to return to yourself, to express who you truly are, create from a place of alignment, and participate more fully in your own life.
-    </p>
+
+    <!-- Primary CTA -->
+    <div class="mt-6">
+      <button class="btn-primary text-white font-semibold py-3 px-8 rounded-full text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5" data-key="bookSession">
+        Book a Session
+      </button>
+    </div>
+
   </div>
-
-  <!-- Final Punchline Callout -->
-  <p class="mt-6 text-sm sm:text-base font-semibold text-gray-900 tracking-wide max-w-xl">
-    Because the future does not only need smarter technology. <br class="hidden sm:inline" />
-    <span class="text-sky-600">It needs more conscious humans.</span>
-  </p>
-
 </section>
-
-  <!-- CTA Button -->
-  <div class="mt-8">
-    <button
-      class="btn-primary text-white font-semibold py-3.5 px-8 rounded-full text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5"
-      data-key="bookSession"
-    >
-      Book a Session
-    </button>
-  </div>
-
-</div>
-    </section>
 
     <!-- Why This Matters Section -->
     <section
