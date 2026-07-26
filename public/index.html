@@ -403,64 +403,196 @@ Many people have already explored self-development through reflection, mindset w
       </div>
     </section>
 
-    <!-- About Me Section -->
-    <section
-      id="about"
-      class="container mx-auto px-6 py-16 md:py-24 mt-16 md:mt-24 section-bg-light rounded-3xl"
+   <!-- About Me Section -->
+<section
+  id="about"
+  class="container mx-auto px-6 py-16 md:py-24 mt-16 md:mt-24 section-bg-light rounded-3xl shadow-sm"
+>
+  <div class="max-w-4xl mx-auto">
+    <!-- Header -->
+    <h2
+      class="text-3xl md:text-5xl font-bold text-center mb-10 text-gradient-blue-pink"
+      data-key="aboutMeTitle"
     >
-      <div class="max-w-4xl mx-auto">
-        <h2
-          class="text-3xl md:text-5xl font-bold text-center mb-10 text-gradient-blue-pink"
-          data-key="aboutMeTitle"
-        >
-          About Me
-        </h2>
-        <div
-          class="prose lg:prose-xl text-gray-900 leading-relaxed text-justify mx-auto space-y-4"
-        >
-          <p data-key="aboutMePara1">
-            One of the songs that stayed with me from a young age was "It's My Life" by Bon Jovi—especially the line: "It's my life, it's now or never." 
-            Those words resonated deeply because I learned early on how fragile and precious life truly is. 
-            After losing my mother at a young age, I witnessed both the weight of grief and the beauty of resilience through my father’s conscious, loving and steady presence. 
-            His strength taught me that even in difficult situations, we can choose to live fully, intentionally, and with heart.
-            <br/><br/>
-            Today, I support high-functioning women who have built successful lives, yet feel secretly exhausted, running on low batteries, 
-            or disconnected from their true vitality. Many of the women I work with carry immense talent, depth, and unused creative energy 
-            that has been sidelined by constant busyness and performance. My work combines practical coaching, somatic practices, and breathwork 
-            to help you recharge your system, quiet the mental chatter, 
-            and tap back into the rich reservoir of intuition, creativity, and clarity already within you.
+      About Me
+    </h2>
+
+    <!-- Visible Initial Content (Before 'Continue Reading') -->
+    <div class="prose lg:prose-xl text-gray-900 leading-relaxed text-justify mx-auto space-y-6">
+      <p>
+        One of the songs that stayed with me from a young age was “It’s My Life” by Bon Jovi — especially the line: <em>“It’s my life, it’s now or never.”</em>
+      </p>
+      <p>
+        Those words resonated deeply because I learned early that life is both fragile and precious. After losing my mother at a young age, I experienced the depth of grief and the many ways loss can change our relationship with life. At the same time, I witnessed the power of resilience through my father’s conscious, loving, and steady presence. He showed me that even in difficult moments, we still have the ability to choose how we meet life.
+      </p>
+      <p class="font-medium text-gray-900 italic bg-white/60 p-4 rounded-xl border-l-4 border-sky-500">
+        This question has stayed with me ever since: <br/>
+        <strong class="text-sky-800 font-semibold">How do we not simply move through life, but truly participate in it?</strong>
+      </p>
+      <p>
+        Growing up as a child in a small Polish village, surrounded mostly by people and experiences that felt familiar, I developed a strong curiosity about the wider world. Books, stories, and media became my window into other cultures, places, and ways of living. They sparked a desire to explore beyond what I knew — to understand different perspectives, meet different people, and experience life outside the boundaries of my own environment.
+      </p>
+      <p>
+        That curiosity eventually led me to live abroad and become part of international communities. As a student, moving between different countries and sharing everyday life with people from different backgrounds felt natural. I found it easy to connect, adapt, laugh, learn, and create a sense of belonging across cultures.
+      </p>
+      <p>
+        Arriving in Zurich, however, showed me another side of living abroad. Building connection in a city that can sometimes feel more reserved and distant was a different experience. It challenged me to explore questions that have become central to my work: What allows people to feel connected? What helps us create belonging? How do we remain open when our environment does not immediately mirror our own way of relating?
+      </p>
+      <p>
+        These questions continue to shape the way I see people, relationships, and life itself.
+      </p>
+
+      <!-- FIRST PICTURE (Placed right before the 'Continue Reading' button) -->
+      <div class="my-8 text-center">
+        <img
+          src="/JustynaWalk.webp" 
+          alt="Justyna - Early Journey and Roots"
+          class="rounded-2xl mx-auto shadow-md border-4 border-white w-full max-w-lg object-cover h-72 sm:h-80"
+        />
+      </div>
+    </div>
+
+    <!-- Continue Reading Button -->
+    <div id="about-read-more-wrapper" class="mt-8 text-center">
+      <button
+        id="about-toggle-btn"
+        onclick="toggleAboutContent()"
+        class="btn-primary text-white font-semibold py-3 px-8 rounded-full text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2"
+      >
+        <span>Continue reading</span>
+        <svg id="about-btn-chevron" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Hidden Extended Content (Expands on click) -->
+    <div id="about-extended-content" class="hidden transition-all duration-500 ease-in-out mt-8">
+      <div class="prose lg:prose-xl text-gray-900 leading-relaxed text-justify mx-auto space-y-6">
+        
+        <!-- Section: Disconnection & Work -->
+        <div class="pt-4 border-t border-gray-200">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-left">
+            Many of us gradually lose our ability to fully participate in life
+          </h3>
+          <p>
+            We become highly skilled at achieving, solving problems, adapting, and carrying responsibility. We build careers, support others, and keep everything moving. We think, analyse, plan, and perform.
           </p>
-          <p data-key="aboutMePara2">
-          I deeply understand the demands of modern performance. Alongside my practice, I work as an HR Business Partner in global corporate environments in 
-            Zurich, Switzerland. Having spent over a decade navigating academia, tech startups, and corporate structures, 
-            I know firsthand how easy it is to trade personal alignment for professional achievement—and how much brilliance gets lost when we stay in survival mode.
+          <p>
+            But somewhere along the way, we may disconnect from the things that make us feel alive: our bodies, emotions, creativity, intuition, and sense of connection.
           </p>
-          <p data-key="aboutMePara3">
-            My approach is warm, grounded, and deeply resourceful. With a background in Philosophy, I bring a keen curiosity to our sessions, 
-            using powerful questions to help you cut through the noise, reframe old patterns, and access your own inner wisdom. 
-            I don't see you as someone who needs to be "fixed"—I see you as a complete, 
-            highly capable person ready to reclaim your full capacity, clear internal blocks, and design a life that actually feels good to live.
+          <p>
+            <strong>This is where my work begins.</strong>
           </p>
-          <p data-key="aboutMePara4">
-            
+          <p>
+            I support high-functioning professionals who want to move beyond constant striving and reconnect with a more embodied, intentional, and fulfilling way of living — people who have achieved a lot, yet sense that something more is possible: more presence, more creativity, more connection, more authenticity.
           </p>
-          <p data-key="aboutMePara5">
-            My own path has been wonderfully non-linear: I hold degrees in Business Management and Intercultural Communication, studied Philosophy, 
-            completed a full-stack coding bootcamp, and lived across different cultures. Through it all, my favorite thing has always been connecting deeply with people 
-            (I like to joke it’s an only-child trait!).
-Whether you're navigating a major transition, feeling burnt out, or simply looking for a more grounded way to live and work, you are warmly welcomed here.
-            I’d love to connect with you.
+          <p>
+            My work combines coaching, somatic breathwork, and Yin Yoga to support the integration of mind and body. Because understanding something intellectually does not always create transformation. We also need to experience, feel, and embody new ways of being.
+          </p>
+          <p>
+            Through this work, you can learn to regulate your stress responses, soften patterns of over-control that once helped you succeed, reconnect with your inner resources, and create from a place of greater clarity and alignment.
           </p>
         </div>
-        <div class="mt-10 text-center">
+
+        <!-- SECOND PICTURE (Placed in the middle section) -->
+        <div class="my-10 text-center">
           <img
-            src="/JustynaZurawska.jpeg"
-            alt="Coach's Photo"
-            class="rounded-full mx-auto shadow-lg border-4 border-white w-64"
+            src="/workLaptop.jpg" 
+            alt="Justyna - Embodiment and Somatic Practice"
+            class="rounded-2xl mx-auto shadow-md border-4 border-white w-full max-w-lg object-cover h-72 sm:h-80"
           />
         </div>
+
+        <!-- Section: Corporate & Performance -->
+        <div class="pt-4 border-t border-gray-200">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-left">
+            Bridging the worlds of achievement and embodiment
+          </h3>
+          <p>
+            I deeply understand the demands of modern performance. Alongside my coaching practice, I work as an HR Business Partner in global corporate environments in Zurich, Switzerland. Over the past decade, my path has taken me through academia, technology startups, corporate structures, and international environments.
+          </p>
+          <p>
+            I have seen how much talent, creativity, and potential exists in people who are intelligent, capable, and ambitious. I have also seen how easily these qualities become limited when we operate only from our minds and lose connection with ourselves.
+          </p>
+          <p>
+            My own experience in technology and the changing world of work has shaped my perspective on the future. As artificial intelligence and automation transform the way we work and create, the question becomes not only what technology can do — but how we choose to show up as humans:
+          </p>
+          <ul class="list-disc pl-6 space-y-1 font-medium text-gray-800 text-left">
+            <li>To think clearly, but also feel deeply.</li>
+            <li>To achieve, but also experience.</li>
+            <li>To adapt, but also consciously participate in shaping the world around us.</li>
+          </ul>
+        </div>
+
+        <!-- Section: Approach -->
+        <div class="pt-4 border-t border-gray-200">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-left">
+            My approach
+          </h3>
+          <p>
+            My approach is warm, grounded, and deeply curious. With a background in Philosophy, I naturally explore the deeper questions behind our choices, assumptions, and patterns. My coaching style combines curiosity, powerful questions, and practical reflection. Somatic practices, breathwork, and Yin Yoga bring another dimension: reconnecting with the wisdom of the body.
+          </p>
+          <p class="font-medium text-gray-900">
+            I do not see people as problems to be fixed. I see people as complex, capable, and constantly evolving human beings — with existing strengths, resources, and possibilities waiting to be rediscovered.
+          </p>
+        </div>
+
+        <!-- Section: My Own Path -->
+        <div class="pt-4 border-t border-gray-200">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-left">
+            My own path
+          </h3>
+          <p>
+            My own journey has never followed a straight line. I hold degrees in Business Management and Intercultural Communication, studied Philosophy, completed a full-stack coding bootcamp, became a certified coach, and trained in somatic breathwork and Yin Yoga.
+          </p>
+          <p>
+            I have moved between cultures, disciplines, and ways of thinking. Each experience has shaped my curiosity about people: how we adapt, how we create meaning, how we relate to each other, and how we continue becoming who we are.
+          </p>
+          <p class="italic text-sky-800 font-semibold bg-sky-50/70 p-4 rounded-xl border-l-4 border-sky-400">
+            At the centre of my work is one ongoing exploration: <br />
+            <span>What becomes possible when we are fully connected to ourselves?</span>
+          </p>
+          <p>
+            Whether you are navigating change, questioning your next chapter, feeling disconnected despite external success, or simply wanting to engage with life in a deeper way — this work is an invitation to explore what is possible.
+          </p>
+        </div>
+
+        <!-- THIRD PICTURE (Placed at the end) -->
+        <div class="pt-6 text-center">
+          <img
+            src="/chooseLove.jpg" 
+            alt="Justyna Zurawska - Connect"
+            class="rounded-full mx-auto shadow-lg border-4 border-white w-52 sm:w-64 h-52 sm:h-64 object-cover"
+          />
+        </div>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+<!-- Toggle Script (Place before closing </body> tag) -->
+<script>
+  function toggleAboutContent() {
+    const extendedContent = document.getElementById('about-extended-content');
+    const toggleBtn = document.getElementById('about-toggle-btn');
+    const chevron = document.getElementById('about-btn-chevron');
+    
+    if (extendedContent.classList.contains('hidden')) {
+      extendedContent.classList.remove('hidden');
+      toggleBtn.querySelector('span').textContent = 'Show less';
+      chevron.classList.add('rotate-180');
+    } else {
+      extendedContent.classList.add('hidden');
+      toggleBtn.querySelector('span').textContent = 'Continue reading';
+      chevron.classList.remove('rotate-180');
+      
+      // Smooth scroll back to top of about section on hide
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
 
     <!-- About You Section -->
     <section
