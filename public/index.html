@@ -113,6 +113,7 @@
   <nav class="hidden md:flex space-x-8 lg:space-x-12">
     <a href="#about" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">About Me</a>
     <a href="#services" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Services</a>
+    <a href="#blog" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Blog</a>
     <a href="#join" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Join</a>
     <a href="#contact" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Contact</a>
   </nav>
@@ -127,6 +128,7 @@
 <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-md z-40 hidden md:hidden flex flex-col items-center justify-center space-y-6 pt-16">
   <a href="#about" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Me</a>
   <a href="#services" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
+  <a href="#blog" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Blog</a>
   <a href="#join" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Join</a>
   <a href="#contact" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
 </div>
@@ -405,7 +407,104 @@
   </div>
 
 </section>
+
+<!-- Blog Section -->
+<section id="blog" class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24">
+  <div class="max-w-5xl mx-auto text-center">
+    <span class="inline-block px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider text-sky-700 bg-sky-100 uppercase mb-3">
+      Insights & Reflections
+    </span>
+    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gradient-blue-pink">
+      Blog & Thoughts
+    </h2>
+    <p class="text-gray-700 text-base sm:text-lg max-w-2xl mx-auto mb-12">
+      Explorations on embodiment, conscious living, human presence in the age of AI, and emotional regulation.
+    </p>
+
+    <!-- Blog Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+      <!-- Article Card 1 -->
+      <article class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden border border-white/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="flex items-center space-x-2 text-xs font-medium text-sky-600 mb-3">
+            <span>Somatic Practice</span>
+            <span>•</span>
+            <span>5 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-sky-600 transition-colors cursor-pointer" onclick="openBlogModal('post-1')">
+            Moving From Thinking to Feeling: Why Logic Isn't Enough
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Understanding your patterns intellectually is only the first step. True integration happens when we allow our nervous system to digest our experiences...
+          </p>
+        </div>
+        <div class="px-6 pb-6 pt-0 border-t border-gray-100/80 mt-auto">
+          <button onclick="openBlogModal('post-1')" class="text-sky-700 font-semibold text-sm hover:text-pink-600 transition-colors inline-flex items-center gap-1 pt-4">
+            Read Article <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Article Card 2 -->
+      <article class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden border border-white/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="flex items-center space-x-2 text-xs font-medium text-pink-600 mb-3">
+            <span>Human & AI</span>
+            <span>•</span>
+            <span>4 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-sky-600 transition-colors cursor-pointer" onclick="openBlogModal('post-2')">
+            Staying Fully Alive as a Human in the Age of AI
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            As technology handles speed, intelligence, and optimization, our unique power shifts toward presence, intuition, and deep emotional connectivity...
+          </p>
+        </div>
+        <div class="px-6 pb-6 pt-0 border-t border-gray-100/80 mt-auto">
+          <button onclick="openBlogModal('post-2')" class="text-sky-700 font-semibold text-sm hover:text-pink-600 transition-colors inline-flex items-center gap-1 pt-4">
+            Read Article <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+      </article>
+
+      <!-- Article Card 3 -->
+      <article class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden border border-white/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="p-6">
+          <div class="flex items-center space-x-2 text-xs font-medium text-purple-600 mb-3">
+            <span>Embodied Presence</span>
+            <span>•</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-sky-600 transition-colors cursor-pointer" onclick="openBlogModal('post-3')">
+            Reclaiming Anger as a Fuel for Authentic Expression
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Anger is often misunderstood and suppressed. When welcomed with curiosity, it transforms into healthy boundaries, clarity, and creative passion...
+          </p>
+        </div>
+        <div class="px-6 pb-6 pt-0 border-t border-gray-100/80 mt-auto">
+          <button onclick="openBlogModal('post-3')" class="text-sky-700 font-semibold text-sm hover:text-pink-600 transition-colors inline-flex items-center gap-1 pt-4">
+            Read Article <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Post Reader Modal -->
+<div id="blog-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+  <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-10 relative shadow-2xl">
+    <button onclick="closeBlogModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 text-2xl font-bold focus:outline-none w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
+      &times;
+    </button>
     
+    <div id="blog-modal-content" class="prose lg:prose-lg text-gray-800 space-y-4">
+      <!-- Article content loaded dynamically -->
+    </div>
+  </div>
+</div>
+
     <!-- Why This Matters Section -->
     <section
       id="why-this-matters"
@@ -539,8 +638,6 @@ Many people have already explored self-development through reflection, mindset w
       
     </ul>
   </div>
-
-
 
   <!-- Approach / Methodology -->
   <div class="space-y-6 my-12">
@@ -736,50 +833,6 @@ Many people have already explored self-development through reflection, mindset w
     </div>
   </div>
 </section>
-
-<!-- Toggle Script (Place before closing </body> tag) -->
-<script>
-  function toggleAboutContent() {
-    const extendedContent = document.getElementById('about-extended-content');
-    const toggleBtn = document.getElementById('about-toggle-btn');
-    const chevron = document.getElementById('about-btn-chevron');
-    
-    if (extendedContent.classList.contains('hidden')) {
-      extendedContent.classList.remove('hidden');
-      toggleBtn.querySelector('span').textContent = 'Show less';
-      chevron.classList.add('rotate-180');
-    } else {
-      extendedContent.classList.add('hidden');
-      toggleBtn.querySelector('span').textContent = 'Continue reading';
-      chevron.classList.remove('rotate-180');
-      
-      // Smooth scroll back to top of about section on hide
-      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-</script>
-
-<!-- Toggle Script (Place before closing </body> tag) -->
-<script>
-  function toggleAboutContent() {
-    const extendedContent = document.getElementById('about-extended-content');
-    const toggleBtn = document.getElementById('about-toggle-btn');
-    const chevron = document.getElementById('about-btn-chevron');
-    
-    if (extendedContent.classList.contains('hidden')) {
-      extendedContent.classList.remove('hidden');
-      toggleBtn.querySelector('span').textContent = 'Show less';
-      chevron.classList.add('rotate-180');
-    } else {
-      extendedContent.classList.add('hidden');
-      toggleBtn.querySelector('span').textContent = 'Continue reading';
-      chevron.classList.remove('rotate-180');
-      
-      // Smooth scroll back to top of about section on hide
-      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-</script>
 
     <!-- About You Section -->
     <section
@@ -1241,7 +1294,7 @@ Many people have already explored self-development through reflection, mindset w
   </div>
 </footer>
 
-    <!-- Interactive Menus JavaScript -->
+    <!-- Interactive Menus & Blog Scripts -->
     <script>
       // Mobile menu toggle
       const mobileBtn = document.getElementById('mobile-menu-button');
@@ -1251,18 +1304,92 @@ Many people have already explored self-development through reflection, mindset w
         mobileMenu.classList.toggle('hidden');
       });
 
-      // Language menu toggle
-      const langBtn = document.getElementById('language-toggle-button');
-      const langMenu = document.getElementById('language-menu');
+      // About Content Toggle
+      function toggleAboutContent() {
+        const extendedContent = document.getElementById('about-extended-content');
+        const toggleBtn = document.getElementById('about-toggle-btn');
+        const chevron = document.getElementById('about-btn-chevron');
+        
+        if (extendedContent.classList.contains('hidden')) {
+          extendedContent.classList.remove('hidden');
+          toggleBtn.querySelector('span').textContent = 'Show less';
+          chevron.classList.add('rotate-180');
+        } else {
+          extendedContent.classList.add('hidden');
+          toggleBtn.querySelector('span').textContent = 'Continue reading';
+          chevron.classList.remove('rotate-180');
+          
+          document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        }
+      }
 
-      langBtn.addEventListener('click', () => {
-        langMenu.classList.toggle('hidden');
-      });
+      // Blog Article Data & Reader Modal Functionality
+      const blogArticles = {
+        'post-1': {
+          title: "Moving From Thinking to Feeling: Why Logic Isn't Enough",
+          category: "Somatic Practice • 5 min read",
+          content: `
+            <p class="text-lg font-medium text-sky-800">Many highly capable people excel at analyzing their lives, yet feel stuck in the same emotional and behavioral loops.</p>
+            <p>You can read all the books, attend workshops, and articulate your patterns perfectly in coaching—yet when stress arises, your body defaults to old protective mechanisms like over-working, hyper-vigilance, or numbing out.</p>
+            <h4 class="text-xl font-bold text-gray-900 pt-2">The Limits of Intellectual Understanding</h4>
+            <p>Intellectual understanding happens in the neocortex, but survival patterns and nervous system responses are stored in the autonomic nervous system and subcortical brain. You cannot think your way out of a physiological stress state.</p>
+            <h4 class="text-xl font-bold text-gray-900 pt-2">The Power of Somatic Integration</h4>
+            <p>When we combine mental clarity with somatic practices like breathwork, we allow the body to complete unreleased stress responses. This builds genuine nervous system capacity, transforming cognitive insight into felt, lived reality.</p>
+          `
+        },
+        'post-2': {
+          title: "Staying Fully Alive as a Human in the Age of AI",
+          category: "Human & AI • 4 min read",
+          content: `
+            <p class="text-lg font-medium text-sky-800">As artificial intelligence rapidly masters logic, code, and speed, what remains uniquely human?</p>
+            <p>The future won't just belong to those who optimize for speed and productivity, but to those who retain their capacity for presence, felt empathy, creativity, and conscious choice.</p>
+            <h4 class="text-xl font-bold text-gray-900 pt-2">Productivity vs. Presence</h4>
+            <p>When machines take over cognitive labor, human value shifts from output volume to the quality of our presence and relational depth. Staying connected to your body and emotional landscape is no longer just wellness advice—it's essential for grounded leadership and authentic living.</p>
+          `
+        },
+        'post-3': {
+          title: "Reclaiming Anger as a Fuel for Authentic Expression",
+          category: "Embodied Presence • 6 min read",
+          content: `
+            <p class="text-lg font-medium text-sky-800">Anger is one of the most suppressed emotions, especially for women and high-achieving professionals.</p>
+            <p>When denied, anger turns inward—manifesting as exhaustion, chronic resentment, or self-criticism. But at its core, anger is simply bound energy seeking boundary clarity and protection.</p>
+            <h4 class="text-xl font-bold text-gray-900 pt-2">Transforming Fire into Boundary & Purpose</h4>
+            <p>By giving anger conscious, embodied expression—through movement, breathwork, and structured reflection—we transform raw emotion into healthy boundaries, self-respect, and clear action.</p>
+          `
+        }
+      };
 
-      // Close dropdowns on outside click
+      function openBlogModal(postId) {
+        const article = blogArticles[postId];
+        if (!article) return;
+
+        const modalContent = document.getElementById('blog-modal-content');
+        modalContent.innerHTML = `
+          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">${article.category}</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">${article.title}</h2>
+          <hr class="border-gray-200 my-4" />
+          <div class="space-y-4 text-gray-700 leading-relaxed">${article.content}</div>
+          <div class="pt-6 mt-6 border-t border-gray-100 flex justify-end">
+            <button onclick="closeBlogModal()" class="px-6 py-2.5 bg-gray-900 text-white font-semibold text-sm rounded-full hover:bg-gray-800 transition-colors">
+              Close Article
+            </button>
+          </div>
+        `;
+
+        document.getElementById('blog-modal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeBlogModal() {
+        document.getElementById('blog-modal').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      // Close modal on outside click
       window.addEventListener('click', (e) => {
-        if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
-          langMenu.classList.add('hidden');
+        const modal = document.getElementById('blog-modal');
+        if (e.target === modal) {
+          closeBlogModal();
         }
       });
     </script>
