@@ -1,1250 +1,573 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Justyna Zurawska</title>
+    <title>Justyna Zurawska | Executive Coaching, Somatic Breathwork & Integration</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+
+    <!-- Google Fonts: Cormorant Garamond (Headings) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
     <style>
+      :root {
+        /* AIR (Corporate / Coaching) */
+        --navy-dark: #1E3557;
+        --steel-blue: #567A9E;
+        --mist-blue: #EAF2F7;
+        --off-white: #FAF8F5;
+        --charcoal: #333333;
+
+        /* EARTH (Grief Support) */
+        --sage-green: #8A9A86;
+        --sage-light: #F0F4F1;
+        --sand-warm: #E6DFD5;
+        --linen-bg: #F9F7F4;
+
+        /* FIRE (Pretty & Angry Girls Club) */
+        --terracotta: #C85A32;
+        --burnt-rust: #9E3B1B;
+        --burgundy-dark: #4A1513;
+        --amber-glow: #FDF6F0;
+      }
+
       body {
-        font-family: "Inter", sans-serif;
-        background: linear-gradient(
-          135deg,
-          #ebf5f8 0%,
-          #f0f6fc 50%,
-          #f9f2f7 100%
-        );
-        background-image: url("/image_background.png");
-        color: #333;
-        background-position: top;
+        font-family: 'Inter', sans-serif;
+        background-color: var(--off-white);
+        color: var(--charcoal);
+        overflow-x: hidden;
       }
-      .text-gradient-blue-pink {
-        background: linear-gradient(
-          90deg,
-          #5ab1e7,
-          #de95d7
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+
+      h1, h2, h3, h4, .font-heading {
+        font-family: 'Cormorant Garamond', serif;
       }
-      .btn-primary {
-        background: linear-gradient(
-          45deg,
-          #5ab1e7,
-          #de95d7
-        );
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+      .bg-air { background-color: var(--off-white); }
+      .bg-mist { background-color: var(--mist-blue); }
+      .text-navy { color: var(--navy-dark); }
+      .border-steel { border-color: rgba(86, 122, 158, 0.25); }
+
+      /* Custom Buttons */
+      .btn-navy {
+        background-color: var(--navy-dark);
+        color: #ffffff;
+        transition: all 0.3s ease;
       }
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      .btn-navy:hover {
+        background-color: var(--steel-blue);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px rgba(30, 53, 87, 0.2);
       }
-      .section-bg-light {
-        background-color: rgba(
-          34,
-          150,
-          171,
-          0.15
-        );
-        box-shadow: 0 8px 25px rgba(36, 140, 200, 0.15);
+
+      .btn-earth {
+        background-color: var(--sage-green);
+        color: #ffffff;
+        transition: all 0.3s ease;
       }
-      .card {
-        background-color: rgba(255, 255, 255, 0.85);
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        cursor: pointer;
+      .btn-earth:hover {
+        background-color: #788874;
+        transform: translateY(-1px);
       }
-      .animated-subtle {
-        animation: floatSubtle 8s ease-in-out infinite;
+
+      .btn-fire {
+        background-color: var(--terracotta);
+        color: #ffffff;
+        transition: all 0.3s ease;
       }
-      @keyframes floatSubtle {
-        0% {
-          transform: translateY(0) rotate(0deg);
-          opacity: 0.7;
-        }
-        50% {
-          transform: translateY(-15px) rotate(5deg);
-          opacity: 0.8;
-        }
-        100% {
-          transform: translateY(0) rotate(0deg);
-          opacity: 0.7;
-        }
+      .btn-fire:hover {
+        background-color: var(--burnt-rust);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px rgba(200, 90, 50, 0.25);
       }
+
+      /* Animated Ripple for Air/Breath */
       .animated-ripple {
-        animation: ripple 8s ease-out infinite;
+        animation: ripple 9s ease-out infinite;
       }
       @keyframes ripple {
-        0% {
-          r: 150;
-          opacity: 0.6;
-          stroke-width: 2;
-        }
-        100% {
-          r: 350;
-          opacity: 0;
-          stroke-width: 0;
-        }
+        0% { r: 120; opacity: 0.5; stroke-width: 1.5; }
+        100% { r: 380; opacity: 0; stroke-width: 0; }
       }
     </style>
   </head>
-  <body class="selection:bg-blue-100 selection:text-blue-800">
-    <!-- Header -->
-<header class="bg-white/80 backdrop-blur-sm shadow-sm py-3.5 px-4 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50 rounded-b-lg">
-  <!-- Brand / Logo Area -->
-  <div class="flex items-center min-w-0 mr-2">
-    <img src="/smile.png" alt="smile" class="w-8 h-8 mr-2 rounded-full object-cover flex-shrink-0" />
-    <a href="#" class="text-base sm:text-lg md:text-2xl font-bold text-gradient-blue-pink truncate max-w-[200px] sm:max-w-none">
-      Think. Breathe. Allow. Glow. Connect. Stay Open.
-    </a>
-  </div>
+  <body class="selection:bg-sky-100 selection:text-slate-800">
 
-  <!-- Desktop Navigation -->
-  <nav class="hidden md:flex space-x-8 lg:space-x-12">
-    <a href="#about" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">About Me</a>
-    <a href="#services" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Services</a>
-    <a href="#blog" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Blog</a>
-    <a href="#join" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Join</a>
-    <a href="#contact" class="text-gray-900 hover:text-gradient-blue-pink transition-colors duration-200 text-lg">Contact</a>
-  </nav>
-
-  <!-- Mobile Menu Button -->
-  <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none p-1" aria-label="Toggle Menu">
-    <i class="fas fa-bars text-xl"></i>
-  </button>
-</header>
-
-<!-- Mobile Overlay Menu -->
-<div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-md z-40 hidden md:hidden flex flex-col items-center justify-center space-y-6 pt-16">
-  <a href="#about" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Me</a>
-  <a href="#services" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
-  <a href="#blog" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Blog</a>
-  <a href="#join" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Join</a>
-  <a href="#contact" class="text-gray-900 text-2xl font-medium" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
-</div>
-
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center text-center overflow-hidden pt-28 pb-12 md:pt-32 md:pb-16 px-4">
-  <!-- Background Ripple Effect -->
-  <div class="absolute inset-0 z-0 pointer-events-none">
-    <svg class="w-full h-full" viewBox="0 0 1000 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="500" cy="480" r="150" stroke="#ADD8E6" stroke-width="2" opacity="0.6" class="animated-ripple"></circle>
-      <circle cx="500" cy="480" r="200" stroke="#ADD8E6" stroke-width="2" opacity="0.4" class="animated-ripple" style="animation-delay: 2s"></circle>
-      <circle cx="500" cy="480" r="250" stroke="#ADD8E6" stroke-width="2" opacity="0.2" class="animated-ripple" style="animation-delay: 4s"></circle>
-      <path class="animated-subtle" d="M100 100 Q110 90 120 100 Q110 110 100 100 Z" fill="#FFFFFF" opacity="0.7"></path>
-      <path class="animated-subtle" d="M800 50 Q810 40 820 50 Q810 60 800 50 Z" fill="#F0F8FF" opacity="0.6" style="animation-delay: 2.5s"></path>
-      <path class="animated-subtle" d="M200 20 Q210 10 220 20 Q210 30 200 20 Z" fill="#EBF5F8" opacity="0.5" style="animation-delay: 5s"></path>
-      <path class="animated-subtle" d="M700 200 Q710 190 720 200 Q710 210 700 200 Z" fill="#F5F5DC" opacity="0.7" style="animation-delay: 1.2s"></path>
-      <path class="animated-subtle" d="M300 150 Q310 140 320 150 Q310 160 300 150 Z" fill="#ADD8E6" opacity="0.6" style="animation-delay: 3.8s"></path>
-    </svg>
-  </div>
-
-  <!-- Hero Content Container -->
-  <div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center justify-center">
-
-    <!-- Kicker Badge -->
-    <span class="inline-block px-3 py-1 mb-3 text-xs font-semibold text-sky-700 bg-sky-50 border border-sky-200/60 rounded-full uppercase tracking-wider">
-      Welcome! :) 
-    </span>
-
-    
-
-    <!-- Primary CTA button whatsapp-->
-   <div class="mt-6">
-  <a
-    href="https://wa.me/41786938831?text=Hey%2C%20I%20saw%20your%20website%20and%20I%20would%20like%20to%20"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="btn-primary inline-flex items-center gap-2 text-white font-semibold py-3 px-8 rounded-full text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 bg-emerald-600 hover:bg-emerald-500"
-    aria-label="Chat on WhatsApp"
-  >
-    <!-- Optional: WhatsApp Icon -->
-    <i class="fab fa-whatsapp text-lg"></i>
-    <span>Book a Discovery Call</span>
-  </a>
-</div>
-
-  </div>
-</section>
-
-<!-- Hero / Main Landing Section -->
-<section class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12 text-center">
-
-  <!-- Category Badge & Main Headline -->
-  <div class="space-y-4 max-w-3xl mx-auto">
-    <span class="inline-block px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider text-sky-700 bg-sky-100 uppercase">
-      high performance and being fully human
-    </span>
-    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gradient-blue-pink leading-snug sm:leading-tight">
-      When thinking harder is no longer the answer.
-    </h1>
-    <p class="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto font-medium">
-      For thoughtful, high-performing professionals who have spent years relying on their minds and are ready to reconnect with themselves. <span class="text-sky-700 font-semibold"> Through 1:1 Coaching</span> & <span class="text-pink-600 font-semibold">Somatic Breathwork</span> you'll learn not only to understand yourself—but to actually feel different.
-    </p>
-  </div>
-
-  <!-- Opening Value Card -->
-  <div class="bg-white/80 backdrop-blur-md border border-white/90 rounded-2xl p-6 sm:p-8 shadow-sm space-y-4 max-w-3xl mx-auto text-left sm:text-center text-gray-700 text-sm sm:text-base leading-relaxed">
-    <p>
-      In today's workplace, success often comes from solving problems, making decisions and constantly adapting. 
-      But the same skills that make you successful can also leave you disconnected from yourself. Real resilience isn't about doing more. It's about knowing how to slow down, 
-      regulate your nervous system and stay present under pressure.
-    </p>
-    <p class="font-bold text-gray-900 text-base sm:text-lg border-y border-sky-100 py-3 my-2">
-      If you've built a successful career but quietly feel exhausted, disconnected or stuck in your head, 
-      this work helps you reconnect with the part of you that 
-      achievement alone cannot satisfy.
-    </p>
-    <p class="text-gray-600 text-xs sm:text-sm">
-      Move beyond constant overthinking, people-pleasing, perfectionism and always feeling responsible. 
-      Learn to release the tension your body has been carrying for years and regain access to clarity, creativity and genuine presence.
-    </p>
-  </div>
-
-  <!-- CORE METHODOLOGY: Coaching + Breathwork Synergy -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
-    <!-- Pillar 1: Coaching -->
-    <div class="bg-white/80 backdrop-blur-md border border-sky-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all space-y-3">
-      <div class="w-10 h-10 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center font-bold text-xl">
-        🧠
-      </div>
-      <h3 class="text-lg font-bold text-gray-900">1:1 Coaching & Pattern Reframing</h3>
-      <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Untangle the thinking patterns that keep you stuck—even when you already know better. 
-        Together we challenge assumptions, quiet the mental noise and create practical shifts that support both your work and your personal life.
-      </p>
-    </div>
-
-    <!-- Pillar 2: Breathwork -->
-    <div class="bg-white/80 backdrop-blur-md border border-pink-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all space-y-3">
-      <div class="w-10 h-10 bg-pink-100 text-pink-600 rounded-xl flex items-center justify-center font-bold text-xl">
-        🫁
-      </div>
-      <h3 class="text-lg font-bold text-gray-900">Somatic Breathwork & Bodywork</h3>
-      <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">
-        Your nervous system remembers what your mind has already moved past. 
-        Breathwork helps release accumulated stress, regulate your body and create change that goes beyond insight alone.
-      </p>
-    </div>
-  </div>
-
-  <!-- THE 3-STEP PATHWAY (Thinking -> Doing -> Being) -->
-  <div class="bg-gradient-to-r from-sky-50 via-white to-pink-50 border border-white/80 rounded-3xl p-6 sm:p-8 shadow-sm max-w-4xl mx-auto">
-    <h3 class="text-xs sm:text-sm font-bold text-sky-800 tracking-widest uppercase mb-6">The Pathway: From Thinking to Doing and From Doing to Being</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-      
-      <div class="space-y-2 bg-white/60 p-4 rounded-xl border border-white">
-        <span class="text-xs font-bold text-sky-600 uppercase tracking-wider">Step 1</span>
-        <h4 class="text-base font-bold text-gray-900">Understand</h4>
-        <p class="text-xs text-gray-600">Uncover hidden patterns, quiet mental chatter, and reduce over-analyzing.</p>
+    <!-- Header Navigation -->
+    <header class="bg-white/85 backdrop-blur-md border-b border-stone-200/60 py-4 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+      <div class="flex items-center space-x-3">
+        <img src="/smile.png" alt="Justyna Zurawska" class="w-9 h-9 rounded-full object-cover border border-stone-300" />
+        <a href="#" class="font-heading text-xl sm:text-2xl font-bold tracking-tight text-[#1E3557]">
+          Justyna Zurawska
+        </a>
       </div>
 
-      <div class="space-y-2 bg-white/60 p-4 rounded-xl border border-white">
-        <span class="text-xs font-bold text-purple-600 uppercase tracking-wider">Step 2</span>
-        <h4 class="text-base font-bold text-gray-900">Regulate</h4>
-        <p class="text-xs text-gray-600">Release stress armor, regulate nervous system, and move out of survival mode.</p>
-      </div>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
+        <a href="#about" class="hover:text-[#1E3557] transition-colors">About</a>
+        <a href="#air-coaching" class="hover:text-[#1E3557] transition-colors">Coaching & Breathwork</a>
+        <a href="#grief-earth" class="hover:text-[#8A9A86] transition-colors">Grief Support</a>
+        <a href="#fire-club" class="hover:text-[#C85A32] transition-colors">Pretty & Angry</a>
+        <a href="#blog" class="hover:text-[#1E3557] transition-colors">Insights</a>
+        <a href="#contact" class="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#1E3557] rounded-full hover:bg-[#567A9E] transition-all">Contact</a>
+      </nav>
 
-      <div class="space-y-2 bg-white/60 p-4 rounded-xl border border-white">
-        <span class="text-xs font-bold text-pink-600 uppercase tracking-wider">Step 3</span>
-        <h4 class="text-base font-bold text-gray-900">Live</h4>
-        <p class="text-xs text-gray-600">Authentic expression, trusting intuition, and co-creating your life with presence.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- THIS WORK IS A GOOD FIT IF... (Checklist) -->
-  <div class="max-w-4xl mx-auto space-y-6 text-left">
-    <div class="text-center space-y-1">
-      <h3 class="text-xl sm:text-2xl font-bold text-gray-900">This Work Might Be a Good Fit If...</h3>
-      <p class="text-gray-600 text-xs sm:text-sm">You are ready to shift from collecting insights to living them.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-      
-      <div class="flex items-start gap-3 bg-white/90 p-3.5 rounded-xl border border-gray-100 shadow-sm text-xs sm:text-sm text-gray-800">
-        <span class="text-sky-500 font-bold">✓</span>
-        <span>You've read the books. You've listened to podcasts. Maybe you've even tried coaching or therapy. Yet you still find yourself reacting in the same situations. You're ready for change that is experienced—not just understood.</span>
-      </div>
-
-      <div class="flex items-start gap-3 bg-white/90 p-3.5 rounded-xl border border-gray-100 shadow-sm text-xs sm:text-sm text-gray-800">
-        <span class="text-sky-500 font-bold">✓</span>
-        <span>Willing to look honestly at the patterns that no longer serve you.</span>
-      </div>
-
-      <div class="flex items-start gap-3 bg-white/90 p-3.5 rounded-xl border border-gray-100 shadow-sm text-xs sm:text-sm text-gray-800">
-        <span class="text-sky-500 font-bold">✓</span>
-        <span>You've ignored your body's signals for years because work came first. Now you're curious what happens when you finally listen.</span>
-      </div>
-
-      <div class="flex items-start gap-3 bg-white/90 p-3.5 rounded-xl border border-gray-100 shadow-sm text-xs sm:text-sm text-gray-800">
-        <span class="text-sky-500 font-bold">✓</span>
-        <span>Open to exploring both your mind and nervous system—not just collecting insights.</span>
-      </div>
-
-      <div class="flex items-start gap-3 bg-white/90 p-3.5 rounded-xl border border-gray-100 shadow-sm text-xs sm:text-sm text-gray-800">
-        <span class="text-sky-500 font-bold">✓</span>
-        <span>Tired of surviving on autopilot and want to reconnect with yourself.</span>
-      </div>
-
-      <div class="flex items-start gap-3 bg-white/90 p-3.5 rounded-xl border border-gray-100 shadow-sm text-xs sm:text-sm text-gray-800">
-        <span class="text-sky-500 font-bold">✓</span>
-        <span>Ready to take responsibility for your life without blaming yourself for where you are.</span>
-      </div>
-
-      <div class="flex items-start gap-3 bg-white/90 p-3.5 rounded-xl border border-gray-100 shadow-sm text-xs sm:text-sm text-gray-800">
-        <span class="text-sky-500 font-bold">✓</span>
-        <span>You want difficult conversations, leadership decisions and personal choices to come from clarity instead of stress, urgency or fear of disappointing others.</span>
-      </div>
-
-      <div class="flex items-start gap-3 bg-white/90 p-3.5 rounded-xl border border-gray-100 shadow-sm text-xs sm:text-sm text-gray-800">
-        <span class="text-sky-500 font-bold">✓</span>
-        <span>Prepared to experiment, practise, and integrate between our sessions.</span>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Manifesto Card -->
-  <div class="bg-white/70 backdrop-blur-md border border-white/80 rounded-2xl p-6 sm:p-8 md:p-10 shadow-sm max-w-2xl mx-auto text-center space-y-6">
-    <!-- Header / Opening Statement -->
-    <div class="space-y-1 sm:space-y-2">
-      <p class="text-base sm:text-lg font-bold text-gray-900 leading-snug">
-        As AI becomes better at processing information, our uniquely human abilities become even more valuable: emotional intelligence, presence, creativity, courage, relationships and wise judgement.
-      </p>
-      <p class="text-base sm:text-lg font-bold text-sky-600 leading-snug">
-        It will also be shaped by the humans who create, use, and live alongside it.
-      </p>
-    </div>
-
-    <!-- Parallel Core Traits -->
-    <div class="space-y-2 text-sm sm:text-base text-gray-700 font-medium leading-relaxed py-2 border-y border-gray-100">
-      <p>Humans who are not only productive, but <span class="font-semibold text-gray-900">present</span>.</p>
-      <p>Not only capable, but <span class="font-semibold text-gray-900">connected</span>.</p>
-      <p>Not only thinking, but <span class="font-semibold text-gray-900">feeling</span>.</p>
-      <p>Not only adapting to the world, but <span class="font-semibold text-gray-900">consciously participating in shaping it</span>.</p>
-    </div>
-
-    <!-- Final Call to Action -->
-    <div class="pt-2 space-y-3">
-      <p class="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider">
-        No hacks. No optimisation culture. Sustainable change built from the inside out.
-      </p>
-      <a 
-        href="https://wa.me/41786938831" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="btn-primary inline-block text-white font-semibold py-3 px-8 rounded-full text-base sm:text-lg shadow-lg hover:shadow-xl transition-all"
-      >
-        Book a Discovery Call
-      </a>
-    </div>
-  </div>
-
-</section>
-
-<!-- Blog Section -->
-<section id="blog" class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24">
-  <div class="max-w-5xl mx-auto text-center">
-    <span class="inline-block px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wider text-sky-700 bg-sky-100 uppercase mb-3">
-      Insights & Reflections
-    </span>
-    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-gradient-blue-pink">
-      Blog & Thoughts
-    </h2>
-    <p class="text-gray-700 text-base sm:text-lg max-w-2xl mx-auto mb-12">
-      Practical reflections on stress, leadership, nervous system regulation, work, relationships and staying deeply human in a fast-changing world.
-    </p>
-
-    <!-- Blog Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-      <!-- Article Card 1 -->
-      <article class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden border border-white/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-        <div class="p-6">
-          <div class="flex items-center space-x-2 text-xs font-medium text-sky-600 mb-3">
-            <span>Somatic Practice</span>
-            <span>•</span>
-            <span>5 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-sky-600 transition-colors cursor-pointer" onclick="openBlogModal('post-1')">
-            Moving From Thinking to Feeling: Why Logic Isn't Enough
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            Understanding your patterns intellectually is only the first step. True integration happens when we allow our nervous system to digest our experiences...
-          </p>
-        </div>
-        <div class="px-6 pb-6 pt-0 border-t border-gray-100/80 mt-auto">
-          <button onclick="openBlogModal('post-1')" class="text-sky-700 font-semibold text-sm hover:text-pink-600 transition-colors inline-flex items-center gap-1 pt-4">
-            Read Article <i class="fas fa-arrow-right text-xs"></i>
-          </button>
-        </div>
-      </article>
-
-      <!-- Article Card 2 -->
-      <article class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden border border-white/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-        <div class="p-6">
-          <div class="flex items-center space-x-2 text-xs font-medium text-pink-600 mb-3">
-            <span>Human & AI</span>
-            <span>•</span>
-            <span>4 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-sky-600 transition-colors cursor-pointer" onclick="openBlogModal('post-2')">
-            Staying Fully Alive as a Human in the Age of AI
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            As technology handles speed, intelligence, and optimization, our unique power shifts toward presence, intuition, and deep emotional connectivity...
-          </p>
-        </div>
-        <div class="px-6 pb-6 pt-0 border-t border-gray-100/80 mt-auto">
-          <button onclick="openBlogModal('post-2')" class="text-sky-700 font-semibold text-sm hover:text-pink-600 transition-colors inline-flex items-center gap-1 pt-4">
-            Read Article <i class="fas fa-arrow-right text-xs"></i>
-          </button>
-        </div>
-      </article>
-
-      <!-- Article Card 3 -->
-      <article class="bg-white/80 backdrop-blur-md rounded-2xl overflow-hidden border border-white/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-        <div class="p-6">
-          <div class="flex items-center space-x-2 text-xs font-medium text-purple-600 mb-3">
-            <span>Embodied Presence</span>
-            <span>•</span>
-            <span>6 min read</span>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-sky-600 transition-colors cursor-pointer" onclick="openBlogModal('post-3')">
-            Reclaiming Anger as a Fuel for Authentic Expression
-          </h3>
-          <p class="text-gray-600 text-sm leading-relaxed mb-4">
-            Anger is often misunderstood and suppressed. When welcomed with curiosity, it transforms into healthy boundaries, clarity, and creative passion...
-          </p>
-        </div>
-        <div class="px-6 pb-6 pt-0 border-t border-gray-100/80 mt-auto">
-          <button onclick="openBlogModal('post-3')" class="text-sky-700 font-semibold text-sm hover:text-pink-600 transition-colors inline-flex items-center gap-1 pt-4">
-            Read Article <i class="fas fa-arrow-right text-xs"></i>
-          </button>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- Blog Post Reader Modal -->
-<div id="blog-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-  <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-10 relative shadow-2xl">
-    <button onclick="closeBlogModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 text-2xl font-bold focus:outline-none w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
-      &times;
-    </button>
-    
-    <div id="blog-modal-content" class="prose lg:prose-lg text-gray-800 space-y-4">
-      <!-- Article content loaded dynamically -->
-    </div>
-  </div>
-</div>
-
-    <!-- Why This Matters Section -->
-    <section
-      id="why-this-matters"
-      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
-    >
-      <div class="max-w-4xl mx-auto text-center">
-        <h2
-          class="text-3xl md:text-5xl font-bold mb-10 text-gradient-blue-pink"
-          data-key="whyThisMattersTitle"
-        >
-          Why I Do This Work
-        </h2>
-        <div class="text-gray-900 leading-relaxed px-4 text-left space-y-4" data-key="whyThisMattersContent">
-
-<!-- Opening / Philosophical Hook -->
-  <div class="space-y-6 mb-12">
-    <p class="text-xl md:text-2xl font-light italic text-gray-700 leading-snug">
-      "Why are we here? What's the meaning of life? (42) What is? What is life asking of us?"
-    </p>
-    
-    <p class="text-base md:text-lg">
-      These are among the few profound philosophical questions that have accompanied humanity for centuries. My answers to them continue to evolve, but what remains constant is my curiosity and my commitment to exploring what is possible.
-    </p>
-
-    <p class="text-base md:text-lg">
-      I deeply resonate with the idea that we have the ability to take agency in our own lives — to consciously engage with ourselves, our choices, and the way we meet the world.
-    </p>
-
-    <p class="text-base md:text-lg">
-      To meet it with curiosity rather than certainty. To remain open instead of becoming rigid. To keep redefining ourselves as we grow, change, and encounter new experiences. Life is not a destination where we finally arrive as a "finished" version of ourselves. It is an ongoing conversation between who we have been, who we are becoming, and what each new moment asks of us.
-    </p>
-  </div>
-
-  <!-- Divider Line -->
-  <hr class="border-t border-gray-200 my-10 w-24 mx-auto" />
-
-  <!-- The Problem / Turning Point -->
-  <div class="space-y-6 mb-12">
-    <p class="text-lg md:text-xl font-medium text-gray-900">
-      Somewhere between deadlines, responsibility, promotions and always being available, many of us lose contact with ourselves. We continue performing—but stop feeling fully alive.
-    </p>
-
-    <p class="text-base md:text-lg">
-      We become excellent at functioning. We achieve, solve problems, care for others and keep everything moving. We think, analyse, and plan. From the outside, we appear capable and successful.
-    </p>
-
-    <!-- Highlight Box -->
-    <div class="p-6 my-8 bg-white/60 backdrop-blur-sm border-l-4 border-blue-400 rounded-r-2xl shadow-sm">
-      <p class="text-lg md:text-xl font-semibold text-gray-900 mb-2">
-        But somewhere along the way, we stop feeling fully alive.
-      </p>
-      <p class="text-base text-gray-600">
-        We disconnect from our bodies, our emotions, our creativity, our intuition and, often, from ourselves.
-      </p>
-    </div>
-  </div>
-
-  <!-- The Mission Statement -->
-  <div class="space-y-6 my-12 text-center max-w-2xl mx-auto">
-    <h3 class="text-xs uppercase tracking-widest font-bold text-gray-400">My Mission</h3>
-    <p class="text-2xl md:text-3xl font-extrabold text-gradient-blue-pink">
-      My mission is to help people reclaim their capacity to fully participate in life — not by becoming someone else, but by returning to themselves.
-    </p>
-    <p class="text-lg md:text-xl text-gray-800 font-medium">
-      In a changing world, we don't need to abandon our intelligence. We need to integrate it with embodied awareness.
-    </p>
-    <p>Thinking alone is no longer enough.
-We need to develop a deeper relationship with ourselves — the ability to feel, sense, regulate, 
-      connect, and respond consciously rather than simply react.
-</p>
-    <p>
-Many people have already explored self-development through reflection, mindset work, coaching, or talk-based approaches. 
-      These tools can create powerful insights, but sometimes understanding something intellectually is not enough to create lasting change.</p>
-  </div>
-
-  <!-- What Expands Section -->
-  <div class="p-8 my-10 rounded-3xl bg-white/50 backdrop-blur-sm border border-slate-200/80 shadow-sm space-y-6">
-    <p class="text-lg font-semibold text-gray-900">
-      By coming closer to yourself, with full awareness and feeling:
-    </p>
-
-    <ul class="space-y-3 text-base text-gray-700">
-      <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You become more able to <strong>love deeply</strong> without losing yourself.</span>
-      </li>
-      <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You <strong>create</strong> instead of simply consuming.</span>
-      </li>
-      <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You <strong>express what is true</strong> instead of constantly adapting.</span>
-      </li>
-      <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You make decisions even when certainty is impossible, and set boundaries without guilt.</span>
-      </li>
-      <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You experience closeness without abandoning yourself — to play, laugh, dance, rest, and be moved by beauty.</span>
-      </li>
-      <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You welcome both <strong>joy and grief</strong> as part of a fully lived life.</span>
-      </li>
-
-  <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You stop watching your life from the outside.</span>
-      </li>
-
-        <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You stop living only in your head.</span>
-      </li>
-
-        <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You stop postponing your life until everything feels under control.</span>
-      </li>
-         <li class="flex items-start space-x-3">
-        <span class="text-blue-500 font-bold">•</span>
-        <span>You begin to participate and co-create.</span>
-      </li>
-         <p class="text-lg font-semibold text-gray-900">
-      To participate fully in life means more than simply getting through our days. 
-      It means recognising that we are not separate from the world we live in. We are constantly shaping it 
-      through the way we show up, the choices we make, the relationships we build, and the energy we bring into our communities.
-    </p>
-      
-    </ul>
-  </div>
-
-  <!-- Approach / Methodology -->
-  <div class="space-y-6 my-12">
-    <h4 class="text-xl font-bold text-gray-900">Your mind understands. Your body decides whether change feels safe. That's why we work with both.</h4>
-    <p class="text-base md:text-lg">
-      I combine <strong>coaching</strong>, <strong>breathwork</strong>.
-    </p>
-    <p class="text-base md:text-lg text-gray-700 leading-relaxed">
-      Coaching helps you bring awareness to the stories, assumptions, and patterns shaping your life. Breathwork helps access your deep knowing and process on much more connected way. 
-      Together, they create the conditions for lasting change — not because they fix you, but because they help you reconnect with your own inner resources.
-    </p>
-  </div>
-
-  <!-- Closing Statement Box -->
-  <div class="p-8 rounded-3xl bg-gradient-to-br from-blue-50/50 to-pink-50/50 border border-slate-200/60 text-center space-y-6 shadow-sm">
-    <p class="text-base md:text-lg text-gray-700">
-      My role is not to tell you who you should become. It is to create a space where you can hear yourself more clearly, trust yourself more deeply, and meet life with greater openness, courage, and presence.
-    </p>
-    
-    <div class="pt-4 border-t border-gray-200/60">
-      <p class="text-sm uppercase tracking-wider text-gray-500 mb-1">***</p>
-      <p class="text-xl md:text-2xl font-bold text-gray-900">
-        To have the courage to express ourselves and contribute something meaningful.<br />
-        <span class="text-gradient-blue-pink">To approach life with curiosity instead of certainty. To know ourselves more deeply.</span>
-      </p>
-    </div>
-  </div>
-          
-        </div>
-      </div>
-    </section>
-
-  <!-- About Me Section -->
-<section
-  id="about"
-  class="container mx-auto px-6 py-16 md:py-24 mt-16 md:mt-24 section-bg-light rounded-3xl shadow-sm"
->
-  <div class="max-w-4xl mx-auto">
-    <!-- Header -->
-    <h2
-      class="text-3xl md:text-5xl font-bold text-center mb-10 text-gradient-blue-pink"
-      data-key="aboutMeTitle"
-    >
-      About Me
-    </h2>
-
-    <!-- Visible Initial Content (Before 'Continue Reading') -->
-    <div class="prose lg:prose-xl text-gray-900 leading-relaxed text-justify mx-auto space-y-6">
-      <p>
-        One of the songs that stayed with me from a young age was “It’s My Life” by Bon Jovi — especially the line: <em>“It’s my life, it’s now or never.”</em>
-      </p>
-      <p>
-        Those words resonated deeply because I learned early that life is both fragile and precious. After losing my mother at a young age, I experienced the depth of grief and the many ways loss can change our relationship with life. At the same time, I witnessed the power of resilience through my father’s conscious, loving, and steady presence. He showed me that even in difficult moments, we still have the ability to choose how we meet life.
-      </p>
-      <p class="font-medium text-gray-900 italic bg-white/60 p-4 rounded-xl border-l-4 border-sky-500">
-        This question has stayed with me ever since: <br/>
-        <strong class="text-sky-800 font-semibold">What is life? How do we not simply move through life, but truly participate in it?</strong>
-      </p>
-      <p>
-        Growing up as a child in a small Polish village, surrounded mostly by people and experiences that felt familiar, I developed a strong curiosity about the wider world. Books, stories, and media became my window into other cultures, places, and ways of living. They sparked a desire to explore beyond what I knew — to understand different perspectives, meet different people, and experience life outside the boundaries of my own environment.
-      </p>
-      <p>
-        That curiosity eventually led me to live abroad and become part of international communities. As a student, moving between different countries and sharing everyday life with people from different backgrounds felt natural. I found it easy to connect, adapt, laugh, learn, and create a sense of belonging across cultures.
-      </p>
-      <p>
-        Arriving in Zurich, however, showed me another side of living abroad. Building connection in a city that can sometimes feel more reserved and distant was a different experience. It challenged me to explore questions that have become central to my work: What allows people to feel connected? What helps us create belonging? How do we remain open when our environment does not immediately mirror our own way of relating?
-      </p>
-      <p>
-        These questions continue to shape the way I see people, relationships, and life itself.
-      </p>
-
-      <!-- FIRST PICTURE (Full photo visible, responsive container) -->
-      <div class="my-10 flex justify-center">
-        <div class="w-full max-w-xl bg-white p-2 sm:p-3 rounded-2xl shadow-md border border-gray-100">
-          <img
-            src="/JustynaWalk.webp" 
-            alt="Justyna - Early Journey and Roots"
-            class="w-full h-auto max-h-[500px] object-contain rounded-xl"
-          />
-        </div>
-      </div>
-    </div>
-
-    <!-- Continue Reading Button -->
-    <div id="about-read-more-wrapper" class="mt-8 text-center">
-      <button
-        id="about-toggle-btn"
-        onclick="toggleAboutContent()"
-        class="btn-primary text-white font-semibold py-3 px-8 rounded-full text-base sm:text-lg shadow-md hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2"
-      >
-        <span>Continue reading</span>
-        <svg id="about-btn-chevron" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-        </svg>
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-slate-700 p-2 focus:outline-none" aria-label="Toggle Menu">
+        <i class="fas fa-bars text-xl"></i>
       </button>
+    </header>
+
+    <!-- Mobile Overlay Navigation -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#FAF8F5]/98 backdrop-blur-lg z-40 hidden md:hidden flex flex-col items-center justify-center space-y-7 pt-12">
+      <a href="#about" class="font-heading text-2xl text-slate-900" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+      <a href="#air-coaching" class="font-heading text-2xl text-[#1E3557]" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Coaching & Breathwork (Air)</a>
+      <a href="#grief-earth" class="font-heading text-2xl text-[#8A9A86]" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Grief Support (Earth)</a>
+      <a href="#fire-club" class="font-heading text-2xl text-[#C85A32]" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Pretty & Angry Club (Fire)</a>
+      <a href="#blog" class="font-heading text-2xl text-slate-900" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Insights</a>
+      <a href="#contact" class="font-heading text-2xl text-slate-900" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
     </div>
 
-    <!-- Hidden Extended Content (Expands on click) -->
-    <div id="about-extended-content" class="hidden transition-all duration-500 ease-in-out mt-8">
-      <div class="prose lg:prose-xl text-gray-900 leading-relaxed text-justify mx-auto space-y-6">
-        
 
-        </div>
-
-        <!-- SECOND PICTURE (Full photo visible, responsive container) -->
-        <div class="my-10 flex justify-center">
-          <div class="w-full max-w-xl bg-white p-2 sm:p-3 rounded-2xl shadow-md border border-gray-100">
-            <img
-              src="/workLaptop.jpeg" 
-              alt="Justyna - Embodiment and Somatic Practice"
-              class="w-full h-auto max-h-[500px] object-contain rounded-xl"
-            />
-          </div>
-        </div>
-
-        <!-- Section: Corporate & Performance -->
-        <div class="pt-4 border-t border-gray-200">
-          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-left">
-            Bridging the worlds of achievement and embodiment
-          </h3>
-          <p>
-            I deeply understand the demands of modern performance. Alongside my coaching practice, I work as an HR Business Partner 
-            in global corporate environments in Zurich, Switzerland. Over the past decade, my path has taken me through academia, 
-            technology startups, corporate structures, and international environments.
-          </p>
-          <p>
-            I have seen how much talent, creativity, and potential exists in people who are intelligent, capable, and ambitious. 
-            I have also seen how easily these qualities become limited when we operate only from our minds and lose connection with ourselves.
-          </p>
-          <p>
-            My own experience in technology and the changing world of work has shaped my perspective on the future. 
-            As artificial intelligence and automation transform the way we work and create, the question becomes not only what technology 
-            can do — but how we choose to show up as humans:
-          </p>
-          <ul class="list-disc pl-6 space-y-1 font-medium text-gray-800 text-left">
-            <li>How to think clearly, but also feel deeply.</li>
-            <li>How to achieve, but also experience.</li>
-            <li>How to adapt, but also consciously participate in shaping the world around us.</li>
-          </ul>
-        </div>
-
-        <!-- Section: Approach -->
-        <div class="pt-4 border-t border-gray-200">
-          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-left">
-            My approach
-          </h3>
-          <p>
-            My approach is warm, grounded, and deeply curious. With a background in Philosophy, I naturally explore the deeper questions 
-            behind our choices, assumptions, and patterns. My coaching style combines curiosity, powerful questions, and practical reflection. 
-            Somatic practices, breathwork, and Yin Yoga bring another dimension: reconnecting with the wisdom of the body, mind and spirit.
-          </p>
-          <p class="font-medium text-gray-900">
-            I do not see people as problems to be fixed. I see people as complex, capable, and constantly evolving human beings — 
-            with existing strengths, resources, and possibilities waiting to be rediscovered.
-          </p>
-        </div>
-
-        <!-- Section: My Own Path -->
-        <div class="pt-4 border-t border-gray-200">
-          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 text-left">
-            My own path
-          </h3>
-          <p>
-            My own journey has never been lineral. I hold degrees in Business Management and Intercultural Communication, studied Philosophy, 
-            completed a full-stack coding bootcamp, became a certified coach, and trained in somatic breathwork and Yin Yoga and pursued other professional trainings.
-          </p>
-          <p>
-            I have moved between cultures, disciplines, and ways of thinking. Each experience has shaped my curiosity about people: 
-            how we adapt, how we create meaning, how we relate to each other, and how we continue becoming who we are.
-          </p>
-          <p class="italic text-sky-800 font-semibold bg-sky-50/70 p-4 rounded-xl border-l-4 border-sky-400">
-            At the centre of my work is one ongoing exploration: <br />
-            <span>What becomes possible when we are fully connected to ourselves?</span>
-          </p>
-          <p>
-            Whether you are navigating change, questioning your next chapter, feeling disconnected despite external success, 
-            or simply wanting to engage with life in a deeper way — this work is an invitation to explore what is possible.
-          </p>
-        </div>
-
-        <!-- THIRD PICTURE (Full photo visible, responsive container) -->
-        <div class="pt-8 flex justify-center">
-          <div class="w-full max-w-lg bg-white p-2 sm:p-3 rounded-2xl shadow-md border border-gray-100">
-            <img
-              src="/chooseLove.jpg" 
-              alt="Justyna Zurawska - Connect"
-              class="w-full h-auto max-h-[480px] object-contain rounded-xl"
-            />
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- About You Section -->
-    <section
-      id="about-you"
-      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
-    >
-      <div class="max-w-4xl mx-auto text-center">
-        <h2
-          class="text-3xl md:text-5xl font-bold mb-10 text-gradient-blue-pink"
-          data-key="aboutYouTitle"
-        >
-          About You
-        </h2>
-       
-<!-- Responsive Container -->
-<!-- Grid Container: 1 column on mobile, 2 columns on tablet and desktop -->
-<!-- Grid Container: 1 column on mobile, 2 columns on desktop -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto my-12 px-4">
-
-  <!-- Picture 1 -->
-  <div class="overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white/40 backdrop-blur-sm hover:shadow-md hover:border-blue-300 transition-all duration-300 flex items-center justify-center p-1">
-    <img
-      src="/AboutYou1.png"
-      alt="Client photo 1"
-      class="w-full h-auto max-h-[450px] object-contain hover:scale-102 transition-transform duration-500 rounded-xl"
-    />
-  </div>
-
-  <!-- Picture 2 -->
-  <div class="overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white/40 backdrop-blur-sm hover:shadow-md hover:border-blue-300 transition-all duration-300 flex items-center justify-center p-1">
-    <img
-      src="/AboutYou2.png" 
-      alt="Client photo 2"
-      class="w-full h-auto max-h-[450px] object-contain hover:scale-102 transition-transform duration-500 rounded-xl"
-    />
-  </div>
-
-  <!-- Picture 3 -->
-  <div class="overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white/40 backdrop-blur-sm hover:shadow-md hover:border-blue-300 transition-all duration-300 flex items-center justify-center p-1">
-    <img
-      src="/AboutYou3.png" 
-      alt="Client photo 3"
-      class="w-full h-auto max-h-[450px] object-contain hover:scale-102 transition-transform duration-500 rounded-xl"
-    />
-  </div>
-
-  <!-- Picture 4 -->
-  <div class="overflow-hidden rounded-2xl shadow-sm border border-slate-200/80 bg-white/40 backdrop-blur-sm hover:shadow-md hover:border-blue-300 transition-all duration-300 flex items-center justify-center p-1">
-    <img
-      src="/AboutYou4.png" 
-      alt="Client photo 4"
-      class="w-full h-auto max-h-[450px] object-contain hover:scale-102 transition-transform duration-500 rounded-xl"
-    />
-  </div>
-
-</div>
-      </div>
-    </section>
-
-    <!-- My Services Section -->
-    <section
-      id="services"
-      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
-    >
-      <div class="max-w-4xl mx-auto">
-        <h2
-          class="text-3xl md:text-5xl font-bold text-center mb-10 text-gradient-blue-pink"
-          data-key="myServicesTitle"
-        >
-          My Services
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div
-            class="bg-purple-50 bg-opacity-60 card p-6 rounded-2xl flex items-start space-x-4"
-          >
-            <div class="flex-shrink-0 text-gradient-blue-pink">
-              <i class="fas fa-comments text-4xl"></i>
-            </div>
-            <div>
-              <h3
-                class="text-2xl font-semibold mb-2 text-gray-800"
-                data-key="service1Title"
-              >
-                1:1 Coaching Sessions
-              </h3>
-              <p class="text-gray-600" data-key="service1Desc">
-                (Online and in person)
-              </p>
-            </div>
-          </div>
-          <div
-            class="bg-purple-50 bg-opacity-60 card p-6 rounded-2xl flex items-start space-x-4"
-          >
-            <div class="flex-shrink-0 text-gradient-blue-pink">
-              <i class="fas fa-lungs text-4xl"></i>
-            </div>
-            <div>
-              <h3
-                class="text-2xl font-semibold mb-2 text-gray-800"
-                data-key="service2Title"
-              >
-                Breathwork Sessions
-              </h3>
-              <p class="text-gray-600" data-key="service2Desc">
-                1:1 Biodynamic Breathwork sessions
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Work With Me Section -->
-    <section
-      id="work-with-me"
-      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
-    >
-      <div class="max-w-4xl mx-auto">
-        <h2
-          class="text-3xl md:text-5xl font-bold text-center mb-10 text-gradient-blue-pink"
-          data-key="workWithMeTitle"
-        >
-          Why To Work With Me?
-        </h2>
-   <div class="max-w-4xl mx-auto my-12 px-4">
-  <!-- Section Title -->
-  <h3 
-    class="text-2xl md:text-3xl font-extrabold text-center mb-8 text-gradient-blue-pink tracking-tight"
-    data-key="goodFitTitle"
-  >
-    This work might be a good fit if...
-  </h3>
-
-  <!-- List Grid -->
-  <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-800 leading-relaxed">
+    <!-- ==========================================
+         ELEMENT 1: AIR (Corporate / Coaching / Presence)
+         Visuals: Navy, Steel Blue, Soft Mist, Crisp Sky
+         ========================================== -->
     
-    <!-- Item 1 -->
-    <li class="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex items-start space-x-4">
-      <i class="fas fa-sparkles text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
-      <span class="font-medium text-base text-gray-800" data-key="goodFit1">
-        You're ready to stop merely understanding yourself and start experiencing life differently.
-      </span>
-    </li>
+    <section class="relative min-h-screen pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 bg-gradient-to-b from-[#EAF2F7]/60 via-[#FAF8F5] to-white overflow-hidden">
+      
+      <!-- Subtle Background Ripple Effect -->
+      <div class="absolute inset-0 z-0 pointer-events-none opacity-40">
+        <svg class="w-full h-full" viewBox="0 0 1000 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="500" cy="400" r="120" stroke="#567A9E" stroke-width="1.5" fill="none" class="animated-ripple"></circle>
+          <circle cx="500" cy="400" r="180" stroke="#567A9E" stroke-width="1.5" fill="none" class="animated-ripple" style="animation-delay: 3s"></circle>
+          <circle cx="500" cy="400" r="240" stroke="#567A9E" stroke-width="1.5" fill="none" class="animated-ripple" style="animation-delay: 6s"></circle>
+        </svg>
+      </div>
 
-    <!-- Item 2 -->
-    <li class="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex items-start space-x-4">
-      <i class="fas fa-sparkles text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
-      <span class="font-medium text-base text-gray-800" data-key="goodFit2">
-        You're willing to look honestly at the patterns that no longer serve you.
-      </span>
-    </li>
-
-    <!-- Item 3 -->
-    <li class="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex items-start space-x-4">
-      <i class="fas fa-sparkles text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
-      <span class="font-medium text-base text-gray-800" data-key="goodFit3">
-        You're curious about what your body has been trying to tell you.
-      </span>
-    </li>
-
-    <!-- Item 4 -->
-    <li class="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex items-start space-x-4">
-      <i class="fas fa-sparkles text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
-      <span class="font-medium text-base text-gray-800" data-key="goodFit4">
-        You're open to exploring both your mind and your nervous system—not just collecting more insights.
-      </span>
-    </li>
-
-    <!-- Item 5 -->
-    <li class="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex items-start space-x-4">
-      <i class="fas fa-sparkles text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
-      <span class="font-medium text-base text-gray-800" data-key="goodFit5">
-        You're tired of surviving on autopilot and want to reconnect with yourself.
-      </span>
-    </li>
-
-    <!-- Item 6 -->
-    <li class="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex items-start space-x-4">
-      <i class="fas fa-sparkles text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
-      <span class="font-medium text-base text-gray-800" data-key="goodFit6">
-        You're ready to take responsibility for your life without blaming yourself for where you are.
-      </span>
-    </li>
-
-    <!-- Item 7 -->
-    <li class="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex items-start space-x-4">
-      <i class="fas fa-sparkles text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
-      <span class="font-medium text-base text-gray-800" data-key="goodFit7">
-        You want your decisions to come from clarity rather than fear, habit or external expectations.
-      </span>
-    </li>
-
-    <!-- Item 8 -->
-    <li class="p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex items-start space-x-4">
-      <i class="fas fa-sparkles text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
-      <span class="font-medium text-base text-gray-800" data-key="goodFit8">
-        You're prepared to experiment, practise and integrate what you discover between our sessions.
-      </span>
-    </li>
-
-    <!-- Item 9 (Spans full width on desktop for visual balance) -->
-    <li class="md:col-span-2 p-5 rounded-2xl bg-white/70 backdrop-blur-sm border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 flex items-start space-x-4">
-      <i class="fas fa-sparkles text-gradient-blue-pink flex-shrink-0 text-xl mt-1"></i>
-      <span class="font-medium text-base text-gray-800" data-key="goodFit9">
-        You don't expect quick fixes: you want meaningful, lasting change.
-      </span>
-    </li>
-
-  </ul>
-</div>
-
-
+      <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
         
-        <div class="mt-12 p-8 bg-purple-50 bg-opacity-60 rounded-2xl shadow-inner border border-purple-100 space-y-4">
-          <h3
-            class="text-2xl md:text-3xl font-semibold text-gradient-blue-pink"
-            data-key="griefSupportTitle"
-          >
-            Grief Support
-          </h3>
-          <p class="text-gray-900 leading-relaxed" data-key="griefSupport1">
-            Grief isn't a problem to solve; It’s a process to move through - at your own pace, in your own way. 
-            It can be loud, numb, or even show up as anger, exhaustion or overworking. 
-            Having navigated my own grief since childhood, I offer a heart-centered, non-therapeutic approach that honors your unique experience. 
-          </p>
-          <p class="text-gray-900 leading-relaxed" data-key="griefSupport2">
-            Through integrative coaching and breathwork, we’ll create a space where you can meet your emotions safely, release what’s held in the body, 
-            begin to integrate your loss and move forward with meaning. 
-          </p>
-          <p>My foundation is built on both personal experience and specialized training. I participated in Hope Edelman’s 
-            <a href="https://www.hopeedelman.com/motherless-daughter-circles" target="_blank" rel="noopener noreferrer" class="hover:underline text-gradient-blue-pink">
-  Motherless Daughters circles</a> and 
-            completed my further grief coaching education through an ICF-accredited From Grief to Gratitude program.</p>
-          <p class="text-gray-900 leading-relaxed" data-key="griefSupport3">
-            Pain doesn’t always fade, but we can learn to hold it differently, grow around it, and live fully again.
-          </p>
+        <!-- Zurich Corporate Positioning Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 text-xs font-semibold tracking-widest text-[#1E3557] bg-white border border-[#567A9E]/30 rounded-full shadow-sm uppercase">
+          <span class="w-2 h-2 rounded-full bg-[#567A9E]"></span>
+          Zurich Executive Coaching & Somatic Practice
         </div>
-      </div>
-    </section>
 
-    <!-- How Section -->
-    <section
-      id="how"
-      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24"
-    >
-      <div class="max-w-4xl mx-auto text-center">
-        <h2
-          class="text-3xl md:text-5xl font-bold mb-10 text-gradient-blue-pink"
-          data-key="howTitle"
-        >
-          How
-        </h2>
-        <div class="text-gray-900 leading-relaxed px-4 text-left space-y-4" data-key="howContent">
-          <p>I combine coaching and breathwork to create a grounded, integrative process that helps you reconnect with yourself — not just mentally, but physically and emotionally.</p>
-          <p>We start by slowing down and creating space for what’s really going on beneath the surface. Whether you’re navigating grief, burnout, or a major life transition, I support you in releasing the tension and protective patterns that no longer serve you.</p>
-          <p class="font-semibold pt-2">We work with both the mind and the body:</p>
-          <ul class="list-disc list-inside space-y-2 pl-2">
-            <li><strong>Coaching</strong> brings clarity, direction, and gentle accountability. Through deep, well-placed questions, I help you access insight and shift perspectives without judgment or pressure.</li>
-            <li><strong>Breathwork</strong> supports emotional release, nervous system regulation, and reconnection with your body. </li>
-          </ul>
-          <p class="pt-2">My approach is trauma-informed, non-therapeutic, and practical. It’s designed for high-functioning, thoughtful people who are used to holding it all together — but are ready to soften, feel again, and lead from their inner strength.</p>
-          <p class="font-semibold pt-2">Through this work, you’ll learn to:</p>
-          <ul class="list-disc list-inside space-y-1 pl-2">
-            <li>Regulate your nervous system</li>
-            <li>Release stored emotional tension from the body</li>
-            <li>Access your inner clarity and sense of self</li>
-            <li>Make decisions that are not just logical, but deeply aligned</li>
-          </ul>
-          <p class="pt-2">This is not about fixing you. It’s about walking you back home to yourself — with gentleness, honesty, and space to just be.</p>
-        </div>
-      </div>
-    </section>
+        <!-- Headline -->
+        <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-[#1E3557] leading-[1.1]">
+          When thinking harder is <br class="hidden sm:inline"/>no longer the answer.
+        </h1>
 
-    <!-- Join Section -->
-    <section
-      id="join"
-      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24 mb-16 md:mb-24"
-    >
-      <div class="max-w-4xl mx-auto text-center">
-        <div
-          class="bg-blue-50 bg-opacity-80 rounded-2xl p-8 md:p-16 shadow-inner border border-blue-100"
-        >
-          <h3
-            class="text-2xl md:text-3xl font-semibold mb-6 text-gradient-blue-pink"
-            data-key="clubTitle"
-          >
-            Pretty & Angry Girls Club
-          </h3>
-          <div
-            class="text-gray-900 leading-relaxed text-lg text-left space-y-4"
-            data-key="clubDescription"
-          >
-            <p>It is a space we co-create.</p>
-            <p><strong>Pretty and Angry Girls Club</strong> is a series of group gatherings, both in-person and online, where we come together to meet one of the most misunderstood emotions: ANGER.</p>
-            <p>Here, we don’t push it away or try to fix it. We embrace it. We use it and transform it together.</p>
-            <p>You belong here whether you're simmering, silent, or explosive under anger. This is a space to remain fully yourself, in all your fire and softness.</p>
-            <p>We explore how anger can become a source of strength, clarity, and connection instead of something we repress or carry alone.</p>
-            <p>Expect a lively, laid-back atmosphere.</p>
-            <p>We draw from each other’s skills and expressions. You'll experience sessions that include elements of improv theatre, movement and dance, painting, boxing and more — all designed to help you process and channel your emotions in empowering, embodied ways.</p>
-            <p>And yes, you might as well meet new friends here.</p>
-            <p>This is a place where fierceness meets fun, and where your emotions have full permission to be seen and felt without judgment.</p>
-            <p>You’re not too much or too little here. You're just in time and fully welcomed. 🔥</p>
-          </div>
-        </div>
-        <button
-          class="btn-primary text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl mt-10"
-          data-key="joinNow"
-        >
-          Join Now
-        </button>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section
-      id="contact"
-      class="container mx-auto px-6 py-16 md:py-24 section-bg-light rounded-3xl mt-16 md:mt-24 mb-16 md:mb-24"
-    >
-      <div class="max-w-4xl mx-auto text-center">
-        <h2
-          class="text-3xl md:text-5xl font-bold mb-10 text-gradient-blue-pink"
-          data-key="contactTitle"
-        >
-          Get in Touch
-        </h2>
-        <div
-          class="flex flex-col md:flex-row justify-center items-center gap-8 text-xl"
-        >
-          <div class="flex items-center space-x-3">
-            <i class="fas fa-envelope text-gradient-blue-pink text-2xl"></i>
-            <a
-              href="mailto:coaching@justynazurawska.com"
-              class="text-gray-900 hover:text-gradient-blue-pink"
-              data-key="contactEmail"
-              >coaching@justynazurawska.com</a
-            >
-          </div>
-          <div class="flex items-center space-x-3">
-            <i class="fas fa-phone-alt text-gradient-blue-pink text-2xl"></i>
-            <a
-              href="tel:+41786938831"
-              class="text-gray-900 hover:text-gradient-blue-pink"
-              data-key="contactPhone"
-              >+41 78 693 88 31</a
-            >
-          </div>
-        </div>
-        <a 
-  href="https://wa.me/41786938831" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="whatsapp-link"
->
-  Text me on Whatsapp
-</a>
-        <p class="text-lg text-gray-700 mt-16" data-key="contactFormPrompt">
-          Alternatively, fill out the form below and I'll get back to you shortly.
+        <!-- Brand Mantra -->
+        <p class="text-xs sm:text-sm font-bold tracking-[0.2em] text-[#567A9E] uppercase">
+          Think. Breathe. Allow. Glow.
         </p>
-        <form class="mt-8 max-w-xl mx-auto space-y-6 text-left">
-          <div>
-            <label
-              for="name"
-              class="block text-gray-900 text-sm font-medium mb-2"
-              data-key="formNameLabel"
-              >Name</label
-            >
-            <input
-              type="text"
-              id="name"
-              name="name"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
-              placeholder="Your Name"
-              data-key="formNamePlaceholder"
-            />
+
+        <!-- Subheading -->
+        <p class="text-base sm:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed font-normal">
+          Integrating strategic 1:1 coaching with trauma-informed somatic breathwork for leaders, senior executives, and high-performing professionals navigating complexity and change.
+        </p>
+
+        <!-- Trust & Background Bar -->
+        <div class="w-full max-w-3xl mx-auto bg-white/80 backdrop-blur-md border border-stone-200 rounded-2xl py-3.5 px-6 shadow-sm flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-600">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check text-[#567A9E]"></i>
+            <span>Global Corporate HR Background</span>
           </div>
-          <div>
-            <label
-              for="email"
-              class="block text-gray-900 text-sm font-medium mb-2"
-              data-key="formEmailLabel"
-              >Email</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
-              placeholder="your.email@example.com"
-              data-key="formEmailPlaceholder"
-            />
+          <span class="hidden sm:inline text-slate-300">•</span>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check text-[#567A9E]"></i>
+            <span>Certified Somatic Breathwork</span>
           </div>
-          <div>
-            <label
-              for="message"
-              class="block text-gray-900 text-sm font-medium mb-2"
-              data-key="formMessageLabel"
-              >Message</label
-            >
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
-              placeholder="Tell me about your needs..."
-              data-key="formMessagePlaceholder"
-            ></textarea>
+          <span class="hidden sm:inline text-slate-300">•</span>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check text-[#567A9E]"></i>
+            <span>Trauma-Informed & Grounded</span>
           </div>
-        <a 
-  href="https://wa.me/41786938831" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  class="btn-primary inline-block text-center text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl w-full md:w-auto"
-  data-key="formSubmitButton"
->
-  Send Message
-</a>
-        </form>
+        </div>
+
+        <!-- Primary CTA -->
+        <div class="pt-4">
+          <a
+            href="https://wa.me/41786938831?text=Hello%20Justyna%2C%20I%20would%20like%20to%20inquire%20about%20a%20confidential%20discovery%20call."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-navy inline-flex items-center gap-3 font-semibold py-4 px-9 rounded-full text-sm sm:text-base tracking-wide"
+          >
+            <i class="fab fa-whatsapp text-lg"></i>
+            <span>Book a Confidential Discovery Call</span>
+          </a>
+        </div>
+
       </div>
     </section>
 
-  <!-- Footer -->
-<footer class="bg-gray-800 text-white py-10 px-6 md:px-12 rounded-t-xl">
-  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-    <div class="mb-6 md:mb-0">
-      <h3 class="text-2xl font-bold text-gradient-blue-pink mb-2">
-        Justyna Zurawska. Think. Breathe. Allow. Glow. Connect. Stay Open.
-      </h3>
-      <p class="text-gray-400">&copy; 2026 All rights reserved. </p>
-    </div>
-    <div class="flex space-x-6 mb-6 md:mb-0">
-      <a
-        href="https://wa.me/41786938831?text=Hey%2C%20following%20your%20website%20I%20would%20like%20to%20"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="WhatsApp"
-        class="hover:text-emerald-400 transition-colors"
-      >
-        <i class="fab fa-whatsapp text-2xl"></i>
-      </a>
-      <a
-        href="https://www.instagram.com/breathworkpopolsku/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Instagram"
-        class="hover:text-pink-400 transition-colors"
-      >
-        <i class="fab fa-instagram text-2xl"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/justynazurawska/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-        class="hover:text-blue-400 transition-colors"
-      >
-        <i class="fab fa-linkedin text-2xl"></i>
-      </a>
-    </div>
-  </div>
-</footer>
+    <!-- Air: Methodology Section -->
+    <section id="air-coaching" class="py-16 sm:py-24 px-4 sm:px-6 bg-white">
+      <div class="max-w-5xl mx-auto space-y-16">
 
-    <!-- Interactive Menus & Blog Scripts -->
+        <div class="text-center space-y-3 max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Air Element • Intellectual & Somatic Clarity</span>
+          <h2 class="font-heading text-3xl sm:text-5xl text-[#1E3557]">The Dual Approach to Embodied Leadership</h2>
+          <p class="text-slate-600 text-sm sm:text-base">Reconnecting executive decision-making with nervous system regulation.</p>
+        </div>
+
+        <!-- Two Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-[#FAF8F5] border border-stone-200/80 p-8 rounded-3xl space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-[#EAF2F7] text-[#1E3557] flex items-center justify-center font-bold">
+              🧠
+            </div>
+            <h3 class="font-heading text-2xl text-[#1E3557]">1:1 Coaching & Pattern Reframing</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Examine cognitive assumptions, decision-making habits, and perfectionist stories driving your workload. Gain strategic clarity, break through autopilot thinking, and intentionally direct your leadership presence.
+            </p>
+          </div>
+
+          <div class="bg-[#FAF8F5] border border-stone-200/80 p-8 rounded-3xl space-y-4">
+            <div class="w-10 h-10 rounded-xl bg-[#EAF2F7] text-[#1E3557] flex items-center justify-center font-bold">
+              🫁
+            </div>
+            <h3 class="font-heading text-2xl text-[#1E3557]">Somatic Breathwork & Regulation</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Bypass intellectual over-analysis to access the nervous system directly. Down-regulate stress responses, release accumulated physical tension, and embody calm authority under pressure.
+            </p>
+          </div>
+        </div>
+
+        <!-- Developmental Pathway Card -->
+        <div class="bg-[#EAF2F7]/50 border border-[#567A9E]/20 rounded-3xl p-8 sm:p-10 text-center space-y-8">
+          <h3 class="text-xs font-bold text-[#567A9E] uppercase tracking-widest">The Developmental Shift</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-2">
+              <span class="text-xs font-bold text-slate-400 uppercase">Phase 01</span>
+              <h4 class="font-heading text-xl text-[#1E3557]">Achievement</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">Sustained by intellect, hyper-vigilance, and over-working habits that created initial success.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-2">
+              <span class="text-xs font-bold text-[#567A9E] uppercase">Phase 02</span>
+              <h4 class="font-heading text-xl text-[#1E3557]">Alignment</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">Regulating the nervous system, releasing tension armor, and clarifying core values.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-2">
+              <span class="text-xs font-bold text-[#8A9A86] uppercase">Phase 03</span>
+              <h4 class="font-heading text-xl text-[#1E3557]">Full Participation</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">Leading and living with grounded presence, authentic authority, and creative vitality.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Organic Flowing SVG Divider (Air to Earth) -->
+    <div class="w-full overflow-hidden leading-none bg-white">
+      <svg class="relative block w-full h-12 sm:h-20 text-[#F9F7F4]" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,0 C150,90 350,-40 500,50 C650,140 900,10 1200,40 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+
+
+    <!-- ==========================================
+         ELEMENT 2: EARTH (Grief Support & Integration)
+         Visuals: Sage, Warm Sand, Linen, Gentle Organic Shadows
+         ========================================== -->
+
+    <section id="grief-earth" class="py-16 sm:py-24 px-4 sm:px-6 bg-[#F9F7F4] relative">
+      <div class="max-w-4xl mx-auto space-y-12">
+        
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+          <span class="inline-block px-4 py-1 text-xs font-semibold uppercase tracking-widest text-[#8A9A86] bg-[#F0F4F1] rounded-full">
+            Earth Element • Grounding & Holding
+          </span>
+          <h2 class="font-heading text-3xl sm:text-5xl text-slate-900">Grief Support & Integration</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Quiet hope. A heart-centered space to honor loss, meet emotions safely, and grow around your experience at your own pace.
+          </p>
+        </div>
+
+        <!-- Earth Content Card -->
+        <div class="bg-white/80 border border-[#E6DFD5] rounded-3xl p-8 sm:p-12 shadow-sm space-y-6 text-slate-700 leading-relaxed">
+          <p class="text-base sm:text-lg text-slate-800">
+            Grief isn't a problem to solve; it is a profound human process to move through—at your own pace, in your own way. It can be quiet, numb, loud, or show up unexpectedly as exhaustion, anger, or chronic overworking.
+          </p>
+
+          <div class="border-l-2 border-[#8A9A86] pl-6 py-2 my-6 italic text-slate-800 font-heading text-xl sm:text-2xl">
+            "Pain doesn’t always fade completely, but we can learn to hold it differently, build capacity around it, and participate fully in life again."
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-600">
+            Having navigated my own deep grief since childhood, I offer a grounded, non-therapeutic space. Through integrative coaching and somatic breathwork, we create conditions where you can safely release what is stored in the body and integrate loss with gentleness.
+          </p>
+
+          <p class="text-xs sm:text-sm text-slate-500 pt-2 border-t border-stone-200">
+            Built on personal resilience and ICF-accredited grief coaching education (From Grief to Gratitude) alongside participation in Hope Edelman’s Motherless Daughters circles.
+          </p>
+
+          <div class="pt-4 text-center sm:text-left">
+            <a href="https://wa.me/41786938831?text=Hello%20Justyna%2C%20I%20would%20like%20to%20ask%20about%20Grief%20Support." target="_blank" rel="noopener noreferrer" class="btn-earth inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold">
+              <span>Inquire About Grief Support</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Organic Flowing SVG Divider (Earth to Fire) -->
+    <div class="w-full overflow-hidden leading-none bg-[#F9F7F4]">
+      <svg class="relative block w-full h-12 sm:h-20 text-[#FDF6F0]" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,40 C300,110 500,10 800,80 C1000,130 1100,20 1200,50 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+
+
+    <!-- ==========================================
+         ELEMENT 3: FIRE (Pretty & Angry Girls Club)
+         Visuals: Terracotta, Burnt Rust, Sunset Warmth, Courage
+         ========================================== -->
+
+    <section id="fire-club" class="py-16 sm:py-24 px-4 sm:px-6 bg-[#FDF6F0] relative">
+      <div class="max-w-4xl mx-auto space-y-10 text-center">
+        
+        <div class="space-y-4 max-w-2xl mx-auto">
+          <span class="inline-block px-4 py-1 text-xs font-semibold uppercase tracking-widest text-[#C85A32] bg-[#C85A32]/10 rounded-full">
+            Fire Element • Creative Feminine Expression
+          </span>
+          <h2 class="font-heading text-4xl sm:text-6xl text-[#4A1513]">Pretty & Angry Girls Club</h2>
+          <p class="text-[#9E3B1B] text-sm sm:text-base font-medium">
+            Not rage—creative fire. Transforming misunderstood emotions into vitality, boundaries, and laughter.
+          </p>
+        </div>
+
+        <!-- Fire Feature Card -->
+        <div class="bg-white/90 border border-[#C85A32]/20 rounded-3xl p-8 sm:p-12 shadow-sm text-left space-y-6 text-slate-700">
+          <p class="text-base sm:text-lg text-slate-800 leading-relaxed">
+            <strong>Pretty & Angry Girls Club</strong> is a series of group gatherings (in-person in Zurich and online) where we come together to meet one of the most suppressed emotions: <span class="text-[#C85A32] font-semibold">ANGER</span>.
+          </p>
+
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Here, we don’t push it away or attempt to fix it. We embrace it, process it, and channel it together. You belong here whether you are simmering, silent, or explosive beneath the surface.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2">
+            <div class="bg-[#FDF6F0] p-4 rounded-xl border border-[#C85A32]/20 text-xs sm:text-sm text-slate-800">
+              🔥 <strong>Embodied Outlets:</strong> Improv elements, movement, dance, boxing, and creative expression.
+            </div>
+            <div class="bg-[#FDF6F0] p-4 rounded-xl border border-[#C85A32]/20 text-xs sm:text-sm text-slate-800">
+              ✨ <strong>The Emotion:</strong> Moving from "I am angry" to <em>"I feel vibrant, clear, and fully alive."</em>
+            </div>
+          </div>
+
+          <div class="pt-4 text-center">
+            <a href="https://wa.me/41786938831?text=Hey!%20I'm%20interested%20in%20joining%20the%20Pretty%20%26%20Angry%20Girls%20Club." target="_blank" rel="noopener noreferrer" class="btn-fire inline-flex items-center gap-2 px-9 py-4 rounded-full text-sm font-semibold tracking-wide">
+              <span>Join the Gatherings</span>
+              <i class="fas fa-fire text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         ABOUT ME & PHILOSOPHY
+         ========================================== -->
+
+    <section id="about" class="py-16 sm:py-24 px-4 sm:px-6 bg-white border-t border-stone-200/60">
+      <div class="max-w-4xl mx-auto space-y-12">
+        
+        <div class="text-center space-y-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Background & Roots</span>
+          <h2 class="font-heading text-3xl sm:text-5xl text-[#1E3557]">About Justyna</h2>
+        </div>
+
+        <div class="prose lg:prose-lg text-slate-700 leading-relaxed space-y-6 mx-auto">
+          <p>
+            One of the songs that stayed with me from a young age was <em>“It’s My Life”</em> by Bon Jovi—especially the line: <em>“It’s my life, it’s now or never.”</em>
+          </p>
+          <p>
+            Those words resonated deeply because I learned early that life is both fragile and precious. After losing my mother at a young age, I experienced the depth of loss and the ways grief changes our relationship with life. At the same time, I witnessed resilience through my father’s conscious, steady presence—showing me that we always retain agency in how we meet the world.
+          </p>
+
+          <blockquote class="font-heading text-xl sm:text-2xl text-[#1E3557] border-l-2 border-[#567A9E] pl-6 italic my-8">
+            "What is life? How do we not simply move through our days, but truly participate in them?"
+          </blockquote>
+
+          <p>
+            My path has taken me from a small Polish village to international communities, degrees in Business Management and Intercultural Communication, philosophy studies, a full-stack code bootcamp, corporate HR roles in Zurich, and somatic breathwork certifications.
+          </p>
+        </div>
+
+        <!-- Zurich Editorial Photo Container -->
+        <div class="flex justify-center my-8">
+          <div class="w-full max-w-xl bg-[#FAF8F5] p-3 rounded-3xl border border-stone-200/80 shadow-sm">
+            <img src="/JustynaWalk.webp" alt="Justyna Zurawska - Zurich" class="w-full h-auto max-h-[480px] object-cover rounded-2xl" />
+          </div>
+        </div>
+
+        <!-- Read More Toggle Content -->
+        <div id="about-read-more-wrapper" class="text-center pt-2">
+          <button id="about-toggle-btn" onclick="toggleAboutContent()" class="btn-navy text-white font-semibold py-3 px-8 rounded-full text-xs sm:text-sm tracking-wider uppercase inline-flex items-center gap-2">
+            <span>Continue Reading</span>
+            <i id="about-btn-chevron" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+          </button>
+        </div>
+
+        <div id="about-extended-content" class="hidden space-y-8 pt-6">
+          <div class="prose lg:prose-lg text-slate-700 leading-relaxed space-y-6 mx-auto">
+            <h3 class="font-heading text-2xl text-[#1E3557]">Bridging Corporate Performance & Somatic Presence</h3>
+            <p>
+              Alongside my practice, I serve as an HR Business Partner in a global corporate environment in Zurich. I see daily how capable, high-performing individuals operate from intellect while ignoring physiological boundaries. My work bridges strategic clarity with body intelligence.
+            </p>
+          </div>
+
+          <div class="flex justify-center">
+            <div class="w-full max-w-xl bg-[#FAF8F5] p-3 rounded-3xl border border-stone-200/80 shadow-sm">
+              <img src="/workLaptop.jpeg" alt="Justyna Working" class="w-full h-auto max-h-[450px] object-cover rounded-2xl" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         BLOG / INSIGHTS SECTION
+         ========================================== -->
+
+    <section id="blog" class="py-16 sm:py-24 px-4 sm:px-6 bg-[#EAF2F7]/40 border-t border-stone-200/60">
+      <div class="max-w-5xl mx-auto space-y-12 text-center">
+        
+        <div class="space-y-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Reflections & Essays</span>
+          <h2 class="font-heading text-3xl sm:text-5xl text-[#1E3557]">Blog & Insights</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          
+          <!-- Article 1 -->
+          <article class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm flex flex-col justify-between hover:border-[#567A9E] transition-all">
+            <div class="space-y-3">
+              <span class="text-xs font-semibold text-[#567A9E]">Somatic Practice • 5 min read</span>
+              <h3 class="font-heading text-xl text-slate-900 font-bold cursor-pointer hover:text-[#567A9E]" onclick="openBlogModal('post-1')">
+                Moving From Thinking to Feeling: Why Logic Isn't Enough
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Intellectual understanding lives in the neocortex, but survival patterns are stored in the nervous system...
+              </p>
+            </div>
+            <button onclick="openBlogModal('post-1')" class="text-xs font-bold text-[#1E3557] pt-6 inline-flex items-center gap-2 hover:text-[#567A9E]">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </button>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm flex flex-col justify-between hover:border-[#567A9E] transition-all">
+            <div class="space-y-3">
+              <span class="text-xs font-semibold text-[#567A9E]">Human & AI • 4 min read</span>
+              <h3 class="font-heading text-xl text-slate-900 font-bold cursor-pointer hover:text-[#567A9E]" onclick="openBlogModal('post-2')">
+                Staying Fully Alive as a Human in the Age of AI
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                As technology handles speed and cognitive output, unique human value shifts toward presence and empathy...
+              </p>
+            </div>
+            <button onclick="openBlogModal('post-2')" class="text-xs font-bold text-[#1E3557] pt-6 inline-flex items-center gap-2 hover:text-[#567A9E]">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </button>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm flex flex-col justify-between hover:border-[#C85A32] transition-all">
+            <div class="space-y-3">
+              <span class="text-xs font-semibold text-[#C85A32]">Embodied Presence • 6 min read</span>
+              <h3 class="font-heading text-xl text-slate-900 font-bold cursor-pointer hover:text-[#C85A32]" onclick="openBlogModal('post-3')">
+                Reclaiming Anger as a Fuel for Authentic Expression
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Anger is bound energy seeking clarity. When met with curiosity, it transforms into healthy boundaries...
+              </p>
+            </div>
+            <button onclick="openBlogModal('post-3')" class="text-xs font-bold text-[#C85A32] pt-6 inline-flex items-center gap-2 hover:text-[#9E3B1B]">
+              Read Article <i class="fas fa-arrow-right"></i>
+            </button>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Modal -->
+    <div id="blog-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+      <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-8 relative shadow-2xl">
+        <button onclick="closeBlogModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 text-xl font-bold">
+          &times;
+        </button>
+        <div id="blog-modal-content" class="space-y-4"></div>
+      </div>
+    </div>
+
+
+    <!-- ==========================================
+         CONTACT & FOOTER
+         ========================================== -->
+
+    <section id="contact" class="py-16 sm:py-24 px-4 sm:px-6 bg-white border-t border-stone-200/60">
+      <div class="max-w-3xl mx-auto text-center space-y-8">
+        
+        <div class="space-y-2">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Initiate Connection</span>
+          <h2 class="font-heading text-3xl sm:text-5xl text-[#1E3557]">Get in Touch</h2>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm sm:text-base text-slate-700">
+          <a href="mailto:coaching@justynazurawska.com" class="flex items-center gap-2 hover:text-[#1E3557]">
+            <i class="fas fa-envelope text-[#567A9E]"></i>
+            <span>coaching@justynazurawska.com</span>
+          </a>
+          <span class="hidden sm:inline text-slate-300">•</span>
+          <a href="https://wa.me/41786938831" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-[#1E3557]">
+            <i class="fab fa-whatsapp text-[#567A9E]"></i>
+            <span>+41 78 693 88 31</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="bg-[#1E3557] text-white py-12 px-6 md:px-12">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+        <div>
+          <h3 class="font-heading text-2xl font-bold tracking-wide">Justyna Zurawska</h3>
+          <p class="text-xs text-slate-300 pt-1">Think. Breathe. Allow. Glow.</p>
+        </div>
+
+        <div class="flex space-x-6 text-xl text-slate-300">
+          <a href="https://wa.me/41786938831" target="_blank" rel="noopener noreferrer" class="hover:text-white"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/breathworkpopolsku/" target="_blank" rel="noopener noreferrer" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/justynazurawska/" target="_blank" rel="noopener noreferrer" class="hover:text-white"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <p class="text-xs text-slate-400">&copy; 2026 All rights reserved.</p>
+      </div>
+    </footer>
+
+
+    <!-- Scripts -->
     <script>
-      // Mobile menu toggle
+      // Mobile Navigation Menu Toggle
       const mobileBtn = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
-      
       mobileBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
       });
@@ -1254,73 +577,48 @@ Many people have already explored self-development through reflection, mindset w
         const extendedContent = document.getElementById('about-extended-content');
         const toggleBtn = document.getElementById('about-toggle-btn');
         const chevron = document.getElementById('about-btn-chevron');
-        
+
         if (extendedContent.classList.contains('hidden')) {
           extendedContent.classList.remove('hidden');
-          toggleBtn.querySelector('span').textContent = 'Show less';
+          toggleBtn.querySelector('span').textContent = 'Show Less';
           chevron.classList.add('rotate-180');
         } else {
           extendedContent.classList.add('hidden');
-          toggleBtn.querySelector('span').textContent = 'Continue reading';
+          toggleBtn.querySelector('span').textContent = 'Continue Reading';
           chevron.classList.remove('rotate-180');
-          
           document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
         }
       }
 
-      // Blog Article Data & Reader Modal Functionality
+      // Blog Reader Modal Script
       const blogArticles = {
         'post-1': {
           title: "Moving From Thinking to Feeling: Why Logic Isn't Enough",
           category: "Somatic Practice • 5 min read",
-          content: `
-            <p class="text-lg font-medium text-sky-800">Many highly capable people excel at analyzing their lives, yet feel stuck in the same emotional and behavioral loops.</p>
-            <p>You can read all the books, attend workshops, and articulate your patterns perfectly in coaching—yet when stress arises, your body defaults to old protective mechanisms like over-working, hyper-vigilance, or numbing out.</p>
-            <h4 class="text-xl font-bold text-gray-900 pt-2">The Limits of Intellectual Understanding</h4>
-            <p>Intellectual understanding happens in the neocortex, but survival patterns and nervous system responses are stored in the autonomic nervous system and subcortical brain. You cannot think your way out of a physiological stress state.</p>
-            <h4 class="text-xl font-bold text-gray-900 pt-2">The Power of Somatic Integration</h4>
-            <p>When we combine mental clarity with somatic practices like breathwork, we allow the body to complete unreleased stress responses. This builds genuine nervous system capacity, transforming cognitive insight into felt, lived reality.</p>
-          `
+          content: `<p class="text-sm text-slate-700 leading-relaxed">Intellectual understanding lives in the neocortex, but survival patterns and nervous system responses are stored in the autonomic nervous system. You cannot think your way out of a physiological stress state. Combining coaching with somatic breathwork allows the body to digest stress responses, turning cognitive insight into lived reality.</p>`
         },
         'post-2': {
           title: "Staying Fully Alive as a Human in the Age of AI",
           category: "Human & AI • 4 min read",
-          content: `
-            <p class="text-lg font-medium text-sky-800">As artificial intelligence rapidly masters logic, code, and speed, what remains uniquely human?</p>
-            <p>The future won't just belong to those who optimize for speed and productivity, but to those who retain their capacity for presence, felt empathy, creativity, and conscious choice.</p>
-            <h4 class="text-xl font-bold text-gray-900 pt-2">Productivity vs. Presence</h4>
-            <p>When machines take over cognitive labor, human value shifts from output volume to the quality of our presence and relational depth. Staying connected to your body and emotional landscape is no longer just wellness advice—it's essential for grounded leadership and authentic living.</p>
-          `
+          content: `<p class="text-sm text-slate-700 leading-relaxed">As AI handles speed and information synthesis, uniquely human capacities become paramount: presence, empathy, and emotional integration. Retaining connection to your body is no longer wellness advice—it is fundamental for executive presence.</p>`
         },
         'post-3': {
           title: "Reclaiming Anger as a Fuel for Authentic Expression",
           category: "Embodied Presence • 6 min read",
-          content: `
-            <p class="text-lg font-medium text-sky-800">Anger is one of the most suppressed emotions, especially for women and high-achieving professionals.</p>
-            <p>When denied, anger turns inward—manifesting as exhaustion, chronic resentment, or self-criticism. But at its core, anger is simply bound energy seeking boundary clarity and protection.</p>
-            <h4 class="text-xl font-bold text-gray-900 pt-2">Transforming Fire into Boundary & Purpose</h4>
-            <p>By giving anger conscious, embodied expression—through movement, breathwork, and structured reflection—we transform raw emotion into healthy boundaries, self-respect, and clear action.</p>
-          `
+          content: `<p class="text-sm text-slate-700 leading-relaxed">Anger is bound energy seeking clarity and boundaries. When given safe, embodied expression through movement and structured practice, it transforms into courage, clear boundaries, and authentic vitality.</p>`
         }
       };
 
       function openBlogModal(postId) {
         const article = blogArticles[postId];
         if (!article) return;
-
         const modalContent = document.getElementById('blog-modal-content');
         modalContent.innerHTML = `
-          <span class="text-xs font-semibold uppercase tracking-wider text-sky-600">${article.category}</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-4">${article.title}</h2>
-          <hr class="border-gray-200 my-4" />
-          <div class="space-y-4 text-gray-700 leading-relaxed">${article.content}</div>
-          <div class="pt-6 mt-6 border-t border-gray-100 flex justify-end">
-            <button onclick="closeBlogModal()" class="px-6 py-2.5 bg-gray-900 text-white font-semibold text-sm rounded-full hover:bg-gray-800 transition-colors">
-              Close Article
-            </button>
-          </div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-[#567A9E]">${article.category}</span>
+          <h2 class="font-heading text-2xl font-bold text-slate-900 mt-1 mb-4">${article.title}</h2>
+          <hr class="border-stone-200 my-4" />
+          <div>${article.content}</div>
         `;
-
         document.getElementById('blog-modal').classList.remove('hidden');
         document.body.style.overflow = 'hidden';
       }
@@ -1330,12 +628,9 @@ Many people have already explored self-development through reflection, mindset w
         document.body.style.overflow = '';
       }
 
-      // Close modal on outside click
       window.addEventListener('click', (e) => {
         const modal = document.getElementById('blog-modal');
-        if (e.target === modal) {
-          closeBlogModal();
-        }
+        if (e.target === modal) closeBlogModal();
       });
     </script>
   </body>
