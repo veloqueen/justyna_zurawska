@@ -185,19 +185,72 @@
         </div>
 
         <!-- Primary CTA -->
-       <div class="pt-4 flex justify-center">
+       <div class="py-6 flex justify-center items-center">
   <a
     href="https://wa.me/41786938831?text=Hello%20Justyna%2C%20I%20would%20like%20to%20inquire%20about%20a%20confidential%20discovery%20call."
     target="_blank"
     rel="noopener noreferrer"
-    class="liquid-glass-btn group relative inline-flex items-center gap-3 py-4 px-10 text-sm sm:text-base font-semibold tracking-wide text-[#1E3557] overflow-hidden transition-all duration-500 ease-out"
+    class="liquid-cloud-wrapper group relative inline-flex items-center justify-center p-6 transition-all duration-500 hover:scale-105 active:scale-95 select-none"
   >
-    <!-- Liquid Glow Inner Highlights -->
-    <span class="liquid-bubble absolute inset-0 rounded-full"></span>
-    
-    <!-- Icon & Text -->
-    <i class="fab fa-whatsapp text-xl text-[#C85A32] transition-transform duration-300 group-hover:scale-110"></i>
-    <span class="relative z-10 drop-shadow-sm">Book a Confidential Discovery Call</span>
+    <!-- 1. Ambient Pulsing Halo (Signals "Click Me") -->
+    <div class="absolute inset-0 rounded-full bg-gradient-to-r from-[#C85A32]/20 to-[#1E3557]/15 blur-xl group-hover:blur-2xl group-hover:scale-110 transition-all duration-500 animate-pulse"></div>
+
+    <!-- 2. Glass Liquid Background Container (Organic Cloud SVG) -->
+    <svg class="liquid-glass-svg absolute inset-0 w-full h-full drop-shadow-lg" viewBox="0 0 380 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Frosted Glass Gradient Fill -->
+        <linearGradient id="cloudGlassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.75" />
+          <stop offset="50%" stop-color="#f4eedf" stop-opacity="0.45" />
+          <stop offset="100%" stop-color="#c85a32" stop-opacity="0.18" />
+        </linearGradient>
+        
+        <!-- Refractive Rim Highlight -->
+        <linearGradient id="rimHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1" />
+        </linearGradient>
+      </defs>
+
+      <!-- Organic Fluid Base Path -->
+      <path 
+        class="liquid-path transition-all duration-700 ease-out"
+        d="M 45,15 C 90,5 290,2 335,18 C 365,30 375,55 350,72 C 310,88 70,86 28,70 C 2,52 12,25 45,15 Z" 
+        fill="url(#cloudGlassGrad)" 
+        stroke="url(#rimHighlight)" 
+        stroke-width="1.5"
+      />
+
+      <!-- Convex Glass Top Light Specular Refraction -->
+      <path 
+        d="M 50,18 C 110,10 270,8 325,20 C 340,23 320,13 270,9 C 180,3 100,8 50,18 Z" 
+        fill="#FFFFFF" 
+        opacity="0.85" 
+      />
+    </svg>
+
+    <!-- 3. Dynamic Click Target Content -->
+    <div class="relative z-10 flex items-center gap-3.5 px-6 py-2">
+      <!-- WhatsApp Icon in Warm Terracotta Bubble -->
+      <div class="w-10 h-10 rounded-full bg-[#C85A32]/10 border border-[#C85A32]/30 flex items-center justify-center text-[#C85A32] shadow-inner transition-transform duration-300 group-hover:scale-110 group-hover:bg-[#C85A32] group-hover:text-white">
+        <i class="fab fa-whatsapp text-lg"></i>
+      </div>
+
+      <!-- Action Label -->
+      <div class="flex flex-col text-left">
+        <span class="text-xs uppercase tracking-widest font-bold text-[#C85A32] opacity-90 group-hover:opacity-100 transition-opacity">Confidential Call</span>
+        <span class="text-base sm:text-lg font-semibold text-[#1E3557] tracking-tight group-hover:text-[#0F1C2E] transition-colors">
+          Book a Discovery Session
+        </span>
+      </div>
+
+      <!-- Interactive Forward Chevron (Affordance Indicator) -->
+      <div class="ml-1 text-[#1E3557]/60 group-hover:text-[#C85A32] group-hover:translate-x-1.5 transition-all duration-300">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </div>
+    </div>
   </a>
 </div>
 
