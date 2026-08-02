@@ -15,12 +15,13 @@
 
     <style>
       :root {
-        /* AIR (Corporate / Coaching) */
-        --navy-dark: #1E3557;
-        --steel-blue: #567A9E;
-        --mist-blue: #EAF2F7;
+        /* AIR (Corporate / Coaching) - Updated to Logo Forest Green & Muted Gold Accent */
+        --navy-dark: #1E2D24;
+        --steel-blue: #344A3C;
+        --mist-blue: #F0F4F1;
         --off-white: #FAF8F5;
-        --charcoal: #333333;
+        --charcoal: #2D3748;
+        --logo-gold: #B8975B;
 
         /* EARTH (Grief Support) */
         --sage-green: #8A9A86;
@@ -55,7 +56,18 @@
       .btn-navy:hover {
         background-color: var(--steel-blue);
         transform: translateY(-2px);
-        box-shadow: 0 10px 20px -5px rgba(30, 53, 87, 0.3);
+        box-shadow: 0 10px 20px -5px rgba(30, 45, 36, 0.3);
+      }
+
+      .btn-brand-forest {
+        background-color: var(--navy-dark);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-brand-forest:hover {
+        background-color: var(--steel-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(30, 45, 36, 0.3);
       }
 
       .btn-earth {
@@ -99,31 +111,31 @@
       }
     </style>
   </head>
-  <body class="selection:bg-sky-100 selection:text-slate-800 antialiased text-slate-800 tracking-normal">
+  <body class="selection:bg-emerald-100 selection:text-slate-800 antialiased text-slate-800 tracking-normal">
 
     <!-- Header Navigation -->
     <header class="bg-white/90 backdrop-blur-md border-b border-stone-200/60 py-3.5 px-4 sm:px-8 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50 transition-all">
       <div class="flex items-center space-x-3">
         <img src="/ensoCrane.svg" alt="Justyna Zurawska" class="w-9 h-9 rounded-full object-cover border border-stone-300" />
-        <a href="#" class="text-sm sm:text-base font-semibold text-[#567A9E] block sm:inline">
+        <a href="#" class="text-sm sm:text-base font-semibold text-[#1E2D24] block sm:inline">
           Justyna Zurawska <span class="hidden sm:inline font-normal text-slate-400">|</span> 
-          <span class="text-sm sm:text-base font-semibold text-[#567A9E] block sm:inline">
+          <span class="text-sm sm:text-base font-semibold text-[#1E2D24] block sm:inline">
             Zurich Executive Coaching & Somatic Practice</span>
         </a>
       </div>
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-7 text-xs lg:text-sm font-medium text-slate-700">
-        <a href="#about" class="hover:text-[#1E3557] transition-colors py-1">About</a>
-        <a href="#air-coaching" class="hover:text-[#1E3557] transition-colors py-1">Coaching & Breathwork</a>
+        <a href="#about" class="hover:text-[#1E2D24] transition-colors py-1">About</a>
+        <a href="#air-coaching" class="hover:text-[#1E2D24] transition-colors py-1">Coaching & Breathwork</a>
         <a href="#grief-earth" class="hover:text-[#8A9A86] transition-colors py-1">Grief Support</a>
         <a href="#fire-club" class="hover:text-[#C85A32] transition-colors py-1">Pretty & Angry</a>
-        <a href="#blog" class="hover:text-[#1E3557] transition-colors py-1">Writings</a>
-        <a href="#contact" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#1E3557] rounded-full hover:bg-[#567A9E] transition-all shadow-sm">Contact</a>
+        <a href="#blog" class="hover:text-[#1E2D24] transition-colors py-1">Writings</a>
+        <a href="#contact" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#1E2D24] rounded-full hover:bg-[#344A3C] transition-all shadow-sm">Contact</a>
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button" class="md:hidden text-slate-700 p-2.5 focus:outline-none focus:ring-2 focus:ring-[#567A9E] rounded-lg" aria-label="Toggle Menu">
+      <button id="mobile-menu-button" class="md:hidden text-slate-700 p-2.5 focus:outline-none focus:ring-2 focus:ring-[#1E2D24] rounded-lg" aria-label="Toggle Menu">
         <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -133,7 +145,7 @@
     <!-- Mobile Overlay Navigation -->
     <div id="mobile-menu" class="fixed inset-0 bg-[#FAF8F5]/98 backdrop-blur-lg z-40 hidden md:hidden flex flex-col items-center justify-center space-y-7 pt-12">
       <a href="#about" class="text-2xl text-slate-900 font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
-      <a href="#air-coaching" class="text-2xl text-[#1E3557] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Coaching & Breathwork</a>
+      <a href="#air-coaching" class="text-2xl text-[#1E2D24] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Coaching & Breathwork</a>
       <a href="#grief-earth" class="text-2xl text-[#8A9A86] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Grief Support</a>
       <a href="#fire-club" class="text-2xl text-[#C85A32] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Pretty & Angry Club</a>
       <a href="#blog" class="text-2xl text-slate-900 font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Insights</a>
@@ -143,30 +155,29 @@
 
     <!-- ==========================================
          ELEMENT 1: AIR (Corporate / Coaching / Presence)
-         Visuals: Navy, Steel Blue, Soft Mist, Crisp Sky
+         Visuals: Deep Forest Green, Muted Gold, Soft Linen
          ========================================== -->
     
-    <section class="relative min-h-[90vh] pt-36 pb-20 md:pt-44 md:pb-32 px-4 sm:px-6 bg-gradient-to-b from-[#EAF2F7]/60 via-[#FAF8F5] to-white overflow-hidden flex items-center justify-center">
+    <section class="relative min-h-[90vh] pt-36 pb-20 md:pt-44 md:pb-32 px-4 sm:px-6 bg-gradient-to-b from-[#F0F4F1]/60 via-[#FAF8F5] to-white overflow-hidden flex items-center justify-center">
       
       <!-- Subtle Background Ripple Effect -->
       <div class="absolute inset-0 z-0 pointer-events-none opacity-40">
         <svg class="w-full h-full" viewBox="0 0 1000 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="500" cy="400" r="120" stroke="#567A9E" stroke-width="1.5" fill="none" class="animated-ripple"></circle>
-          <circle cx="500" cy="400" r="180" stroke="#567A9E" stroke-width="1.5" fill="none" class="animated-ripple" style="animation-delay: 3s"></circle>
-          <circle cx="500" cy="400" r="240" stroke="#567A9E" stroke-width="1.5" fill="none" class="animated-ripple" style="animation-delay: 6s"></circle>
+          <circle cx="500" cy="400" r="120" stroke="#B8975B" stroke-width="1.5" fill="none" class="animated-ripple"></circle>
+          <circle cx="500" cy="400" r="180" stroke="#B8975B" stroke-width="1.5" fill="none" class="animated-ripple" style="animation-delay: 3s"></circle>
+          <circle cx="500" cy="400" r="240" stroke="#B8975B" stroke-width="1.5" fill="none" class="animated-ripple" style="animation-delay: 6s"></circle>
         </svg>
       </div>
 
       <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
         
         <!-- Headline -->
-        
-        <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#1E3557] leading-[1.15]">
-  When thinking harder is<span class="inline sm:hidden">&nbsp;</span><br class="hidden sm:block" />no longer the answer.
-</h1>
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#1E2D24] leading-[1.15]">
+          When thinking harder is<span class="inline sm:hidden">&nbsp;</span><br class="hidden sm:block" />no longer the answer.
+        </h1>
 
         <!-- Brand Mantra -->
-        <p class="text-xs sm:text-sm font-bold tracking-[0.25em] text-[#567A9E] uppercase">
+        <p class="text-xs sm:text-sm font-bold tracking-[0.25em] text-[#B8975B] uppercase">
           Think. Breathe. Allow. Glow.
         </p>
 
@@ -178,17 +189,17 @@
         <!-- Trust & Background Bar -->
         <div class="w-full max-w-3xl mx-auto bg-white/90 backdrop-blur-md border border-stone-200/80 rounded-2xl py-3.5 px-6 shadow-sm flex flex-col sm:flex-row items-center justify-center gap-y-2.5 gap-x-6 text-xs sm:text-sm text-slate-600">
           <div class="flex items-center gap-2">
-            <span class="text-[#567A9E] font-bold text-base">✓</span>
+            <span class="text-[#B8975B] font-bold text-base">✓</span>
             <span>Global Corporate HR Background</span>
           </div>
           <span class="hidden sm:inline text-slate-300">•</span>
           <div class="flex items-center gap-2">
-            <span class="text-[#567A9E] font-bold text-base">✓</span>
+            <span class="text-[#B8975B] font-bold text-base">✓</span>
             <span>Somatic Breathwork Practitioner</span>
           </div>
           <span class="hidden sm:inline text-slate-300">•</span>
           <div class="flex items-center gap-2">
-            <span class="text-[#567A9E] font-bold text-base">✓</span>
+            <span class="text-[#B8975B] font-bold text-base">✓</span>
             <span>Trauma-Informed & Grounded</span>
           </div>
         </div>
@@ -216,8 +227,8 @@
          ========================================== -->
     <section class="py-16 sm:py-20 px-4 sm:px-6 bg-[#FAF8F5] border-y border-stone-200/80">
       <div class="max-w-4xl mx-auto space-y-6 text-center">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Understanding The Context</span>
-        <h2 class="text-2xl sm:text-4xl font-bold text-[#1E3557]">Meeting You Where You Operate</h2>
+        <span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Understanding The Context</span>
+        <h2 class="text-2xl sm:text-4xl font-bold text-[#1E2D24]">Meeting You Where You Operate</h2>
         
         <div class="bg-white p-6 sm:p-10 rounded-3xl border border-stone-200/80 shadow-sm text-left text-slate-700 leading-relaxed space-y-4">
           <p class="text-base sm:text-lg text-slate-800">
@@ -228,7 +239,7 @@
             <strong>Executive</strong> refers not to a job title or hierarchical level, but the experience of carrying complexity, 
             making decisions, leading change, and performing under pressure.
           </p>
-          <p class="text-base sm:text-lg text-[#1E3557] font-semibold pt-4 border-t border-stone-100">
+          <p class="text-base sm:text-lg text-[#1E2D24] font-semibold pt-4 border-t border-stone-100">
             My praxis supports people who want to meet these demands without losing clarity, presence, or themselves.
           </p>
         </div>
@@ -241,17 +252,17 @@
     <section class="py-16 sm:py-24 px-4 sm:px-6 bg-white">
       <div class="max-w-5xl mx-auto space-y-12">
         <div class="text-center space-y-3 max-w-2xl mx-auto">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Alignment & Intent</span>
-          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E3557]">This Work Is a Good Fit If:</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Alignment & Intent</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E2D24]">This Work Is a Good Fit If:</h2>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Box 1 -->
-          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EAF2F7] text-[#1E3557] font-bold text-sm">✓</span>
-              <h3 class="text-base font-bold text-[#1E3557] leading-snug">Ready to shift from collecting insights to living them</h3>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24] font-bold text-sm">✓</span>
+              <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to shift from collecting insights to living them</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 You've read the books. You've listened to podcasts. Maybe you've even tried coaching or therapy. Yet you still find yourself reacting in the same situations. You're ready for change that is experienced—not just understood.
               </p>
@@ -259,10 +270,10 @@
           </div>
 
           <!-- Box 2 -->
-          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EAF2F7] text-[#1E3557] font-bold text-sm">✓</span>
-              <h3 class="text-base font-bold text-[#1E3557] leading-snug">Willing to look honestly at outdated patterns</h3>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24] font-bold text-sm">✓</span>
+              <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Willing to look honestly at outdated patterns</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 You are ready to look honestly at the thoughts, habits, and protective mechanisms that no longer serve your growth, well-being, or leadership.
               </p>
@@ -270,10 +281,10 @@
           </div>
 
           <!-- Box 3 -->
-          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EAF2F7] text-[#1E3557] font-bold text-sm">✓</span>
-              <h3 class="text-base font-bold text-[#1E3557] leading-snug">Ready to listen to your body</h3>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24] font-bold text-sm">✓</span>
+              <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to listen to your body</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 You've ignored your body's signals for years because work came first. Now you're curious what happens when you finally listen.
               </p>
@@ -281,10 +292,10 @@
           </div>
 
           <!-- Box 4 -->
-          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EAF2F7] text-[#1E3557] font-bold text-sm">✓</span>
-              <h3 class="text-base font-bold text-[#1E3557] leading-snug">Open to exploring mind & nervous system</h3>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24] font-bold text-sm">✓</span>
+              <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Open to exploring mind & nervous system</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 You are open to exploring both your cognitive landscape and your nervous system—moving beyond just collecting conceptual ideas.
               </p>
@@ -292,10 +303,10 @@
           </div>
 
           <!-- Box 5 -->
-          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EAF2F7] text-[#1E3557] font-bold text-sm">✓</span>
-              <h3 class="text-base font-bold text-[#1E3557] leading-snug">Ready to exit autopilot survival mode</h3>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24] font-bold text-sm">✓</span>
+              <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to exit autopilot survival mode</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 Tired of surviving on autopilot, pushing through exhaustion, and ready to genuinely reconnect with yourself and your vitality.
               </p>
@@ -303,10 +314,10 @@
           </div>
 
           <!-- Box 6 -->
-          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EAF2F7] text-[#1E3557] font-bold text-sm">✓</span>
-              <h3 class="text-base font-bold text-[#1E3557] leading-snug">Ready to step into personal agency</h3>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24] font-bold text-sm">✓</span>
+              <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to step into personal agency</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 Ready to take complete responsibility for your life and choices without placing blame on yourself or your circumstances for where you are today.
               </p>
@@ -314,10 +325,10 @@
           </div>
 
           <!-- Box 7 -->
-          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EAF2F7] text-[#1E3557] font-bold text-sm">✓</span>
-              <h3 class="text-base font-bold text-[#1E3557] leading-snug">Seeking decisions grounded in clarity</h3>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24] font-bold text-sm">✓</span>
+              <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Seeking decisions grounded in clarity</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 You want difficult conversations, high-stakes leadership decisions, and personal choices to come from grounded clarity instead of stress, urgency, or fear of disappointing others.
               </p>
@@ -325,10 +336,10 @@
           </div>
 
           <!-- Box 8 -->
-          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#EAF2F7] text-[#1E3557] font-bold text-sm">✓</span>
-              <h3 class="text-base font-bold text-[#1E3557] leading-snug">Prepared to practice and integrate</h3>
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24] font-bold text-sm">✓</span>
+              <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Prepared to practice and integrate</h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 Prepared to experiment, practice somatic tools, and integrate new ways of being between our dedicated sessions.
               </p>
@@ -390,8 +401,8 @@
       <div class="max-w-5xl mx-auto space-y-16">
 
         <div class="text-center space-y-3 max-w-2xl mx-auto">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Intellectual & Somatic Clarity</span>
-          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E3557]">The Dual Approach to Leadership</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Intellectual & Somatic Clarity</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E2D24]">The Dual Approach to Leadership</h2>
           <p class="text-slate-600 text-sm sm:text-base">Reconnecting executive decision-making with nervous system regulation.</p>
         </div>
 
@@ -401,17 +412,17 @@
           <!-- Pillar 1 -->
           <div class="bg-white border border-stone-200/80 p-6 sm:p-8 rounded-3xl space-y-5 flex flex-col justify-between shadow-sm">
             <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#EAF2F7] text-[#1E3557] flex items-center justify-center font-bold text-xl">
+              <div class="w-12 h-12 rounded-2xl bg-[#F0F4F1] text-[#1E2D24] flex items-center justify-center font-bold text-xl">
                 🧠
               </div>
-              <h3 class="text-2xl font-bold text-[#1E3557]">Strategic Coaching</h3>
+              <h3 class="text-2xl font-bold text-[#1E2D24]">Strategic Coaching</h3>
               <p class="text-slate-600 text-sm leading-relaxed">
                 Examine cognitive assumptions, decision-making habits, and perfectionist patterns driving your workload. 
                 Gain strategic clarity, break through autopilot thinking, and intentionally direct your leadership presence.
               </p>
               
               <div class="pt-4 space-y-2 border-t border-stone-200/60">
-                <span class="text-xs font-bold text-[#567A9E] uppercase tracking-wider block">What you gain:</span>
+                <span class="text-xs font-bold text-[#B8975B] uppercase tracking-wider block">What you gain:</span>
                 <ul class="text-xs text-slate-700 space-y-2 list-disc list-inside leading-normal">
                   <li>Clear framework for complex executive decision-making</li>
                   <li>Identification and dismantling of burnout triggers</li>
@@ -425,17 +436,17 @@
           <!-- Pillar 2 -->
           <div class="bg-white border border-stone-200/80 p-6 sm:p-8 rounded-3xl space-y-5 flex flex-col justify-between shadow-sm">
             <div class="space-y-4">
-              <div class="w-12 h-12 rounded-2xl bg-[#EAF2F7] text-[#1E3557] flex items-center justify-center font-bold text-xl">
+              <div class="w-12 h-12 rounded-2xl bg-[#F0F4F1] text-[#1E2D24] flex items-center justify-center font-bold text-xl">
                 🫁
               </div>
-              <h3 class="text-2xl font-bold text-[#1E3557]">Somatic Breathwork & Integration</h3>
+              <h3 class="text-2xl font-bold text-[#1E2D24]">Somatic Breathwork & Integration</h3>
               <p class="text-slate-600 text-sm leading-relaxed">
                 Bypass intellectual over-analysis to access the nervous system directly. 
                 Down-regulate stress responses, release accumulated physical tension armor, and embody calm authority under high pressure.
               </p>
               
               <div class="pt-4 space-y-2 border-t border-stone-200/60">
-                <span class="text-xs font-bold text-[#567A9E] uppercase tracking-wider block">What you gain:</span>
+                <span class="text-xs font-bold text-[#B8975B] uppercase tracking-wider block">What you gain:</span>
                 <ul class="text-xs text-slate-700 space-y-2 list-disc list-inside leading-normal">
                   <li>Rapid physiological de-escalation of acute stress</li>
                   <li>Improved heart rate variability and deeper rest</li>
@@ -449,22 +460,22 @@
         </div>
 
         <!-- Developmental Pathway Card -->
-        <div class="bg-[#EAF2F7]/50 border border-[#567A9E]/20 rounded-3xl p-6 sm:p-10 text-center space-y-8">
-          <h3 class="text-xs font-bold text-[#567A9E] uppercase tracking-widest">The Client Transformation Journey</h3>
+        <div class="bg-[#F0F4F1]/60 border border-[#B8975B]/30 rounded-3xl p-6 sm:p-10 text-center space-y-8">
+          <h3 class="text-xs font-bold text-[#B8975B] uppercase tracking-widest">The Client Transformation Journey</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div class="bg-white p-6 rounded-2xl border border-stone-200/80 space-y-2 shadow-sm">
               <span class="text-xs font-bold text-slate-400 uppercase tracking-wide">Step 1 • Achievement</span>
-              <h4 class="text-xl font-bold text-[#1E3557]">Cognitive Dominance</h4>
+              <h4 class="text-xl font-bold text-[#1E2D24]">Cognitive Dominance</h4>
               <p class="text-xs text-slate-600 leading-relaxed">Sustained by intellect, hyper-vigilance, and over-working habits that created initial success but now cause strain.</p>
             </div>
             <div class="bg-white p-6 rounded-2xl border border-stone-200/80 space-y-2 shadow-sm">
-              <span class="text-xs font-bold text-[#567A9E] uppercase tracking-wide">Step 2 • Regulation</span>
-              <h4 class="text-xl font-bold text-[#1E3557]">Somatic Realignment</h4>
+              <span class="text-xs font-bold text-[#B8975B] uppercase tracking-wide">Step 2 • Regulation</span>
+              <h4 class="text-xl font-bold text-[#1E2D24]">Somatic Realignment</h4>
               <p class="text-xs text-slate-600 leading-relaxed">Down-regulating the nervous system, releasing bodily tension armor, and clarifying core values.</p>
             </div>
             <div class="bg-white p-6 rounded-2xl border border-stone-200/80 space-y-2 shadow-sm">
               <span class="text-xs font-bold text-[#8A9A86] uppercase tracking-wide">Step 3 • Integration</span>
-              <h4 class="text-xl font-bold text-[#1E3557]">Full Participation</h4>
+              <h4 class="text-xl font-bold text-[#1E2D24]">Full Participation</h4>
               <p class="text-xs text-slate-600 leading-relaxed">Leading and living with grounded presence, authentic authority, clear boundaries, and renewed vitality.</p>
             </div>
           </div>
@@ -613,8 +624,8 @@
       <div class="max-w-4xl mx-auto space-y-12">
         
         <div class="text-center space-y-3">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Background & Roots</span>
-          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E3557]">About Justyna</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Background & Roots</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E2D24]">About Justyna</h2>
         </div>
 
         <div class="prose lg:prose-lg text-slate-700 leading-relaxed space-y-6 mx-auto">
@@ -625,7 +636,7 @@
             Those words resonated deeply because I learned early that life is both fragile and precious. After losing my mother at a young age, I experienced the depth of loss and the ways grief changes our relationship with life. At the same time, I witnessed resilience through my father’s conscious, steady presence—showing me that we always retain agency in how we meet the world.
           </p>
 
-          <blockquote class="text-xl sm:text-2xl font-bold text-[#1E3557] border-l-2 border-[#567A9E] pl-6 italic my-8">
+          <blockquote class="text-xl sm:text-2xl font-bold text-[#1E2D24] border-l-2 border-[#B8975B] pl-6 italic my-8">
             "What is life? How do we not simply move through our days on autopilot, but truly participate in them?"
           </blockquote>
 
@@ -653,7 +664,7 @@
 
         <div id="about-extended-content" class="hidden space-y-8 pt-6">
           <div class="prose lg:prose-lg text-slate-700 leading-relaxed space-y-6 mx-auto">
-            <h3 class="text-2xl sm:text-3xl font-bold text-[#1E3557]">Bridging Corporate Performance & Somatic Presence</h3>
+            <h3 class="text-2xl sm:text-3xl font-bold text-[#1E2D24]">Bridging Corporate Performance & Somatic Presence</h3>
             <p>
               Alongside my practice, I serve as an HR Business Partner in a global corporate environment in Zurich. I see daily how capable, high-performing individuals operate almost exclusively from intellect while ignoring physiological boundaries and nervous system limits. My work bridges strategic clarity with body intelligence.
             </p>
@@ -674,28 +685,28 @@
          BLOG / INSIGHTS SECTION
          ========================================== -->
 
-    <section id="blog" class="py-16 sm:py-24 px-4 sm:px-6 bg-[#EAF2F7]/40 border-t border-stone-200/60">
+    <section id="blog" class="py-16 sm:py-24 px-4 sm:px-6 bg-[#F0F4F1]/40 border-t border-stone-200/60">
       <div class="max-w-5xl mx-auto space-y-12 text-center">
         
         <div class="space-y-3">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Reflections & Essays</span>
-          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E3557]">Blog & Insights</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Reflections & Essays</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E2D24]">Blog & Insights</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           
           <!-- Article 1 -->
-          <article class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <article class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="text-xs font-semibold text-[#567A9E]">Somatic Practice • 5 min read</span>
-              <h3 class="text-lg sm:text-xl text-slate-900 font-bold cursor-pointer hover:text-[#567A9E] leading-snug" onclick="openBlogModal('post-1')">
+              <span class="text-xs font-semibold text-[#B8975B]">Somatic Practice • 5 min read</span>
+              <h3 class="text-lg sm:text-xl text-slate-900 font-bold cursor-pointer hover:text-[#B8975B] leading-snug" onclick="openBlogModal('post-1')">
                 Moving From Thinking to Feeling: Why Logic Isn't Enough
               </h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 Intellectual understanding lives in the neocortex, but survival patterns are stored in the nervous system...
               </p>
             </div>
-            <button onclick="openBlogModal('post-1')" class="text-xs font-bold text-[#1E3557] pt-6 inline-flex items-center gap-2 hover:text-[#567A9E]">
+            <button onclick="openBlogModal('post-1')" class="text-xs font-bold text-[#1E2D24] pt-6 inline-flex items-center gap-2 hover:text-[#B8975B]">
               <span>Read Article</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -704,17 +715,17 @@
           </article>
 
           <!-- Article 2 -->
-          <article class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm flex flex-col justify-between ui-card-hover hover:border-[#567A9E]">
+          <article class="bg-white rounded-3xl p-6 border border-stone-200/80 shadow-sm flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
             <div class="space-y-3">
-              <span class="text-xs font-semibold text-[#567A9E]">Human & AI • 4 min read</span>
-              <h3 class="text-lg sm:text-xl text-slate-900 font-bold cursor-pointer hover:text-[#567A9E] leading-snug" onclick="openBlogModal('post-2')">
+              <span class="text-xs font-semibold text-[#B8975B]">Human & AI • 4 min read</span>
+              <h3 class="text-lg sm:text-xl text-slate-900 font-bold cursor-pointer hover:text-[#B8975B] leading-snug" onclick="openBlogModal('post-2')">
                 Staying Fully Alive as a Human in the Age of AI
               </h3>
               <p class="text-xs text-slate-600 leading-relaxed">
                 As technology handles speed and cognitive output, unique human value shifts toward presence and empathy...
               </p>
             </div>
-            <button onclick="openBlogModal('post-2')" class="text-xs font-bold text-[#1E3557] pt-6 inline-flex items-center gap-2 hover:text-[#567A9E]">
+            <button onclick="openBlogModal('post-2')" class="text-xs font-bold text-[#1E2D24] pt-6 inline-flex items-center gap-2 hover:text-[#B8975B]">
               <span>Read Article</span>
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
@@ -764,20 +775,20 @@
       <div class="max-w-3xl mx-auto text-center space-y-8">
         
         <div class="space-y-2">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#567A9E]">Connect</span>
-          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E3557]">I am looking forward hearing from you</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Connect</span>
+          <h2 class="text-3xl sm:text-5xl font-bold text-[#1E2D24]">I am looking forward hearing from you</h2>
         </div>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm sm:text-base text-slate-700">
-          <a href="mailto:coaching@justynazurawska.com" class="flex items-center gap-2 hover:text-[#1E3557]">
-            <svg class="w-4 h-4 text-[#567A9E]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <a href="mailto:coaching@justynazurawska.com" class="flex items-center gap-2 hover:text-[#1E2D24]">
+            <svg class="w-4 h-4 text-[#B8975B]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
             <span>coaching@justynazurawska.com</span>
           </a>
           <span class="hidden sm:inline text-slate-300">•</span>
-          <a href="https://wa.me/41786938831" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-[#1E3557]">
-            <svg class="w-4 h-4 fill-current text-[#567A9E]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <a href="https://wa.me/41786938831" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-[#1E2D24]">
+            <svg class="w-4 h-4 fill-current text-[#B8975B]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
             </svg>
             <span>+41 78 693 88 31</span>
@@ -835,7 +846,7 @@
           body = "<p class='text-sm leading-relaxed text-slate-700'>Anger is bound energy seeking clarity. When met with curiosity, it transforms into healthy boundaries and authentic creative force rather than reactive frustration.</p>";
         }
 
-        modalContent.innerHTML = `<h3 class="text-2xl font-bold text-[#1E3557] mb-4">${title}</h3>${body}`;
+        modalContent.innerHTML = `<h3 class="text-2xl font-bold text-[#1E2D24] mb-4">${title}</h3>${body}`;
         modal.classList.remove('hidden');
       }
 
