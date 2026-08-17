@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -15,11 +15,58 @@
       gtag('config', 'G-1SSF66GQHS');
     </script>
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/speed-insights/v0/script.js"></script>
+
     <!-- Plik stylów CSS -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Style pomocnicze dla ikon w stopce -->
+    <!-- Style pomocnicze dla ikon w stopce oraz sekcji kolorystycznych -->
     <style>
+      :root {
+        /* EARTH (Grief Support) */
+        --sage-green: #8A9A86;
+        --sage-light: #F0F4F1;
+        --sand-warm: #E6DFD5;
+        --linen-bg: #F9F7F4;
+
+        /* FIRE (Pretty & Angry Girls Club) */
+        --terracotta: #C85A32;
+        --burnt-rust: #9E3B1B;
+        --burgundy-dark: #4A1513;
+        --amber-glow: #FDF6F0;
+      }
+
+      .btn-earth {
+        background-color: var(--sage-green);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-earth:hover {
+        background-color: #788874;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(138, 154, 134, 0.3);
+      }
+
+      .btn-fire {
+        background-color: var(--terracotta);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-fire:hover {
+        background-color: var(--burnt-rust);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(200, 90, 50, 0.35);
+      }
+
       .footer-socials {
         display: flex;
         gap: 1rem;
@@ -57,6 +104,8 @@
         <nav id="site-nav" class="site-nav">
           <a href="#practice">Practices</a>
           <a href="#ways">Ways in</a>
+          <a href="#grief-earth">Grief Support</a>
+          <a href="#fire-club">Pretty & Angry</a>
           <a href="#about">About</a>
           <a href="#writing">Blog</a>
         </nav>
@@ -282,6 +331,123 @@
         </div>
       </section>
 
+      <!-- ========================================== -->
+      <!-- SEKCJA: GRIEF SUPPORT & INTEGRATION        -->
+      <!-- ========================================== -->
+      <section id="grief-earth" class="py-16 sm:py-24 px-4 sm:px-6 bg-[#F9F7F4] relative">
+        <div class="max-w-4xl mx-auto space-y-12">
+          
+          <div class="text-center space-y-4 max-w-2xl mx-auto">
+            <span class="inline-block px-4 py-1 text-xs font-semibold uppercase tracking-widest text-[#8A9A86] bg-[#F0F4F1] rounded-full">
+              Grounding & Holding
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-bold text-slate-900">Grief Support & Integration</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Quiet hope. A heart-centered space to honor loss, meet emotions safely, and grow around your experience at your own pace.
+            </p>
+          </div>
+
+          <div class="bg-white/80 border border-[#E6DFD5] rounded-3xl p-6 sm:p-12 shadow-sm space-y-6 text-slate-700 leading-relaxed">
+            <p class="text-base sm:text-lg text-slate-800">
+              Grief isn't a problem to solve or a linear checklist; it is a profound human process to move through—at your own pace, 
+              in your own way. It can be quiet, numb, loud, or show up unexpectedly as physical exhaustion, 
+              difficulty concentrating, anger, or chronic overworking.
+            </p>
+
+            <div class="border-l-2 border-[#8A9A86] pl-6 py-2 my-6 italic text-slate-800 text-xl sm:text-2xl font-normal">
+              "Pain doesn’t always fade completely, but we can learn to hold it differently, build capacity around it, and participate fully in life again."
+            </div>
+
+            <p class="text-sm sm:text-base text-slate-600">
+              Having navigated my own deep grief since childhood following the loss of my mother, I offer a grounded, non-judgmental space. Through integrative coaching and somatic breathwork, we create conditions where you can safely release what is stored in the body and integrate loss with gentleness.
+            </p>
+
+            <div class="bg-[#F0F4F1]/60 p-6 rounded-2xl border border-[#8A9A86]/20 space-y-3">
+              <h4 class="text-xl text-[#8A9A86] font-bold">In these sessions, you will find space to:</h4>
+              <ul class="text-xs sm:text-sm text-slate-700 space-y-2 list-disc list-inside leading-relaxed">
+                <li>Process loss without pressure to "move on" or put up a brave face</li>
+                <li>Somatic discharge of accumulated grief tension and emotional fatigue</li>
+                <li>Reconnect gently with your body, daily routine, and personal agency</li>
+                <li>Honor what was lost while slowly building new meaning for the future</li>
+              </ul>
+            </div>
+
+            <p class="text-xs sm:text-sm text-slate-500 pt-2 border-t border-stone-200">
+              Built on personal resilience and ICF-accredited grief coaching education (From Grief to Gratitude) alongside participation in Hope Edelman’s Motherless Daughters circles.
+            </p>
+
+            <div class="pt-4 text-center sm:text-left">
+              <a href="https://wa.me/41786938831?text=Hello%20Justyna%2C%20I%20would%20like%20to%20ask%20about%20Grief%20Support." target="_blank" rel="noopener noreferrer" class="btn-earth inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold shadow-sm">
+                <span>Inquire About Grief Support</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Organic Flowing SVG Divider (Earth to Fire) -->
+      <div class="w-full overflow-hidden leading-none bg-[#F9F7F4]">
+        <svg class="relative block w-full h-12 sm:h-20 text-[#FDF6F0]" viewBox="0 0 1200 120" preserveAspectRatio="none" fill="currentColor">
+          <path d="M0,40 C300,110 500,10 800,80 C1000,130 1100,20 1200,50 L1200,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- SEKCJA: PRETTY & ANGRY GIRLS CLUB          -->
+      <!-- ========================================== -->
+      <section id="fire-club" class="py-16 sm:py-24 px-4 sm:px-6 bg-[#FDF6F0] relative">
+        <div class="max-w-4xl mx-auto space-y-10 text-center">
+          
+          <div class="space-y-4 max-w-2xl mx-auto">
+            <span class="inline-block px-4 py-1 text-xs font-semibold uppercase tracking-widest text-[#C85A32] bg-[#C85A32]/10 rounded-full">
+              Creative Feminine Expression
+            </span>
+            <h2 class="text-4xl sm:text-6xl font-bold text-[#4A1513]">Pretty & Angry Girls Club</h2>
+            <p class="text-[#9E3B1B] text-sm sm:text-base font-medium">
+              Not rage—creative fire. Transforming misunderstood emotions into vitality, clear boundaries, and authentic connection.
+            </p>
+          </div>
+
+          <div class="bg-white/90 border border-[#C85A32]/20 rounded-3xl p-6 sm:p-12 shadow-sm text-left space-y-6 text-slate-700">
+            <p class="text-base sm:text-lg text-slate-800 leading-relaxed">
+              <strong>Pretty & Angry Girls Club</strong> is a series of curated group gatherings (in-person in Zurich and online) where women come together to meet one of the most suppressed and misunderstood emotions: <span class="text-[#C85A32] font-semibold">ANGER</span>.
+            </p>
+
+            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+              Women are often taught to mask anger with politeness, perfectionism, or compliance. Here, we don’t push it away, apologize for it, or attempt to fix it. We embrace it, express it physically, and channel it together into creative energy and unshakable boundaries.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2">
+              <div class="bg-[#FDF6F0] p-5 rounded-2xl border border-[#C85A32]/20 space-y-1.5">
+                <h4 class="text-base text-[#9E3B1B] font-bold flex items-center gap-2">🔥 Embodied Practice</h4>
+                <p class="text-xs text-slate-700 leading-relaxed">Movement, breathwork, boxing elements, improv, and vocal release to move bound energy out of the body safely.</p>
+              </div>
+              <div class="bg-[#FDF6F0] p-5 rounded-2xl border border-[#C85A32]/20 space-y-1.5">
+                <h4 class="text-base text-[#9E3B1B] font-bold flex items-center gap-2">✨ What You Experience</h4>
+                <p class="text-xs text-slate-700 leading-relaxed">Shift from "I am angry or overwhelmed" to <em>"I feel vibrant, clear on my boundaries, and fully alive."</em></p>
+              </div>
+            </div>
+            
+            <p class="text-xs sm:text-sm text-slate-500 pt-2 border-t border-stone-200 leading-relaxed">
+              The name Pretty & Angry is inspired by the Polish saying "Złość piękności szkodzi": literally, "Anger harms beauty." For generations, 
+              many girls grew up hearing this phrase whenever they expressed frustration or anger, learning that to be "pretty" they should not express anger.
+            </p>
+            
+            <div class="pt-4 text-center">
+              <a href="https://wa.me/41786938831?text=Hey!%20I'm%20interested%20in%20joining%20the%20Pretty%20%26%20Angry%20Girls%20Club." target="_blank" rel="noopener noreferrer" class="btn-fire inline-flex items-center gap-2 px-9 py-4 rounded-full text-sm font-semibold tracking-wide shadow-md">
+                <span>Join the Gatherings</span>
+                <span>🔥</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <!-- ========================================================= -->
       <!-- SEKCJA: Kontekst AI / Refleksja                            -->
       <!-- ========================================================= -->
@@ -327,124 +493,7 @@
           </div>
         </div>
       </section>
-       NEW SECTION: THIS WORK MIGHT BE A GOOD FIT IF...
-         ========================================== -->
-   <section class="py-16 sm:py-24 px-4 sm:px-6 bg-white">
-  <div class="max-w-5xl mx-auto space-y-12">
-    <div class="text-center space-y-3 max-w-2xl mx-auto">
-      <span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Alignment & Intent</span>
-      <h2 class="text-3xl sm:text-5xl font-bold text-[#1E2D24]">This Work Is a Good Fit If:</h2>
-    </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <!-- Box 1: Shift & Transition -->
-      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
-        <div class="space-y-3">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </span>
-          <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to shift from collecting insights to living them</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            You've read the books. You've listened to podcasts. Maybe you've even tried coaching or therapy. Yet you still find yourself reacting in the same situations. You're ready for change that is experienced—not just understood.
-          </p>
-        </div>
-      </div>
-
-      <!-- Box 2: Awareness / Looking Honestly -->
-      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
-        <div class="space-y-3">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-          </span>
-          <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Willing to look honestly at outdated patterns</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            You are ready to look honestly at the thoughts, habits, and protective mechanisms that no longer serve your growth, well-being, or leadership.
-          </p>
-        </div>
-      </div>
-
-      <!-- Box 3: Body & Somatics -->
-      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
-        <div class="space-y-3">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-          </span>
-          <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to listen to your body</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            You've ignored your body's signals for years because work came first. Now you're curious what happens when you finally listen.
-          </p>
-        </div>
-      </div>
-
-      <!-- Box 4: Mind & Nervous System -->
-      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
-        <div class="space-y-3">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M12 5v13"/></svg>
-          </span>
-          <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Open to exploring mind & nervous system</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            You are open to exploring both your cognitive landscape and your nervous system—moving beyond just collecting conceptual ideas.
-          </p>
-        </div>
-      </div>
-
-      <!-- Box 5: Exit Survival / Renewal -->
-      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
-        <div class="space-y-3">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-          </span>
-          <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to exit autopilot survival mode</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Tired of surviving on autopilot, pushing through exhaustion, and ready to genuinely reconnect with yourself and your vitality.
-          </p>
-        </div>
-      </div>
-
-      <!-- Box 6: Agency & Direction -->
-      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
-        <div class="space-y-3">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-          </span>
-          <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to step into personal agency</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Ready to take complete responsibility for your life and choices without placing blame on yourself or your circumstances for where you are today.
-          </p>
-        </div>
-      </div>
-
-      <!-- Box 7: Grounded Clarity -->
-      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
-        <div class="space-y-3">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="M12 7v10"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><path d="M9 21h6"/></svg>
-          </span>
-          <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Seeking decisions grounded in clarity</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            You want difficult conversations, high-stakes leadership decisions, and personal choices to come from grounded clarity instead of stress, urgency, or fear of disappointing others.
-          </p>
-        </div>
-      </div>
-
-      <!-- Box 8: Integration & Practice -->
-      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
-        <div class="space-y-3">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
-            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.5-8.58 3.91a2 2 0 0 1-1.66 0L2 12.5"/><path d="m22 17.5-8.58 3.91a2 2 0 0 1-1.66 0L2 17.5"/></svg>
-          </span>
-          <h3 class="text-base font-bold text-[#1E2D24] leading-snug">Prepared to practice and integrate</h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            Prepared to experiment, practice somatic tools, and integrate new ways of being between our dedicated sessions.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
       <!-- ========================================================= -->
       <!-- SEKCJA: FAQ (Najczęściej zadawane pytania)                 -->
       <!-- ========================================================= -->
