@@ -2,14 +2,14 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1SSF66GQHS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SSF66GQHS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-1SSF66GQHS');
-</script>
+      gtag('config', 'G-1SSF66GQHS');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justyna Zurawska | Zurich Executive Coaching & Somatic Practice</title>
@@ -21,8 +21,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- Vercel Analytics -->
-<script defer src="/_vercel/speed-insights/v0/script.js"></script>
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/speed-insights/v0/script.js"></script>
     <style>
       :root {
         /* AIR (Corporate / Coaching) - Updated to Logo Forest Green & Muted Gold Accent */
@@ -119,6 +119,39 @@
         0% { r: 120; opacity: 0.5; stroke-width: 1.5; }
         100% { r: 380; opacity: 0; stroke-width: 0; }
       }
+
+      /* Dropdown Styling for Tailwind Header */
+      .nav-dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .nav-dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 6px 0;
+        z-index: 100;
+        border: 1px solid rgba(0,0,0,0.05);
+      }
+      .nav-dropdown-menu a {
+        color: #334155;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 13px;
+      }
+      .nav-dropdown-menu a:hover {
+        color: #1E2D24;
+        background-color: #F0F4F1;
+      }
+      .nav-dropdown:hover .nav-dropdown-menu {
+        display: block;
+      }
     </style>
   </head>
   <body class="selection:bg-emerald-100 selection:text-slate-800 antialiased text-slate-800 tracking-normal">
@@ -138,11 +171,20 @@
       <nav class="hidden md:flex items-center space-x-7 text-xs lg:text-sm font-medium text-slate-700">
         <a href="index.html" class="hover:text-[#1E2D24] transition-colors py-1">Main Page</a>
         <a href="#about" class="hover:text-[#1E2D24] transition-colors py-1">About</a>
-        <a href="#air-coaching" class="hover:text-[#1E2D24] transition-colors py-1">Reset & Reconnect </a>
-        <a href="#grief-earth" class="hover:text-[#8A9A86] transition-colors py-1">Grief Support</a>
-        <a href="#fire-club" class="hover:text-[#C85A32] transition-colors py-1">Pretty & Angry</a>
-        <a href="#blog" class="hover:text-[#1E2D24] transition-colors py-1">Writings</a>
+        <a href="#air-coaching" class="hover:text-[#1E2D24] transition-colors py-1">Reset & Reconnect</a>
+        
+        <!-- Community Dropdown -->
+        <div class="nav-dropdown">
+          <button class="hover:text-[#1E2D24] transition-colors py-1 flex items-center gap-1 focus:outline-none">
+            Community <span class="text-[10px]">▾</span>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="#fire-club">Pretty & Angry</a>
+            <a href="#grief-earth">Grief Support</a>
+          </div>
+        </div>
 
+        <a href="#blog" class="hover:text-[#1E2D24] transition-colors py-1">Writings</a>
         <a href="#contact" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#1E2D24] rounded-full hover:bg-[#344A3C] transition-all shadow-sm">Contact</a>
       </nav>
 
@@ -159,8 +201,11 @@
       <a href="index.html" class="text-2xl text-slate-900 font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Main Page</a>
       <a href="#about" class="text-2xl text-slate-900 font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
       <a href="#air-coaching" class="text-2xl text-[#1E2D24] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Coaching & Breathwork</a>
-      <a href="#grief-earth" class="text-2xl text-[#8A9A86] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Grief Support</a>
-      <a href="#fire-club" class="text-2xl text-[#C85A32] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Pretty & Angry Club</a>
+      <div class="text-center space-y-2">
+        <span class="text-xs uppercase tracking-widest text-slate-400 font-bold block">Community</span>
+        <a href="#fire-club" class="text-xl text-[#C85A32] font-semibold block" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Pretty & Angry Club</a>
+        <a href="#grief-earth" class="text-xl text-[#8A9A86] font-semibold block" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Grief Support</a>
+      </div>
       <a href="#blog" class="text-2xl text-slate-900 font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Insights</a>
       <a href="#contact" class="text-2xl text-slate-900 font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
     </div>
