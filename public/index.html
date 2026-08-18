@@ -1,4 +1,8 @@
-Zurich Executive Coaching & Somatic Practice<!DOCTYPE html>
+To integrate the dropdown menu on your main page (index.html), link your second page (discover.html), preserve all text and markup intact, and keep styling clean, here is your update split into three files.
+
+index.html
+HTML
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -141,6 +145,20 @@ Zurich Executive Coaching & Somatic Practice<!DOCTYPE html>
         <a href="#grief-earth" class="hover:text-[#8A9A86] transition-colors py-1">Grief Support</a>
         <a href="#fire-club" class="hover:text-[#C85A32] transition-colors py-1">Pretty & Angry</a>
         <a href="#blog" class="hover:text-[#1E2D24] transition-colors py-1">Writings</a>
+        
+        <!-- More Dropdown -->
+        <div class="relative group py-1">
+          <button class="hover:text-[#1E2D24] transition-colors flex items-center gap-1 focus:outline-none">
+            <span>More</span>
+            <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="absolute right-0 top-full mt-2 w-48 bg-white border border-stone-200 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+            <a href="discover.html" class="block px-4 py-2 text-xs lg:text-sm text-slate-700 hover:bg-[#FAF8F5] hover:text-[#1E2D24] transition-colors">Make It a Choice</a>
+          </div>
+        </div>
+
         <a href="#contact" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-[#1E2D24] rounded-full hover:bg-[#344A3C] transition-all shadow-sm">Contact</a>
       </nav>
 
@@ -159,6 +177,7 @@ Zurich Executive Coaching & Somatic Practice<!DOCTYPE html>
       <a href="#grief-earth" class="text-2xl text-[#8A9A86] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Grief Support</a>
       <a href="#fire-club" class="text-2xl text-[#C85A32] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Pretty & Angry Club</a>
       <a href="#blog" class="text-2xl text-slate-900 font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Insights</a>
+      <a href="discover.html" class="text-2xl text-[#B8975B] font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Make It a Choice</a>
       <a href="#contact" class="text-2xl text-slate-900 font-semibold" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
     </div>
 
@@ -192,8 +211,7 @@ Zurich Executive Coaching & Somatic Practice<!DOCTYPE html>
         </p>
 
       <p class="text-base sm:text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed font-normal">
-          <b>AI can analyse the options.
-It cannot decide what is worth choosing.</b>
+          <b>Success without losing yourself</b>; so that you can:
         </p>
 
         <!-- Focus List -->
