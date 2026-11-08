@@ -70,13 +70,14 @@
   display: block;
 }
 
-/* Facilitator Organic Egg-Shape Section Styles */
+/* Facilitator Organic Outline & Image Clipping */
 .facilitator-art {
-  height: 380px;
+  height: 420px;
   position: relative;
   display: grid;
   place-items: center;
 }
+/* Background filled green/grey circle shape */
 .facilitator-art:before {
   content: "";
   position: absolute;
@@ -86,33 +87,27 @@
   background: #dce1d4;
   transform: rotate(-9deg);
 }
+/* Outer green outline ring matching exact clipping proportion */
 .facilitator-art:after {
   content: "";
   position: absolute;
-  width: 68%;
-  height: 76%;
+  width: 72%;
+  height: 82%;
   border: 1px solid #899984;
-  border-radius: 50%;
+  border-radius: 48% 52% 45% 55% / 48% 42% 58% 52%;
   transform: rotate(23deg);
 }
-.image-circle {
+/* Direct photo clipping matching the outer green outline shape */
+.facilitator-photo {
   position: relative;
   z-index: 1;
-  width: 200px;
-  height: 230px;
-  border-radius: 48% 52% 45% 55% / 48% 42% 58% 52%;
-  transform: rotate(9deg);
-  overflow: hidden;
-  border: 2px solid var(--white);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-.facilitator-photo {
-  width: 100%;
-  height: 100%;
+  width: 65%;
+  height: 75%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 25%;
+  border-radius: 48% 52% 45% 55% / 48% 42% 58% 52%;
+  transform: rotate(23deg);
   display: block;
-  transform: rotate(-9deg);
 }
 
 @media(max-width:760px){
@@ -164,13 +159,9 @@
   .orbit.two{right:1%;bottom:5%}
 
   .facilitator-art {
-    height: 320px;
+    height: 340px;
     max-width: 360px;
     margin: 0 auto;
-  }
-  .image-circle {
-    width: 160px;
-    height: 185px;
   }
   
   .section{padding:60px 0}
@@ -308,9 +299,7 @@
   <div class="wrap about-grid">
     <div class="art facilitator-art" role="img" aria-label="Justyna Zurawska — Facilitator">
       <span class="orbit one">curiosity &amp; care</span>
-      <div class="art-inner image-circle">
-        <img src="justynaPhotoNew.PNG" alt="Justyna Zurawska" class="facilitator-photo">
-      </div>
+      <img src="justynaPhotoNew.PNG" alt="Justyna Zurawska" class="facilitator-photo">
       <span class="orbit two">room to explore</span>
     </div>
     <div>
