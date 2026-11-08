@@ -70,7 +70,7 @@
   display: block;
 }
 
-/* Facilitator Organic Circle Section Styles */
+/* Facilitator Organic Egg-Shape Section Styles */
 .facilitator-art {
   height: 380px;
   position: relative;
@@ -98,9 +98,10 @@
 .image-circle {
   position: relative;
   z-index: 1;
-  width: 210px;
-  height: 210px;
-  border-radius: 50%;
+  width: 200px;
+  height: 230px;
+  border-radius: 48% 52% 45% 55% / 48% 42% 58% 52%;
+  transform: rotate(9deg);
   overflow: hidden;
   border: 2px solid var(--white);
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
@@ -111,6 +112,7 @@
   object-fit: cover;
   object-position: center top;
   display: block;
+  transform: rotate(-9deg);
 }
 
 @media(max-width:760px){
@@ -167,8 +169,8 @@
     margin: 0 auto;
   }
   .image-circle {
-    width: 170px;
-    height: 170px;
+    width: 160px;
+    height: 185px;
   }
   
   .section{padding:60px 0}
@@ -307,7 +309,7 @@
     <div class="art facilitator-art" role="img" aria-label="Justyna Zurawska — Facilitator">
       <span class="orbit one">curiosity &amp; care</span>
       <div class="art-inner image-circle">
-        <img src="justynaPhotoNew.PNG" alt="Justyna Zurawska" class="facilitator-photo">
+        <img src="YOUR_IMAGE_URL.jpg" alt="Justyna Zurawska" class="facilitator-photo">
       </div>
       <span class="orbit two">room to explore</span>
     </div>
