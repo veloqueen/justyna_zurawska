@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership | Justyna Zurawska</title>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1SSF66GQHS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1SSF66GQHS');
+    </script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <script defer="" src="/_vercel/speed-insights/v0/script.js"></script>
+    <style>
+      :root {
+        /* AIR (Corporate / Coaching) - Updated to Logo Forest Green & Muted Gold Accent */
+        --navy-dark: #1E2D24;
+        --steel-blue: #344A3C;
+        --mist-blue: #F0F4F1;
+        --off-white: #FAF8F5;
+        --charcoal: #2D3748;
+        --logo-gold: #B8975B;
+
+        /* EARTH (Grief Support) */
+        --sage-green: #8A9A86;
+        --sage-light: #F0F4F1;
+        --sand-warm: #E6DFD5;
+        --linen-bg: #F9F7F4;
+
+        /* FIRE (Pretty & Angry Girls Club) */
+        --terracotta: #C85A32;
+        --burnt-rust: #9E3B1B;
+        --burgundy-dark: #4A1513;
+        --amber-glow: #FDF6F0;
+      }
+
+      /* UNIFIED TYPOGRAPHY RULE FOR ALL ELEMENTS */
+      *, *::before, *::after, body, h1, h2, h3, h4, h5, h6, p, span, a, li, button, div, input, textarea, .font-heading {
+        font-family: 'Inter', sans-serif !important;
+      }
+
+      body {
+        background-color: var(--off-white);
+        color: var(--charcoal);
+        overflow-x: hidden;
+      }
+
+      /* Custom Buttons & Modern Micro-interactions */
+      .btn-navy {
+        background-color: var(--navy-dark);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-navy:hover {
+        background-color: var(--steel-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(30, 45, 36, 0.3);
+      }
+
+      .btn-brand-forest {
+        background-color: var(--navy-dark);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-brand-forest:hover {
+        background-color: var(--steel-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(30, 45, 36, 0.3);
+      }
+
+      .btn-earth {
+        background-color: var(--sage-green);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-earth:hover {
+        background-color: #788874;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(138, 154, 134, 0.3);
+      }
+
+      .btn-fire {
+        background-color: var(--terracotta);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-fire:hover {
+        background-color: var(--burnt-rust);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(200, 90, 50, 0.35);
+      }
+
+      /* Dynamic UI Focus and Card Elevators */
+      .ui-card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .ui-card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Animated Ripple for Air/Breath */
+      .animated-ripple {
+        animation: ripple 9s ease-out infinite;
+      }
+      @keyframes ripple {
+        0% { r: 120; opacity: 0.5; stroke-width: 1.5; }
+        100% { r: 380; opacity: 0; stroke-width: 0; }
+      }
+
+      /* Dropdown Styling for Tailwind Header */
+      .nav-dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .nav-dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 6px 0;
+        z-index: 100;
+        border: 1px solid rgba(0,0,0,0.05);
+      }
+      .nav-dropdown-menu a {
+        color: #334155;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 13px;
+      }
+      .nav-dropdown-menu a:hover {
+        color: #1E2D24;
+        background-color: #F0F4F1;
+      }
+      .nav-dropdown:hover .nav-dropdown-menu {
+        display: block;
+      }
+    </style>
+</head>
+<body class="selection:bg-emerald-100 selection:text-slate-800 antialiased text-slate-800 tracking-normal">
+
+<header class="bg-white/90 backdrop-blur-md border-b border-stone-200/60 py-3.5 px-4 sm:px-8 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+  <a href="index.html" class="text-sm sm:text-base font-semibold text-[#1E2D24]">Justyna Zurawska <span class="font-normal text-slate-400">|</span> <span class="font-normal">Coaching, Somatic Practice & Creative Facilitation</span></a>
+  <nav class="hidden lg:flex items-center gap-5 text-xs font-medium text-slate-700">
+    <a href="index.html">Home</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="creativity-expression.html">Creativity & Expression</a>
+    <a href="women-community.html">Women & Community</a>
+    <a href="grief-support.html">Grief Support</a>
+    <a href="somatic-breathwork.html">Somatic Breathwork</a>
+    <a href="about.html">About</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="px-4 py-2 text-white bg-[#1E2D24] rounded-full">Contact</a>
+  </nav>
+  <button id="mobile-menu-button" class="lg:hidden text-slate-700 p-2" aria-label="Toggle Menu">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+  </button>
+</header>
+<div id="mobile-menu" class="fixed inset-0 bg-[#FAF8F5]/98 backdrop-blur-lg z-40 hidden lg:hidden flex flex-col items-center justify-center space-y-5 pt-12">
+  <a href="index.html" class="text-xl text-slate-900 font-semibold">Home</a>
+  <a href="leadership.html" class="text-xl text-slate-900">Leadership</a>
+  <a href="creativity-expression.html" class="text-xl text-slate-900">Creativity & Expression</a>
+  <a href="women-community.html" class="text-xl text-slate-900">Women & Community</a>
+  <a href="grief-support.html" class="text-xl text-slate-900">Grief Support</a>
+  <a href="somatic-breathwork.html" class="text-xl text-slate-900">Somatic Breathwork</a>
+  <a href="about.html" class="text-xl text-slate-900">About</a>
+  <a href="insights.html" class="text-xl text-slate-900">Insights</a>
+  <a href="contact.html" class="text-xl text-slate-900">Contact</a>
+</div>
+
+<main class="pt-20">
+
+<section class="pt-16 pb-10 px-4 sm:px-6 bg-gradient-to-b from-[#F0F4F1]/70 to-[#FAF8F5]">
+  <div class="max-w-4xl mx-auto text-center space-y-4">
+    <span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Leadership</span>
+    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-[#1E2D24]">Reset & Reconnect</h1>
+    <p class="text-lg text-slate-700">Strategic coaching and somatic practice for professionals navigating responsibility, complexity, change and pressure.</p>
+  </div>
+</section>
+<section class="py-16 sm:py-20 px-4 sm:px-6 bg-[#FAF8F5] border-y border-stone-200/80" id="leadership-context">
+<div class="max-w-4xl mx-auto space-y-6 text-center">
+<span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Understanding The Context</span>
+<h2 class="text-2xl sm:text-4xl font-bold text-[#1E2D24]">Meeting You Where You Operate</h2>
+<div class="bg-white p-6 sm:p-10 rounded-3xl border border-stone-200/80 shadow-sm text-left text-slate-700 leading-relaxed space-y-4">
+<p class="text-base sm:text-lg text-slate-800">
+<strong>Zurich</strong> reflects the world many of my clients navigate: international, 
+            fast-paced, intellectually demanding, and built on quality and responsibility.
+          </p>
+<p class="text-base sm:text-lg text-slate-800">
+<strong>Executive</strong> refers not to a job title or hierarchical level, but the experience of carrying complexity, 
+            making decisions, leading change, and performing under pressure.
+          </p>
+<p class="text-base sm:text-lg text-[#1E2D24] font-semibold pt-4 border-t border-stone-100">
+            My praxis supports people who want to meet these demands without losing clarity, presence, or themselves.
+          </p>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24 px-4 sm:px-6 bg-white" id="leadership-fit">
+<div class="max-w-5xl mx-auto space-y-12">
+<div class="text-center space-y-3 max-w-2xl mx-auto">
+<span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Alignment &amp; Intent</span>
+<h2 class="text-3xl sm:text-5xl font-bold text-[#1E2D24]">This Work Is a Good Fit If:</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Box 1: Shift & Transition -->
+<div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
+<div class="space-y-3">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+</span>
+<h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to shift from collecting insights to living them</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+            You've read the books. You've listened to podcasts. Maybe you've even tried coaching or therapy. Yet you still find yourself reacting in the same situations. You're ready for change that is experienced—not just understood.
+          </p>
+</div>
+</div>
+<!-- Box 2: Awareness / Looking Honestly -->
+<div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
+<div class="space-y-3">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+</span>
+<h3 class="text-base font-bold text-[#1E2D24] leading-snug">Willing to look honestly at outdated patterns</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+            You are ready to look honestly at the thoughts, habits, and protective mechanisms that no longer serve your growth, well-being, or leadership.
+          </p>
+</div>
+</div>
+<!-- Box 3: Body & Somatics -->
+<div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
+<div class="space-y-3">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+</span>
+<h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to listen to your body</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+            You've ignored your body's signals for years because work came first. Now you're curious what happens when you finally listen.
+          </p>
+</div>
+</div>
+<!-- Box 4: Mind & Nervous System -->
+<div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
+<div class="space-y-3">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M12 5v13"></path></svg>
+</span>
+<h3 class="text-base font-bold text-[#1E2D24] leading-snug">Open to exploring mind &amp; nervous system</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+            You are open to exploring both your cognitive landscape and your nervous system—moving beyond just collecting conceptual ideas.
+          </p>
+</div>
+</div>
+<!-- Box 5: Exit Survival / Renewal -->
+<div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
+<div class="space-y-3">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+</span>
+<h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to exit autopilot survival mode</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+            Tired of surviving on autopilot, pushing through exhaustion, and ready to genuinely reconnect with yourself and your vitality.
+          </p>
+</div>
+</div>
+<!-- Box 6: Agency & Direction -->
+<div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
+<div class="space-y-3">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+</span>
+<h3 class="text-base font-bold text-[#1E2D24] leading-snug">Ready to step into personal agency</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+            Ready to take complete responsibility for your life and choices without placing blame on yourself or your circumstances for where you are today.
+          </p>
+</div>
+</div>
+<!-- Box 7: Grounded Clarity -->
+<div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
+<div class="space-y-3">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="5" r="2"></circle><path d="M12 7v10"></path><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path><path d="M9 21h6"></path></svg>
+</span>
+<h3 class="text-base font-bold text-[#1E2D24] leading-snug">Seeking decisions grounded in clarity</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+            You want difficult conversations, high-stakes leadership decisions, and personal choices to come from grounded clarity instead of stress, urgency, or fear of disappointing others.
+          </p>
+</div>
+</div>
+<!-- Box 8: Integration & Practice -->
+<div class="bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200/80 space-y-3 flex flex-col justify-between ui-card-hover hover:border-[#B8975B]">
+<div class="space-y-3">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#F0F4F1] text-[#1E2D24]">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 12.5-8.58 3.91a2 2 0 0 1-1.66 0L2 12.5"></path><path d="m22 17.5-8.58 3.91a2 2 0 0 1-1.66 0L2 17.5"></path></svg>
+</span>
+<h3 class="text-base font-bold text-[#1E2D24] leading-snug">Prepared to practice and integrate</h3>
+<p class="text-xs text-slate-600 leading-relaxed">
+            Prepared to experiment, practice somatic tools, and integrate new ways of being between our dedicated sessions.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24 px-4 sm:px-6 bg-[#FAF8F5]" id="leadership-programme">
+<div class="max-w-5xl mx-auto space-y-16">
+<div class="text-center space-y-3 max-w-2xl mx-auto">
+<span class="text-xs font-bold uppercase tracking-widest text-[#B8975B]">Intellectual &amp; Somatic Clarity</span>
+<h2 class="text-3xl sm:text-5xl font-bold text-[#1E2D24]">Reset &amp; Reconnect Journey</h2>
+<p class="text-slate-600 text-sm sm:text-base">Reconnecting executive decision-making with nervous system regulation.</p>
+<p class="text-slate-600 text-sm sm:text-base"> The Dual Approach to Leadership.</p>
+<p class="text-slate-600 text-sm sm:text-base">A coaching and somatic program for professionals who want to:</p>
+<!-- Focus List -->
+<ul class="max-w-xl mx-auto text-left space-y-3 pt-2 text-sm sm:text-base text-slate-700 font-normal">
+<li class="flex items-start gap-3">
+<span class="text-[#B8975B] font-bold text-base leading-none pt-1">✓</span>
+<span>Regain clarity</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-[#B8975B] font-bold text-base leading-none pt-1">✓</span>
+<span>Reduce stress patterns</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-[#B8975B] font-bold text-base leading-none pt-1">✓</span>
+<span>Reconnect with themselves</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-[#B8975B] font-bold text-base leading-none pt-1">✓</span>
+<span>Make confident decisions</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-[#B8975B] font-bold text-base leading-none pt-1">✓</span>
+<span>Create sustainable success</span>
+</li>
+</ul>
+</div>
+<!-- Two Pillars with Detailed Client Gains Restored -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Pillar 1 -->
+<div class="bg-white border border-stone-200/80 p-6 sm:p-8 rounded-3xl space-y-5 flex flex-col justify-between shadow-sm">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-2xl bg-[#F0F4F1] text-[#1E2D24] flex items-center justify-center font-bold text-xl">
+                🧠
+              </div>
+<h3 class="text-2xl font-bold text-[#1E2D24]">Strategic Coaching</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+                Examine cognitive assumptions, decision-making habits, and perfectionist patterns driving your workload. 
+                Gain strategic clarity, break through autopilot thinking, and intentionally direct your leadership presence.
+              </p>
+<div class="pt-4 space-y-2 border-t border-stone-200/60">
+<span class="text-xs font-bold text-[#B8975B] uppercase tracking-wider block">What you gain:</span>
+<ul class="text-xs text-slate-700 space-y-2 list-disc list-inside leading-normal">
+<li>Clear framework for complex executive decision-making</li>
+<li>Identification and dismantling of burnout triggers</li>
+<li>Aligned leadership presence without over-explaining</li>
+<li>Boundary-setting that protects your focus and energy</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-white border border-stone-200/80 p-6 sm:p-8 rounded-3xl space-y-5 flex flex-col justify-between shadow-sm">
+<div class="space-y-4">
+<div class="w-12 h-12 rounded-2xl bg-[#F0F4F1] text-[#1E2D24] flex items-center justify-center font-bold text-xl">
+                🫁
+              </div>
+<h3 class="text-2xl font-bold text-[#1E2D24]">Somatic Breathwork &amp; Integration</h3>
+<p class="text-slate-600 text-sm leading-relaxed">
+                Bypass intellectual over-analysis to access the nervous system directly. 
+                Down-regulate stress responses, release accumulated physical tension armor, and embody calm authority under high pressure.
+              </p>
+<div class="pt-4 space-y-2 border-t border-stone-200/60">
+<span class="text-xs font-bold text-[#B8975B] uppercase tracking-wider block">What you gain:</span>
+<ul class="text-xs text-slate-700 space-y-2 list-disc list-inside leading-normal">
+<li>Rapid physiological de-escalation of acute stress</li>
+<li>Improved heart rate variability and deeper rest</li>
+<li>Release of chronic bodily holding patterns &amp; fatigue</li>
+<li>Grounded emotional stability in high-stakes environments</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Developmental Pathway Card -->
+<div class="bg-[#F0F4F1]/60 border border-[#B8975B]/30 rounded-3xl p-6 sm:p-10 text-center space-y-8">
+<h3 class="text-xs font-bold text-[#B8975B] uppercase tracking-widest">The Client Transformation Journey</h3>
+<p>I work with ambitious professionals who are successful on paper but feel overwhelmed, disconnected, or stuck. 
+            I help them reduce stress, gain clarity, and reconnect with their own resources so they can navigate change, make confident 
+            decisions, and create success that is sustainable.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+<div class="bg-white p-6 rounded-2xl border border-stone-200/80 space-y-2 shadow-sm">
+<span class="text-xs font-bold text-slate-400 uppercase tracking-wide">Step 1 • Achievement</span>
+<h4 class="text-xl font-bold text-[#1E2D24]">Cognitive Dominance</h4>
+<p class="text-xs text-slate-600 leading-relaxed">Sustained by intellect, hyper-vigilance, and over-working habits that created initial success but now cause strain.</p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-stone-200/80 space-y-2 shadow-sm">
+<span class="text-xs font-bold text-[#B8975B] uppercase tracking-wide">Step 2 • Regulation</span>
+<h4 class="text-xl font-bold text-[#1E2D24]">Somatic Realignment</h4>
+<p class="text-xs text-slate-600 leading-relaxed">Down-regulating the nervous system, releasing bodily tension armor, and clarifying core values.</p>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-stone-200/80 space-y-2 shadow-sm">
+<span class="text-xs font-bold text-[#8A9A86] uppercase tracking-wide">Step 3 • Integration</span>
+<h4 class="text-xl font-bold text-[#1E2D24]">Full Participation</h4>
+<p class="text-xs text-slate-600 leading-relaxed">Leading and living with grounded presence, authentic authority, clear boundaries, and renewed vitality.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="py-10 px-4 text-center bg-white border-t border-stone-200/70">
+  <div class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-slate-600 mb-5">
+    <a href="index.html">Home</a><a href="leadership.html">Leadership</a>
+    <a href="creativity-expression.html">Creativity & Expression</a><a href="women-community.html">Women & Community</a>
+    <a href="grief-support.html">Grief Support</a><a href="somatic-breathwork.html">Somatic Breathwork</a>
+    <a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+  </div>
+  <p class="text-xs text-slate-500">© Justyna Zurawska. All rights reserved. Zurich, Switzerland.</p>
+</footer>
+<script>
+document.getElementById('mobile-menu-button')?.addEventListener('click', function () {
+  document.getElementById('mobile-menu')?.classList.toggle('hidden');
+});
+</script>
+
+
+</body>
+</html>
