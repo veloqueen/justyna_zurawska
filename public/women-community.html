@@ -1,141 +1,245 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pretty & Angry Girls Club — Justyna Zurawska</title>
-<meta name="description" content="Not rage—creative fire. Curated group gatherings for women to transform misunderstood emotions into vitality, clear boundaries, and authentic connection.">
-<meta name="theme-color" content="#f5f2eb">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women & Community | Justyna Zurawska</title>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-1SSF66GQHS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1SSF66GQHS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      gtag('config', 'G-1SSF66GQHS');
+    </script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <script defer="" src="/_vercel/speed-insights/v0/script.js"></script>
+    <style>
+      :root {
+        /* AIR (Corporate / Coaching) - Updated to Logo Forest Green & Muted Gold Accent */
+        --navy-dark: #1E2D24;
+        --steel-blue: #344A3C;
+        --mist-blue: #F0F4F1;
+        --off-white: #FAF8F5;
+        --charcoal: #2D3748;
+        --logo-gold: #B8975B;
 
-  gtag('config', 'G-1SSF66GQHS');
-</script>
-<!-- Vercel Analytics -->
-<script defer src="/_vercel/speed-insights/v0/script.js"></script>
+        /* EARTH (Grief Support) */
+        --sage-green: #8A9A86;
+        --sage-light: #F0F4F1;
+        --sand-warm: #E6DFD5;
+        --linen-bg: #F9F7F4;
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-<style>
-:root{--paper:#f5f2eb;--white:#fffefa;--ink:#1e2924;--muted:#68736c;--line:rgba(30,41,36,.16);--green:#344c40;--terracotta:#C85A32;--rust:#9E3B1B;--burgundy:#4A1513;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(var(--max),calc(100% - 56px));margin:auto}.eyebrow{font-size:.69rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--muted)}.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.035em}.btn{display:inline-flex;align-items:center;gap:12px;padding:13px 19px;border:1px solid var(--terracotta);font-size:.78rem;letter-spacing:.04em;transition:.2s}.btn.primary{background:var(--terracotta);color:#fff}.btn:hover{transform:translateY(-2px);background:var(--rust);color:white}.arrow{font-size:1.1rem}.topbar{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center}.nav{display:flex;align-items:center;justify-content:space-between;gap:30px}.brand{font-family:var(--serif);font-size:1.25rem;letter-spacing:.01em;white-space:nowrap}.navlinks{display:flex;align-items:center;gap:23px;font-size:.76rem;color:#46524b}.navlinks a:hover{color:var(--terracotta)}.navcta{border-bottom:1px solid var(--green);padding-bottom:4px;font-size:.75rem;white-space:nowrap}.mobile-toggle{display:none;border:0;background:none;font:inherit;font-size:1.4rem}
+        /* FIRE (Pretty & Angry Girls Club) */
+        --terracotta: #C85A32;
+        --burnt-rust: #9E3B1B;
+        --burgundy-dark: #4A1513;
+        --amber-glow: #FDF6F0;
+      }
 
-.hero{padding:76px 0 82px}
-.hero h1{font-size:clamp(3rem,6.2vw,5.5rem);line-height:1.02;margin:22px 0 25px;max-width:800px;color:var(--burgundy)}
-.hero h1 em{color:var(--terracotta);font-weight:400}
-.hero-lead{font-size:1.03rem;line-height:1.85;color:var(--rust);max-width:680px;font-weight:500}
+      /* UNIFIED TYPOGRAPHY RULE FOR ALL ELEMENTS */
+      *, *::before, *::after, body, h1, h2, h3, h4, h5, h6, p, span, a, li, button, div, input, textarea, .font-heading {
+        font-family: 'Inter', sans-serif !important;
+      }
 
-.section{padding:90px 0}
-.card{background:var(--white);padding:40px;border:1px solid rgba(200,90,50,0.2);border-radius:24px;box-shadow:0 10px 30px #4a151308;margin-top:20px}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:25px 0}
-.sub-card{background:#FDF6F0;padding:22px;border-radius:16px;border:1px solid rgba(200,90,50,0.15)}
+      body {
+        background-color: var(--off-white);
+        color: var(--charcoal);
+        overflow-x: hidden;
+      }
 
-.footer{background:#1f2d26;color:#fff;padding:38px 0}
-.footer-grid{display:flex;justify-content:space-between;gap:25px;align-items:center}
-.footer-brand{font-family:var(--serif);font-size:1.4rem}
-.footer small{display:block;color:#c2ccc4;font-size:.68rem;margin-top:5px}
-.footer-links{display:flex;gap:23px;flex-wrap:wrap;font-size:.73rem;color:#e0e6e0}
-.footer-links a:hover{color:#e5b49f}
-.copyright{font-size:.65rem;color:#aab7ad;margin-top:22px;border-top:1px solid #ffffff25;padding-top:16px}
+      /* Custom Buttons & Modern Micro-interactions */
+      .btn-navy {
+        background-color: var(--navy-dark);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-navy:hover {
+        background-color: var(--steel-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(30, 45, 36, 0.3);
+      }
 
-@media(max-width:768px){
-  .grid-2{grid-template-columns:1fr}
-  .navlinks{display:none}
-  .mobile-toggle{display:block}
-}
-</style>
+      .btn-brand-forest {
+        background-color: var(--navy-dark);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-brand-forest:hover {
+        background-color: var(--steel-blue);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(30, 45, 36, 0.3);
+      }
+
+      .btn-earth {
+        background-color: var(--sage-green);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-earth:hover {
+        background-color: #788874;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(138, 154, 134, 0.3);
+      }
+
+      .btn-fire {
+        background-color: var(--terracotta);
+        color: #ffffff;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .btn-fire:hover {
+        background-color: var(--burnt-rust);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px -5px rgba(200, 90, 50, 0.35);
+      }
+
+      /* Dynamic UI Focus and Card Elevators */
+      .ui-card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .ui-card-hover:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Animated Ripple for Air/Breath */
+      .animated-ripple {
+        animation: ripple 9s ease-out infinite;
+      }
+      @keyframes ripple {
+        0% { r: 120; opacity: 0.5; stroke-width: 1.5; }
+        100% { r: 380; opacity: 0; stroke-width: 0; }
+      }
+
+      /* Dropdown Styling for Tailwind Header */
+      .nav-dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .nav-dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        padding: 6px 0;
+        z-index: 100;
+        border: 1px solid rgba(0,0,0,0.05);
+      }
+      .nav-dropdown-menu a {
+        color: #334155;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 13px;
+      }
+      .nav-dropdown-menu a:hover {
+        color: #1E2D24;
+        background-color: #F0F4F1;
+      }
+      .nav-dropdown:hover .nav-dropdown-menu {
+        display: block;
+      }
+    </style>
 </head>
-<body>
-<header class="topbar">
-  <div class="wrap nav">
-    <a class="brand" href="index.html">JUSTYNA ZURAWSKA</a>
-    <button class="mobile-toggle" aria-label="Open navigation" aria-expanded="false" onclick="document.querySelector('.navlinks').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.navlinks').classList.contains('open'))">☰</button>
-    <nav class="navlinks" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="leadership.html">Leadership</a>
-      <a href="write-and-breathe.html">Write &amp; Breathe</a>
-      <a href="just-practice.html">Just Practice</a>
-      <a href="women-community.html" style="color:var(--terracotta);font-weight:600;">Women &amp; Community</a>
-      <a href="grief-support.html">Grief Support</a>
-      <a href="index.html#about">About</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-    <a class="navcta" href="mailto:coaching@justynazurawska.com">Get in touch ↗</a>
-  </div>
+<body class="selection:bg-emerald-100 selection:text-slate-800 antialiased text-slate-800 tracking-normal">
+
+<header class="bg-white/90 backdrop-blur-md border-b border-stone-200/60 py-3.5 px-4 sm:px-8 md:px-12 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+  <a href="index.html" class="text-sm sm:text-base font-semibold text-[#1E2D24]">Justyna Zurawska <span class="font-normal text-slate-400">|</span> <span class="font-normal">Coaching, Somatic Practice & Creative Facilitation</span></a>
+  <nav class="hidden lg:flex items-center gap-5 text-xs font-medium text-slate-700">
+    <a href="index.html">Home</a>
+    <a href="leadership.html">Leadership</a>
+    <a href="creativity-expression.html">Creativity & Expression</a>
+    <a href="women-community.html">Women & Community</a>
+    <a href="grief-support.html">Grief Support</a>
+    <a href="somatic-breathwork.html">Somatic Breathwork</a>
+    <a href="about.html">About</a>
+    <a href="insights.html">Insights</a>
+    <a href="contact.html" class="px-4 py-2 text-white bg-[#1E2D24] rounded-full">Contact</a>
+  </nav>
+  <button id="mobile-menu-button" class="lg:hidden text-slate-700 p-2" aria-label="Toggle Menu">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+  </button>
 </header>
+<div id="mobile-menu" class="fixed inset-0 bg-[#FAF8F5]/98 backdrop-blur-lg z-40 hidden lg:hidden flex flex-col items-center justify-center space-y-5 pt-12">
+  <a href="index.html" class="text-xl text-slate-900 font-semibold">Home</a>
+  <a href="leadership.html" class="text-xl text-slate-900">Leadership</a>
+  <a href="creativity-expression.html" class="text-xl text-slate-900">Creativity & Expression</a>
+  <a href="women-community.html" class="text-xl text-slate-900">Women & Community</a>
+  <a href="grief-support.html" class="text-xl text-slate-900">Grief Support</a>
+  <a href="somatic-breathwork.html" class="text-xl text-slate-900">Somatic Breathwork</a>
+  <a href="about.html" class="text-xl text-slate-900">About</a>
+  <a href="insights.html" class="text-xl text-slate-900">Insights</a>
+  <a href="contact.html" class="text-xl text-slate-900">Contact</a>
+</div>
 
-<main id="top">
-<section class="hero" style="background:#FDF6F0;">
-  <div class="wrap" style="text-align: center;">
-    <div class="eyebrow" style="color:var(--terracotta);">Creative Feminine Expression</div>
-    <h1 class="serif" style="margin-left:auto; margin-right:auto;">Pretty &amp; Angry <em>Girls Club</em></h1>
-    <p class="hero-lead" style="margin-left:auto; margin-right:auto;">Not rage—creative fire. Transforming misunderstood emotions into vitality, clear boundaries, and authentic connection.</p>
-  </div>
-</section>
-
-<section class="section" style="background:#FDF6F0; padding-top:0;">
-  <div class="wrap" style="max-width:900px;">
-    <div class="card">
-      <p style="font-size:1.05rem; line-height:1.8; color:#33413b;">
-        <strong>Pretty & Angry Girls Club</strong> is a series of curated group gatherings (in-person in Zurich and online) where women come together to meet one of the most suppressed and misunderstood emotions: <span style="color:var(--terracotta); font-weight:600;">ANGER</span>.
-      </p>
-
-      <p style="font-size:0.95rem; line-height:1.8; color:#4d5952;">
-        Women are often taught to mask anger with politeness, perfectionism, or compliance. Here, we don’t push it away, apologize for it, or attempt to fix it. We embrace it, express it physically, and channel it together into creative energy and unshakable boundaries.
-      </p>
-
-      <div class="grid-2">
-        <div class="sub-card">
-          <h4 style="font-size:1rem; color:var(--rust); font-weight:700; margin-top:0;">🔥 Embodied Practice</h4>
-          <p style="font-size:0.85rem; color:#4d5952; line-height:1.7; margin-bottom:0;">Movement, breathwork, boxing elements, improv, and vocal release to move bound energy out of the body safely.</p>
-        </div>
-        <div class="sub-card">
-          <h4 style="font-size:1rem; color:var(--rust); font-weight:700; margin-top:0;">✨ What You Experience</h4>
-          <p style="font-size:0.85rem; color:#4d5952; line-height:1.7; margin-bottom:0;">Shift from "I am angry or overwhelmed" to <em>"I feel vibrant, clear on my boundaries, and fully alive."</em></p>
-        </div>
-      </div>
-
-      <p style="font-size:0.85rem; color:#68736c; border-top:1px solid var(--line); padding-top:16px; line-height:1.7;">
-        The name Pretty & Angry is inspired by the Polish saying "Złość piękności szkodzi": literally, "Anger harms beauty." For generations, many girls grew up hearing this phrase whenever they expressed frustration or anger, learning that to be "pretty" they should not express anger.
-      </p>
-
-      <div style="margin-top:30px; text-align:center;">
-        <a href="https://wa.me/41786938831?text=Hey!%20I'm%20interested%20in%20joining%20the%20Pretty%20%26%20Angry%20Girls%20Club." target="_blank" rel="noopener noreferrer" class="btn primary" style="border-radius:9999px; padding:15px 35px;">
-          <span>Join the Gatherings</span>
-          <span>🔥</span>
-        </a>
-      </div>
-    </div>
-  </div>
+<main class="pt-20">
+<section class="py-16 sm:py-24 px-4 sm:px-6 bg-[#FDF6F0] relative" id="fire-club">
+<div class="max-w-4xl mx-auto space-y-10 text-center">
+<div class="space-y-4 max-w-2xl mx-auto">
+<span class="inline-block px-4 py-1 text-xs font-semibold uppercase tracking-widest text-[#C85A32] bg-[#C85A32]/10 rounded-full">
+            Creative Feminine Expression
+          </span>
+<h2 class="text-4xl sm:text-6xl font-bold text-[#4A1513]">Pretty &amp; Angry Girls Club</h2>
+<p class="text-[#9E3B1B] text-sm sm:text-base font-medium">
+            Not rage—creative fire. Transforming misunderstood emotions into vitality, clear boundaries, and authentic connection.
+          </p>
+</div>
+<!-- Fire Feature Card with Full Description Restored -->
+<div class="bg-white/90 border border-[#C85A32]/20 rounded-3xl p-6 sm:p-12 shadow-sm text-left space-y-6 text-slate-700">
+<p class="text-base sm:text-lg text-slate-800 leading-relaxed">
+<strong>Pretty &amp; Angry Girls Club</strong> is a series of curated group gatherings (in-person in Zurich and online) where women come together to meet one of the most suppressed and misunderstood emotions: <span class="text-[#C85A32] font-semibold">ANGER</span>.
+          </p>
+<p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            Women are often taught to mask anger with politeness, perfectionism, or compliance. Here, we don’t push it away, apologize for it, or attempt to fix it. We embrace it, express it physically, and channel it together into creative energy and unshakable boundaries.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2">
+<div class="bg-[#FDF6F0] p-5 rounded-2xl border border-[#C85A32]/20 space-y-1.5">
+<h4 class="text-base text-[#9E3B1B] font-bold flex items-center gap-2">🔥 Embodied Practice</h4>
+<p class="text-xs text-slate-700 leading-relaxed">Movement, breathwork, boxing elements, improv, and vocal release to move bound energy out of the body safely.</p>
+</div>
+<div class="bg-[#FDF6F0] p-5 rounded-2xl border border-[#C85A32]/20 space-y-1.5">
+<h4 class="text-base text-[#9E3B1B] font-bold flex items-center gap-2">✨ What You Experience</h4>
+<p class="text-xs text-slate-700 leading-relaxed">Shift from "I am angry or overwhelmed" to <em>"I feel vibrant, clear on my boundaries, and fully alive."</em></p>
+</div>
+</div>
+<p class="text-xs sm:text-sm text-slate-500 pt-2 border-t border-stone-200 leading-relaxed">
+            The name Pretty &amp; Angry is inspired by the Polish saying "Złość piękności szkodzi": literally, "Anger harms beauty." For generations, 
+            many girls grew up hearing this phrase whenever they expressed frustration or anger, learning that to be "pretty" they should not express anger.
+          </p>
+<div class="pt-4 text-center">
+<a class="btn-fire inline-flex items-center gap-2 px-9 py-4 rounded-full text-sm font-semibold tracking-wide shadow-md" href="https://wa.me/41786938831?text=Hey!%20I'm%20interested%20in%20joining%20the%20Pretty%20%26%20Angry%20Girls%20Club." rel="noopener noreferrer" target="_blank">
+<span>Join the Gatherings</span>
+<span>🔥</span>
+</a>
+</div>
+</div>
+</div>
 </section>
 </main>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">Justyna Zurawska</div>
-        <small>Women &amp; Community Gatherings · Facilitation</small>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="leadership.html">Leadership</a>
-        <a href="write-and-breathe.html">Write &amp; Breathe</a>
-        <a href="just-practice.html">Just Practice</a>
-        <a href="women-community.html">Women &amp; Community</a>
-        <a href="grief-support.html">Grief Support</a>
-        <a href="mailto:coaching@justynazurawska.com">Email</a>
-        <a href="https://wa.me/41786938831">WhatsApp</a>
-      </div>
-    </div>
-    <div class="copyright">© 2026 Justyna Zurawska · Zurich, Switzerland</div>
+<footer class="py-10 px-4 text-center bg-white border-t border-stone-200/70">
+  <div class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-slate-600 mb-5">
+    <a href="index.html">Home</a><a href="leadership.html">Leadership</a>
+    <a href="creativity-expression.html">Creativity & Expression</a><a href="women-community.html">Women & Community</a>
+    <a href="grief-support.html">Grief Support</a><a href="somatic-breathwork.html">Somatic Breathwork</a>
+    <a href="about.html">About</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
   </div>
+  <p class="text-xs text-slate-500">© Justyna Zurawska. All rights reserved. Zurich, Switzerland.</p>
 </footer>
+<script>
+document.getElementById('mobile-menu-button')?.addEventListener('click', function () {
+  document.getElementById('mobile-menu')?.classList.toggle('hidden');
+});
+</script>
+
+
 </body>
 </html>
